@@ -1,0 +1,43 @@
+.container-header{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  max-width: 1280px; 
+  height: 56px;
+  background-color: rgb(18, 17, 17);
+  border: 2px solid #000000;
+  color: white;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+   font-family: "Poppins", sans-serif;
+}
+
+
+.myLogo{
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+}
+
+
+.text{  
+  color: white;
+  text-decoration: none;
+}
+
+.box-links{
+margin-right: 70px;
+}
+
+.box-links >*:not(:last-child){
+  margin-right: 30px;
+}
