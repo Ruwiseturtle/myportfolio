@@ -76,7 +76,6 @@ const HomePage = () => {
               src={imageMyPhoto}
               alt="Ruslana Matviienko"
               width="300"
-              height="200"
             />
             <div className="skill-photo javascript">
               <img src={imageJavaScript} alt="LinkedIn logo" />

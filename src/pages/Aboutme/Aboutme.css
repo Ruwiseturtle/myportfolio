@@ -3,14 +3,156 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  min-height: calc(100vh - 56px);
-  max-width: 1280px;
+  min-height: calc(100vh - 60px);
+  max-width: 1056px;
   margin-top: 56px;
   background-color: rgb(18, 17, 17);
   border: 1px solid black;
   color: white;
 }
 
-.text{
-color: white;
+.list-aboutme{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* height: 100%; */
+}
+
+.box-aboutme-text{
+  width: 463px;
+  margin-left: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.container-aboutme-left{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: calc(100% / 2);
+  /* padding-left: 69px; */
+  padding-top: 150px;
+  /* border: 1px white solid; */
+}
+
+
+.text-title{
+  display: flex;
+  margin-top: 234px;
+   font-family: "Inter", sans-serif;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 29px;
+   color: #ffffff;
+   letter-spacing: 0.05em;  
+}
+
+.aboutme-text{
+  display: block;
+  width: 463px;
+ margin-top: 0;
+ margin-bottom: 0;
+ font-family: "Inter", sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 17px;
+   color: #ffffff;
+   letter-spacing: 0.05em;
+}
+
+.text-white{
+  color: white;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.text-blue{
+color: #00A8CD;
+ margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.container-aboutme-right{
+  position: relative;
+  flex:1;
+  /* border: 1px white solid; */
+}
+
+.box-aboutme-myphoto2{
+  position: relative;
+  width: 300px;
+  border-radius: 8px;
+ z-index: 200;
+ 
+
+}
+
+.myphoto2{
+   width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 5px 10px 10px #000000; /* X:-5, Y:5, Размытие: 10, Расширение: 0, Цвет: #000000 */
+  filter: brightness(80%); /* Зменшує яскравість, роблячи зображення темнішим */
+}
+
+.circle-aboutme{
+position: absolute;
+  right: -85px;
+  top:-60px;
+  transform: rotate(30deg);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right, 
+    rgba(0, 168, 205, 0.30), 
+    rgba(217, 217, 217, 0) 
+  );  
+  /* background-color: white; */
+  z-index: -4;
+}
+
+.quarter1{
+  display: block;
+  position: absolute;
+  top:-10px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+   background: linear-gradient(
+    to right, 
+     rgba(0, 0, 0), /* початковий колір */
+    rgba(217, 217, 217, 0) /* кінцевий колір */
+  ); 
+  /* background-color: white; */
+z-index: -2;
+}
+
+.quarter2{
+  display: block;
+  position: absolute;
+  right: -50px;
+  top:-20px;
+  transform: rotate(8deg); /* Змінює нахил на 45 градусів */
+  width: 300px;
+  height: 300px;
+ background: linear-gradient(
+    to right, /* напрямок градієнту: відверху вниз */
+    rgba(0, 168, 205), /* початковий колір */
+    rgba(217, 217, 217, 0) /* кінцевий колір */
+  ); 
+  /* background-color: yellow; */
+  z-index: -1;
+}
+
+.box-myphoto2{
+  display: block;
+  width: 100%;
+   
 }

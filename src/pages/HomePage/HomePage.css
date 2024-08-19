@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - 60px);
   max-width: 1280px;
   /* height:  calc(100vh - 56px); */
   margin-top: 56px;
@@ -52,14 +52,13 @@
   position: relative;
 }
 
-.text{
-  font-family: "Poppins", sans-serif; 
-}
+
 
 .text-name{
   display: block;
   width: 95%;
   overflow-wrap: break-word; /* перенос довгих слів */  
+   font-family: "Poppins", sans-serif;
    font-weight: 500;
    font-size: 40px;
    line-height: 60px;
@@ -70,6 +69,7 @@
 }
 
 .text-profession{
+   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
@@ -80,6 +80,7 @@
 }
 
 .text-aboutMe{
+  font-family: "Poppins", sans-serif;
   width: 485px;
   font-weight: 400;
   font-size: 14px;
@@ -151,6 +152,7 @@
   background-color: #00A8cd;
   color: white;
   cursor: pointer;
+   font-family: "Poppins", sans-serif;
 }
 
 .button-contactMe:hover{
