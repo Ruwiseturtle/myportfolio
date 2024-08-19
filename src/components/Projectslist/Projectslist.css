@@ -6,5 +6,29 @@
     margin-left: 69px;
     margin-right: 69px;
    
-    
+     overflow: auto; /* Додаємо скролінг */
+     max-height: 500px; /* Встановлюємо висоту контейнера, при якій з'явиться скрол */
+     position: relative;
+
+      /* Приховуємо скролбар повністю */
+  scrollbar-width: none; /* Для Firefox */
+  -ms-overflow-style: none; /* Для Internet Explorer та Edge */
+}
+
+
+/* Приховуємо стандартний скролбар для WebKit-браузерів (Chrome, Safari) */
+.container-with-images::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Приховуємо скролбар в Internet Explorer та Edge */
+.container-with-images {
+  -ms-overflow-style: none; /* Для IE і Edge */
+  scrollbar-width: none; /* Для Firefox */
+}
+
+/* Приховуємо скролбар в Firefox */
+.container-with-images {
+  scrollbar-width: none;
 }

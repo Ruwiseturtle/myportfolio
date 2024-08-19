@@ -11,7 +11,7 @@ const Aboutme = () => {
             <div className="circle-aboutme"></div>
             <div className="quarter1"></div>
             <div className="quarter2"></div>
-            <div className='box-myphoto2'>
+            <div className="box-myphoto2">
               <img
                 className="myphoto2"
                 src={imageMyphoto2}
@@ -39,6 +39,7 @@ const Aboutme = () => {
           </h1>
         </li>
       </ul>
+      <div className="line-aboutme"></div>
     </div>
   );
 }
