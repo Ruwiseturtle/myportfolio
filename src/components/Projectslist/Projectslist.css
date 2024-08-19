@@ -1,0 +1,10 @@
+.container-projects-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Створює три рівні колонки */
+    gap: 20px; /* Відступ між картинками */
+
+    margin-left: 69px;
+    margin-right: 69px;
+   
+    
+}
