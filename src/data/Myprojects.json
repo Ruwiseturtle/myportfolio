@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "image": "https://via.placeholder.com/300",
+    "title": "Image 1",
+    "link": "https://via.placeholder.com/300"
+  },
+  {
+    "id": 2,
+    "image": "https://via.placeholder.com/300x200",
+    "title": "Image 2",
+    "link": "https://via.placeholder.com/300x200"
+  },
+  {
+    "id": 3,
+    "image": "https://via.placeholder.com/200",
+    "title": "Image 3",
+    "link": "https://via.placeholder.com/200"
+  },
+  {
+    "id": 4,
+    "image": "https://via.placeholder.com/200",
+    "title": "Image 3",
+    "link": "https://via.placeholder.com/200"
+  },
+  {
+    "id": 4,
+    "image": "https://via.placeholder.com/200",
+    "title": "Image 3",
+    "link": "https://via.placeholder.com/200"
+  },
+  {
+    "id": 4,
+    "image": "https://via.placeholder.com/200",
+    "title": "Image 3",
+    "link": "https://via.placeholder.com/200"
+  },
+  {
+    "id": 4,
+    "image": "https://via.placeholder.com/200",
+    "title": "Image 3",
+    "link": "https://via.placeholder.com/200"
+  },
+  {
+    "id": 4,
+    "image": "https://via.placeholder.com/200",
+    "title": "Image 3",
+    "link": "https://via.placeholder.com/200"
+  },
+  {
+    "id": 4,
+    "image": "https://via.placeholder.com/200",
+    "title": "Image 3",
+    "link": "https://via.placeholder.com/200"
+  },
+  {
+    "id": 4,
+    "image": "https://via.placeholder.com/200",
+    "title": "Image 3",
+    "link": "https://via.placeholder.com/200"
+  },
+  {
+    "id": 4,
+    "image": "https://via.placeholder.com/200",
+    "title": "Image 3",
+    "link": "https://via.placeholder.com/200"
+  },
+  {
+    "id": 4,
+    "image": "https://via.placeholder.com/200",
+    "title": "Image 3",
+    "link": "https://via.placeholder.com/200"
+  }
+]
