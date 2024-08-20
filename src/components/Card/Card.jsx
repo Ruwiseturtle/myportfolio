@@ -11,19 +11,16 @@ const Card = ({ project }) => {
           src={project.image}
           alt={project.title}
         />
-        <p className="title-project">{project.title}</p>
+        <p className="text-framework">{project.frameworks}</p>
         <a
           href="https://www.instagram.com/vychovanetcruslana/"
           target="_blank"
           rel="noreferrer"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <div className='box-href-to-project'>
-            <img className='image-href'
-              src={imageHref}
-              alt="Instagram logo"
-            />
-            <span>Follow me on Instagram</span>
+          <div className="box-href-to-project">
+            <img className="image-href" src={imageHref} alt="Instagram logo" />
+            <span className='title-text-card'>{project.title}</span>
           </div>
         </a>
       </div>

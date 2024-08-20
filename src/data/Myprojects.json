@@ -1,74 +1,87 @@
 [
   {
     "id": 1,
-    "image": "https://via.placeholder.com/300",
+    "image": "/assets/projects/freshHarvestBox.jpeg",
     "title": "Image 1",
-    "link": "https://via.placeholder.com/300"
+    "link": "https://via.placeholder.com/300",
+    "frameworks": "React"
   },
   {
     "id": 2,
     "image": "https://via.placeholder.com/300x200",
     "title": "Image 2",
-    "link": "https://via.placeholder.com/300x200"
+    "link": "https://via.placeholder.com/300x200",
+    "frameworks": "React"
   },
   {
     "id": 3,
     "image": "https://via.placeholder.com/200",
     "title": "Image 3",
-    "link": "https://via.placeholder.com/200"
+    "link": "https://via.placeholder.com/200",
+    "frameworks": "React"
   },
   {
     "id": 4,
     "image": "https://via.placeholder.com/200",
     "title": "Image 3",
-    "link": "https://via.placeholder.com/200"
+    "link": "https://via.placeholder.com/200",
+    "frameworks": "React-native"
+    
   },
   {
     "id": 4,
     "image": "https://via.placeholder.com/200",
     "title": "Image 3",
-    "link": "https://via.placeholder.com/200"
+    "link": "https://via.placeholder.com/200",
+    "frameworks": "React"
   },
   {
     "id": 4,
     "image": "https://via.placeholder.com/200",
     "title": "Image 3",
-    "link": "https://via.placeholder.com/200"
+    "link": "https://via.placeholder.com/200",
+    "frameworks": "React-native"
   },
   {
     "id": 4,
     "image": "https://via.placeholder.com/200",
     "title": "Image 3",
-    "link": "https://via.placeholder.com/200"
+    "link": "https://via.placeholder.com/200",
+    "frameworks": "React-native"
   },
   {
     "id": 4,
     "image": "https://via.placeholder.com/200",
     "title": "Image 3",
-    "link": "https://via.placeholder.com/200"
+    "link": "https://via.placeholder.com/200",
+    "frameworks": "React"
   },
   {
     "id": 4,
     "image": "https://via.placeholder.com/200",
     "title": "Image 3",
-    "link": "https://via.placeholder.com/200"
+    "link": "https://via.placeholder.com/200",
+    "frameworks": "React"
   },
   {
     "id": 4,
     "image": "https://via.placeholder.com/200",
     "title": "Image 3",
-    "link": "https://via.placeholder.com/200"
+    "link": "https://via.placeholder.com/200",
+    "frameworks": "React"
   },
   {
     "id": 4,
     "image": "https://via.placeholder.com/200",
     "title": "Image 3",
-    "link": "https://via.placeholder.com/200"
+    "link": "https://via.placeholder.com/200",
+    "frameworks": "React"
   },
   {
     "id": 4,
     "image": "https://via.placeholder.com/200",
     "title": "Image 3",
-    "link": "https://via.placeholder.com/200"
+    "link": "https://via.placeholder.com/200",
+    "frameworks": "React-native"
   }
 ]
