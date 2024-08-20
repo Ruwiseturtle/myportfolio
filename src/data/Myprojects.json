@@ -11,36 +11,36 @@
     "image": "network-React-native.jpeg",
     "title": "Image 2",
     "link": "https://via.placeholder.com/300x200",
-    "frameworks": "React"
+    "frameworks": "React-native"
   },
   {
     "id": 3,
-    "image": "https://via.placeholder.com/200",
+    "image": "Bookshelf.jpeg",
     "title": "Image 3",
     "link": "https://via.placeholder.com/200",
-    "frameworks": "React"
+    "frameworks": "Javascript"
   },
   {
     "id": 4,
-    "image": "https://via.placeholder.com/200",
+    "image": "PHONEBOOK.jpeg",
     "title": "Image 3",
     "link": "https://via.placeholder.com/200",
-    "frameworks": "React-native"
+    "frameworks": "React"
     
   },
   {
     "id": 4,
-    "image": "https://via.placeholder.com/200",
+    "image": "WaterTracker.jpeg",
     "title": "Image 3",
     "link": "https://via.placeholder.com/200",
     "frameworks": "React"
   },
   {
     "id": 4,
-    "image": "https://via.placeholder.com/200",
+    "image": "MOVIESSEARCH.jpeg",
     "title": "Image 3",
     "link": "https://via.placeholder.com/200",
-    "frameworks": "React-native"
+    "frameworks": "React"
   },
   {
     "id": 4,
