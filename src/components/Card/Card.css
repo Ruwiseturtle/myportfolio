@@ -1,14 +1,15 @@
-
-.box-imageProject{
-    width: 350px;  /* Ширина блока */
-  height: 250px; /* Висота блока */
-  overflow: hidden; /* Приховує частини картинки, які виходять за межі блоку */
-} 
-.image-card{
-   width: 100%;   /* Розтягнути картинку по ширині блока */
-  height: 100%;  /* Розтягнути картинку по висоті блока */
-  object-fit: cover; /* Масштабує картинку, щоб заповнити блок, зберігаючи пропорції */
+.card{
+   display: block;
+   width: 350px;
+   height: 293px;
+   color: white;
 }
-.title-project{
-    color:white;
+
+.image-project{
+  width: 350px;
+  height: 250px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

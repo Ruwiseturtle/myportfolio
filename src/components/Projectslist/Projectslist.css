@@ -1,20 +1,14 @@
 .container-projects-list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Створює три рівні колонки */
-    gap: 20px; /* Відступ між картинками */
-
     margin-left: 69px;
     margin-right: 69px;
-   
-     overflow: auto; /* Додаємо скролінг */
-     max-height: 500px; /* Встановлюємо висоту контейнера, при якій з'явиться скрол */
-     position: relative;
+    overflow: auto; 
+    max-height: 500px; 
+    position: relative;
 
-      /* Приховуємо скролбар повністю */
+         /* Приховуємо скролбар повністю */
   scrollbar-width: none; /* Для Firefox */
   -ms-overflow-style: none; /* Для Internet Explorer та Edge */
 }
-
 
 /* Приховуємо стандартний скролбар для WebKit-браузерів (Chrome, Safari) */
 .container-with-images::-webkit-scrollbar {
@@ -31,4 +25,12 @@
 /* Приховуємо скролбар в Firefox */
 .container-with-images {
   scrollbar-width: none;
+}
+
+.projects-list{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   gap: 20px;
+   margin-bottom: 50px;
 }

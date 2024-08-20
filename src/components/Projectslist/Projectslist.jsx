@@ -7,9 +7,11 @@ const Projectslist = () => {
 
   return (
     <div className="container-projects-list">
-          {projects.map((project, index) => (
-        <Card key={index} project={project} />
-      ))}
+      <ul className="projects-list">
+        {projects.map((project, index) => (
+          <Card key={index} project={project} />
+        ))}
+      </ul>
     </div>
   );
 }
