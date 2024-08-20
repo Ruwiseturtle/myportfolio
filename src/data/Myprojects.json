@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "image": "/assets/projects/freshHarvestBox.jpeg",
+    "image": "freshHarvestBox.jpeg",
     "title": "Image 1",
     "link": "https://via.placeholder.com/300",
     "frameworks": "React"
   },
   {
     "id": 2,
-    "image": "https://via.placeholder.com/300x200",
+    "image": "network-React-native.jpeg",
     "title": "Image 2",
     "link": "https://via.placeholder.com/300x200",
     "frameworks": "React"
