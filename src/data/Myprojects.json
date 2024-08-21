@@ -29,59 +29,24 @@
     
   },
   {
-    "id": 4,
+    "id": 5,
     "image": "WaterTracker.jpeg",
     "title": "Water tracker",
     "link": "https://argojkee.github.io/dreamteam-water/",
     "frameworks": "React"
   },
   {
-    "id": 4,
+    "id": 6,
     "image": "MOVIESSEARCH.jpeg",
     "title": "Movie search",
     "link": "https://ruwiseturtle.github.io/goit-react-hw-05-movies/",
     "frameworks": "React"
   },
   {
-    "id": 4,
-    "image": "https://via.placeholder.com/200",
-    "title": "Image 3",
-    "link": "https://via.placeholder.com/200",
-    "frameworks": "React-native"
-  },
-  {
-    "id": 4,
-    "image": "https://via.placeholder.com/200",
-    "title": "Image 3",
-    "link": "https://via.placeholder.com/200",
+    "id": 7,
+    "image": "MyPortfolio.jpg",
+    "title": "My Portfolio",
+    "link": "https://ruwiseturtle.github.io/myportfolio/",
     "frameworks": "React"
-  },
-  {
-    "id": 4,
-    "image": "https://via.placeholder.com/200",
-    "title": "Image 3",
-    "link": "https://via.placeholder.com/200",
-    "frameworks": "React"
-  },
-  {
-    "id": 4,
-    "image": "https://via.placeholder.com/200",
-    "title": "Image 3",
-    "link": "https://via.placeholder.com/200",
-    "frameworks": "React"
-  },
-  {
-    "id": 4,
-    "image": "https://via.placeholder.com/200",
-    "title": "Image 3",
-    "link": "https://via.placeholder.com/200",
-    "frameworks": "React"
-  },
-  {
-    "id": 4,
-    "image": "https://via.placeholder.com/200",
-    "title": "Image 3",
-    "link": "https://via.placeholder.com/200",
-    "frameworks": "React-native"
   }
 ]

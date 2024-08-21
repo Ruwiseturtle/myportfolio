@@ -3,7 +3,6 @@ import { getProjectsThunk } from "./projectsThunks";
 
 const INITIAL_STATE = {
   projects: [],
-  currentPage: 1,
   isLoading: false,
   error: null,
 }; 
@@ -11,11 +10,11 @@ const INITIAL_STATE = {
 const projectsSlice = createSlice({
   name: "projects",
   initialState: INITIAL_STATE,
-  reducers: {
-    setCurrentPage: (state, action) => {
-      state.currentPage = action.payload;
-    },
-  },
+  // reducers: {
+  //   setCurrentPage: (state, action) => {
+  //     state.currentPage = action.payload;
+  //   },
+  // },
   extraReducers: (builder) =>
     builder
       //кейси для отримання каталогу проектів заданої сторінки
@@ -39,5 +38,5 @@ const projectsSlice = createSlice({
       }),
 });
 
-export const { setCurrentPage } = projectsSlice.actions;
+// export const { setCurrentPage } = projectsSlice.actions;
 export const projectsReducer = projectsSlice.reducer;

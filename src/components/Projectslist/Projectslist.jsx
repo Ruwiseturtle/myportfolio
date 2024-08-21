@@ -1,32 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import * as selectors from '../../redux/projects/projectsSelectors';
 import * as thunks from '../../redux/projects/projectsThunks';
-// import { setCurrentPage } from '../../redux/projects/projectReducer';
 import './Projectslist.css';
 import Card from '../Card/Card';
-import projects from '../../data/Myprojects.json';
+// import projects from '../../data/Myprojects.json';
 
 const Projectslist = () => {
-    const dispatch = useDispatch();
-  const currentPage = useSelector(selectors.selectCurrentPage);
-  const projects1 = useSelector(selectors.selectGetProjects);
-  console.log(currentPage);
-  console.log(projects1);
+  const [showProjects, setShowProjects] = useState(false);
+  const dispatch = useDispatch();
+  const projects = useSelector(selectors.selectGetProjects);
+ 
+  const clickBtnShowHideProjects = () => {
+    console.log('====================================');
+    console.log('click button');
+    setShowProjects(!showProjects);
+    console.log(showProjects);
+  }
+  // console.log(projects);
   
   useEffect(() => {
-    dispatch(thunks.getProjectsThunk(currentPage));
-  }, [dispatch, currentPage]);
+    dispatch(thunks.getProjectsThunk(showProjects));
+  }, [dispatch, showProjects]);
 
   return (
     <div className="container-projects-list">
       <ul className="projects-list">
-        {projects.map((project, index) => (
-          <Card key={index} project={project} />
-        ))}
+        {Array.isArray(projects) && projects.length > 0 ? (
+          projects.map((project, index) => (
+            <Card key={index} project={project} />
+          ))
+        ) : (
+          <p>No projects available</p>
+        )}
       </ul>
       <div className="box-btnShowAll">
-        <button className="button-ShowAll">Show All</button>
+        <button className="button-ShowAll" onClick={clickBtnShowHideProjects}>
+          {showProjects ? "Hide" : "Show All"}
+        </button>
       </div>
     </div>
   );

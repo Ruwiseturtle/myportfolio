@@ -1,12 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { requestGetProjects } from "../../API/Projects/getProjects";
 
-//санка для отримання даних проектів заданої сторінки
+//санка для отримання даних проектів
 export const getProjectsThunk = createAsyncThunk(
   "projects/get",
-  async (page, thunkAPI) => {
+  async (showAllProjects, thunkAPI) => {
     try {
-      const projectsData = await requestGetProjects(page);
+      const projectsData = await requestGetProjects(showAllProjects);
       // console.log(projectsData);
       return projectsData; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
     } catch (error) {
