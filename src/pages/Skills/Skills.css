@@ -3,10 +3,63 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  min-height: calc(100vh - 56px);
-  max-width: 1280px;
+  height: calc(100vh - 56px);
   margin-top: 56px;
   background-color: rgb(18, 17, 17);
   border: 1px solid black;
   color: white;
+}
+
+.text-mySkills{
+  display: flex;
+   margin-top: 20px;
+   margin-bottom: 17px;
+   justify-content: center;
+   font-family: "Inter", sans-serif;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 29px;
+   color: #ffffff;
+   letter-spacing: 0.05em;
+}
+
+.mySkills-text-white{
+color: white;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.mySkills-text-blue{
+  color: #00A8CD;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.mySkills-text-aboutSkills{
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 26px;
+    width: 328px;
+    color: white;
+
+     font-family: "Inter", sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 17px;
+   color: #ffffff;
+   letter-spacing: 0.05em;
+   /* background-color: #00A8CD; */
+}
+
+.box-skills{
+  width: 1045px;
+  height: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: green;
+  padding-left: 70px;
+  padding-right: 70px;
 }

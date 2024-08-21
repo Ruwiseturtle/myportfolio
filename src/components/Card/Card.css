@@ -1,8 +1,9 @@
 .card{
    display: block;
    width: 350px;
-   height: 293px;
+   /* height: 293px; */
    color: white;
+   margin-bottom: 20px;
 }
 
 .image-project{
@@ -20,11 +21,21 @@
 
 .box-href-to-project{
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .box-href-to-project img{
   margin-right: 8px;
+  
+}
+
+.title-text-card{
+ margin-right: 8px;
+}
+
+.text-projectType{
+  color: #00A8CD;
+  margin: 0;
 }
 
 .text-framework{

@@ -25,11 +25,6 @@ const Card = ({ project }) => {
   return (
     <li>
       <div className="card">
-        {/* <img
-          className="image-project"
-          src={project.image}
-          alt={project.title}
-        /> */}
         {imageSrc ? (
           <img className="image-project" src={imageSrc} alt={project.title} />
         ) : (
@@ -46,6 +41,7 @@ const Card = ({ project }) => {
           <div className="box-href-to-project">
             <img className="image-href" src={imageHref} alt="Instagram logo" />
             <span className="title-text-card">{project.title}</span>
+            <p className="text-projectType">{project.project_type}</p>
           </div>
         </a>
       </div>
