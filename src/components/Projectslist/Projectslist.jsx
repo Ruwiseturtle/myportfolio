@@ -12,6 +12,9 @@ const Projectslist = () => {
           <Card key={index} project={project} />
         ))}
       </ul>
+      <div className="box-btnShowAll">
+        <button className="button-ShowAll">Show All</button>
+      </div>
     </div>
   );
 }

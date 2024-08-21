@@ -15,8 +15,13 @@ const getImagePath = (imageName) => {
 
 
 const Card = ({ project }) => {
-const imageSrc = getImagePath(project.image);
- 
+  // Перевіряємо, чи є URL або локальний шлях
+  const isUrl =
+    project.image.startsWith("http") || project.image.startsWith("https");
+
+  // Визначаємо джерело зображення
+  const imageSrc = isUrl ? project.image : getImagePath(project.image);
+
   return (
     <li>
       <div className="card">
@@ -30,10 +35,10 @@ const imageSrc = getImagePath(project.image);
         ) : (
           <p>Image not found</p>
         )}
-        
+
         <p className="text-framework">{project.frameworks}</p>
         <a
-          href="https://www.instagram.com/vychovanetcruslana/"
+          href={project.link}
           target="_blank"
           rel="noreferrer"
           style={{ textDecoration: "none", color: "inherit" }}

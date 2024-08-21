@@ -2,44 +2,44 @@
   {
     "id": 1,
     "image": "freshHarvestBox.jpeg",
-    "title": "Image 1",
-    "link": "https://via.placeholder.com/300",
+    "title": "Fresh Harvest Box",
+    "link": "https://osmax.github.io/project-p_g9_htcs/index.html",
     "frameworks": "React"
   },
   {
     "id": 2,
     "image": "network-React-native.jpeg",
-    "title": "Image 2",
-    "link": "https://via.placeholder.com/300x200",
+    "title": "Social network",
+    "link": "https://expo.dev/accounts/ruslanawisemouse/projects/your-app-slug/builds/a0a65fed-8526-4755-9e0e-c09450105eef",
     "frameworks": "React-native"
   },
   {
     "id": 3,
     "image": "Bookshelf.jpeg",
-    "title": "Image 3",
-    "link": "https://via.placeholder.com/200",
+    "title": "Bookshelf",
+    "link": "https://argojkee.github.io/bookshelf/",
     "frameworks": "Javascript"
   },
   {
     "id": 4,
     "image": "PHONEBOOK.jpeg",
-    "title": "Image 3",
-    "link": "https://via.placeholder.com/200",
+    "title": "Phonebook",
+    "link": "https://ruwiseturtle.github.io/goit-react-hw-08-phonebook/",
     "frameworks": "React"
     
   },
   {
     "id": 4,
     "image": "WaterTracker.jpeg",
-    "title": "Image 3",
-    "link": "https://via.placeholder.com/200",
+    "title": "Water tracker",
+    "link": "https://argojkee.github.io/dreamteam-water/",
     "frameworks": "React"
   },
   {
     "id": 4,
     "image": "MOVIESSEARCH.jpeg",
-    "title": "Image 3",
-    "link": "https://via.placeholder.com/200",
+    "title": "Movie search",
+    "link": "https://ruwiseturtle.github.io/goit-react-hw-05-movies/",
     "frameworks": "React"
   },
   {

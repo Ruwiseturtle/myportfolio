@@ -10,6 +10,11 @@ const Projectspage = () => {
         <p className="myprojects-text-blue">Projects</p>
       </div>
       <p className='myprojects-text-aboutprojects'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, voluptatum id pariatur vitae laboriosam nostrum ratione sapiente suscipit ullam fuga, recusandae, voluptate dignissimos optio fugiat commodi hic laudantium. Iure, reprehenderit!</p>
+      <div className='filter-box'>
+        <div className='filter-item'>#React</div>
+        <div className='filter-item'>#React-native</div>
+        <div className='filter-item'>#Javascript</div>
+      </div>
       <Projectslist />
     </div>
   );
