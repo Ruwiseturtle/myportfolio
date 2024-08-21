@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import * as selectors from '../../redux/projects/projectsSelectors';
 import * as thunks from '../../redux/projects/projectsThunks';
-import { setCurrentPage } from '../../redux/projects/projectReducer';
+// import { setCurrentPage } from '../../redux/projects/projectReducer';
 import './Projectslist.css';
 import Card from '../Card/Card';
 import projects from '../../data/Myprojects.json';
 
 const Projectslist = () => {
+    const dispatch = useDispatch();
+  const currentPage = useSelector(selectors.selectCurrentPage);
+  const projects1 = useSelector(selectors.selectGetProjects);
+  console.log(currentPage);
+  console.log(projects1);
+  
+  useEffect(() => {
+    dispatch(thunks.getProjectsThunk(currentPage));
+  }, [dispatch, currentPage]);
 
   return (
     <div className="container-projects-list">

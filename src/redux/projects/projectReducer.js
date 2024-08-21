@@ -27,6 +27,10 @@ const projectsSlice = createSlice({
       .addCase(getProjectsThunk.fulfilled, (state, action) => {
         state.isLoading = false;
         state.projects = action.payload;
+        console.log('перевырка');
+        
+        console.log(action.payload);
+        
       })
       .addCase(getProjectsThunk.rejected, (state, action) => {
         console.log("status error projects");

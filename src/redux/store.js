@@ -1,5 +1,6 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { projectsReducer } from "./projects/projectReducer";
+import storage from "redux-persist/lib/storage"; 
 
 import {
   persistStore,
@@ -18,13 +19,18 @@ import {
 //   whitelist: ["token"],
 // };
 
+// Налаштування для persistReducer
+const persistConfig = {
+  key: "root", // Ключ для збереження стану
+  storage,     // Тип сховища
+};
 
 export const rootReducer = combineReducers({
   projectsStore: projectsReducer,
   //   auth: persistReducer(authConfig, authReducer),
 });
 
-const persistedReduser = persistReducer(rootReducer);
+const persistedReduser = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   // reducer: rootReducer,
