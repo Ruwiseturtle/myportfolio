@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmyportfolio=self.webpackChunkmyportfolio||[]).push([[414],{414:(s,l,e)=>{e.r(l),e.d(l,{default:()=>c});e(43);var a=e(579);const c=()=>(0,a.jsx)("div",{className:"container-skills",children:(0,a.jsx)("p",{className:"text",children:"skills"})})}}]);
-//# sourceMappingURL=414.b1c74489.chunk.js.map
