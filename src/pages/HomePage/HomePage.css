@@ -3,12 +3,11 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  min-height: calc(100vh - 60px);
-  max-width: 1280px;
-  /* height:  calc(100vh - 56px); */
+  min-height: calc(100vh - 76px);
   margin-top: 56px;
   background-color: rgb(18, 17, 17);
-  border: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   color: white;
 }
 

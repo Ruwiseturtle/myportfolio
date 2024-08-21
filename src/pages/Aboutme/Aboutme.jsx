@@ -5,8 +5,8 @@ import imageMyphoto2 from '../../assets/images/myphoto2.jpg';
 const Aboutme = () => {
   return (
     <div className="container-aboutMe">
-      <ul className="list-aboutme">
-        <li className="container-aboutme-left">
+      <div className="list-aboutme">
+        <div className="container-aboutme-left">
           <div className="box-aboutme-myphoto2">
             <div className="circle-aboutme"></div>
             <div className="quarter1"></div>
@@ -19,7 +19,7 @@ const Aboutme = () => {
               />
             </div>
           </div>
-        </li>
+        </div>
         <li className="container-aboutme-right">
           <h1 className="box-aboutme-text">
             <div className="text-title">
@@ -38,8 +38,8 @@ const Aboutme = () => {
             </p>
           </h1>
         </li>
-      </ul>
-      <div className="line-aboutme"></div>
+      </div>
+      {/* <div className="line-aboutme"></div> */}
     </div>
   );
 }

@@ -95,7 +95,7 @@ const HomePage = () => {
           </div>
         </li>
       </ul>
-      <div className="line"></div>
+      {/* <div className="line"></div> */}
     </div>
   );
 };
