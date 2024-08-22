@@ -14,7 +14,9 @@ const Skills = () => {
         suscipit ullam fuga, recusandae, voluptate dignissimos optio fugiat
         commodi hic laudantium. Iure, reprehenderit!
       </p>
-      <div className="box-skills"></div>
+      <div className="box-skills">
+        
+      </div>
     </div>
   );
 }

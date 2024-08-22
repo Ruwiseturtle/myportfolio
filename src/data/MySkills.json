@@ -1,0 +1,24 @@
+[{
+    "skillPhoto": "../assets/skills/GroupHtml.png",
+    "skillName": "html"
+},
+{
+     "skillPhoto": "../assets/skills/GroupCss.png",
+    "skillName": "CSS"
+},
+{
+     "skillPhoto": "../assets/skills/GroupJavascript.png",
+    "skillName": "JavaScript"
+},
+{
+     "skillPhoto": "../assets/skills/GroupNode.png",
+    "skillName": "Node.js"
+},
+{
+     "skillPhoto": "../assets/skills/GroupReact.png",
+    "skillName": "React"
+},
+{
+     "skillPhoto": "../assets/skills/GroupRedux.png",
+    "skillName": "Redux"
+}]
