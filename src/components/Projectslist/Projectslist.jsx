@@ -12,12 +12,8 @@ const Projectslist = () => {
   const projects = useSelector(selectors.selectGetProjects);
  
   const clickBtnShowHideProjects = () => {
-    console.log('====================================');
-    console.log('click button');
     setShowProjects(!showProjects);
-    console.log(showProjects);
   }
-  // console.log(projects);
   
   useEffect(() => {
     dispatch(thunks.getProjectsThunk(showProjects));

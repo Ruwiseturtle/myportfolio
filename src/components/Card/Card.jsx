@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 import imageHref from "../../assets/images/href.png";
 
-// Якщо ваші зображення знаходяться в папці `src/assets/images/`
+// зображення знаходяться в папці `src/assets/projects/`
 const getImagePath = (imageName) => {
   try {
     return require(`../../assets/projects/${imageName}`);

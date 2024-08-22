@@ -6,7 +6,7 @@ import Layout from "./components/Layout/Layout.jsx";
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
 const AboutMe = lazy(() => import("./pages/Aboutme/Aboutme.jsx"));
 const MyProjects = lazy(() => import("./pages/Projectspage/Projectspage.jsx"));
-const Skills = lazy(() => import("./pages/Skills/Skills.jsx"));
+const SkillsPage = lazy(() => import("./pages/SkillsPage/Skills.jsx"));
 const Contacts = lazy(() => import("./pages/Contacts/Contacts.jsx"));
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="AboutMe" element={<AboutMe />} />
         <Route path="MyProjects" element={<MyProjects />} />
-        <Route path="Skills" element={<Skills />} />
+        <Route path="Skills" element={<SkillsPage />} />
         <Route path="Contacts" element={<Contacts />} />
       </Route>
     </Routes>

@@ -12,7 +12,7 @@
 
 .text-mySkills{
   display: flex;
-   margin-top: 20px;
+   margin-top: 10%;
    margin-bottom: 17px;
    justify-content: center;
    font-family: "Inter", sans-serif;
@@ -55,6 +55,9 @@ color: white;
 }
 
 .box-skills{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 1045px;
   height: 175px;
   margin-left: auto;
@@ -62,4 +65,20 @@ color: white;
   background-color: green;
   padding-left: 70px;
   padding-right: 70px;
+   background: linear-gradient(
+    to left, /* напрямок градієнту: відверху вниз */
+    rgba(82, 81, 81), /* початковий колір */
+    rgba(82, 81, 81, 0) /* кінцевий колір */
+  );  
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
+
+.list-skills{  
+  display: flex;
+  /* flex-direction: row;
+  justify-content: center; */
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+}
+

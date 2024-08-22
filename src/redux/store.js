@@ -1,5 +1,6 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { projectsReducer } from "./projects/projectReducer";
+import { skillsReducer } from "./skills/skillsReducer";
 import storage from "redux-persist/lib/storage"; 
 
 import {
@@ -27,6 +28,7 @@ const persistConfig = {
 
 export const rootReducer = combineReducers({
   projectsStore: projectsReducer,
+  skillsStore: skillsReducer,
   //   auth: persistReducer(authConfig, authReducer),
 });
 

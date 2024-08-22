@@ -1,24 +1,24 @@
 [{
-    "skillPhoto": "../assets/skills/GroupHtml.png",
+    "skillPhoto": "GroupHtml.png",
     "skillName": "html"
 },
 {
-     "skillPhoto": "../assets/skills/GroupCss.png",
+     "skillPhoto": "GroupCss.png",
     "skillName": "CSS"
 },
 {
-     "skillPhoto": "../assets/skills/GroupJavascript.png",
+     "skillPhoto": "GroupJavascript.png",
     "skillName": "JavaScript"
 },
 {
-     "skillPhoto": "../assets/skills/GroupNode.png",
+     "skillPhoto": "GroupNode.png",
     "skillName": "Node.js"
 },
 {
-     "skillPhoto": "../assets/skills/GroupReact.png",
+     "skillPhoto": "GroupReact.png",
     "skillName": "React"
 },
 {
-     "skillPhoto": "../assets/skills/GroupRedux.png",
+     "skillPhoto": "GroupRedux.png",
     "skillName": "Redux"
 }]
