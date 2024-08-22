@@ -26,8 +26,8 @@ const Header = () => {
             My skills
           </NavLink>
 
-          <NavLink className="text" to="/Contacts">
-            Contacts
+          <NavLink className="text" to="/Contact">
+            Contact
           </NavLink>
         </div>
       </header>

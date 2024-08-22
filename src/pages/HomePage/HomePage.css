@@ -86,6 +86,8 @@
   line-height: 21px;
   color: #ffffff;
   letter-spacing: 0.05em;
+  hyphens: auto; /*для переносу текста*/
+  word-wrap: break-word;
 }
 
 .box-myPfoto{

@@ -1,18 +1,19 @@
-.container-skills{
+.container-contact{
      display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   height: calc(100vh - 56px);
+  max-width: 1280px;
   margin-top: 56px;
   background-color: rgb(18, 17, 17);
   border: 1px solid black;
   color: white;
 }
 
-.text-mySkills{
+.text-contactMe{
   display: flex;
-   margin-top: 10%;
+   margin-top: 10px;
    margin-bottom: 17px;
    justify-content: center;
    font-family: "Inter", sans-serif;
@@ -23,20 +24,20 @@
    letter-spacing: 0.05em;
 }
 
-.mySkills-text-white{
+.contact-text-white{
 color: white;
   margin-right: 4px;
   margin-top: 0;
   margin-bottom: 7px;
 }
 
-.mySkills-text-blue{
+.contact-text-blue{
   color: #00A8CD;
   margin-top: 0;
   margin-bottom: 7px;
 }
 
-.mySkills-text-aboutSkills{
+.contact-text-contactMe{
    display: block;
     margin-left: auto;
     margin-right: auto;
@@ -57,31 +58,11 @@ color: white;
   word-wrap: break-word;
 }
 
-.box-skills{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 1045px;
-  height: 175px;
+.box-contact{
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: green;
-  padding-left: 70px;
-  padding-right: 70px;
-   background: linear-gradient(
-    to left, /* напрямок градієнту: відверху вниз */
-    rgba(82, 81, 81), /* початковий колір */
-    rgba(82, 81, 81, 0) /* кінцевий колір */
-  );  
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 992px;
+  height: 400px;
+  background-color: grey;
 }
-
-.list-skills{  
-  display: flex;
-  /* flex-direction: row;
-  justify-content: center; */
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-}
-
