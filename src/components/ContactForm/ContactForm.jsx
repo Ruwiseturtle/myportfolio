@@ -27,9 +27,9 @@ const ContactForm = () => {
       const phoneNumber = MY_NUMBER_PHONE;
       // Формування повідомлення
       const messageForSend =
-        `Name: ${formData.name} ${formData.lastName}%0A` +
-        `${formData.email ? `Email: ${formData.email}%0A` : ""}` +
-        `Tel: ${formData.phone}%0A%0A` + // Додаємо два переводи рядка перед повідомленням
+        `Name: ${formData.name} ${formData.lastName} ` +
+        `${formData.email ? `Email: ${formData.email} ` : ""}` +
+        `Tel: ${formData.phone}  ` + // Додаємо два переводи рядка перед повідомленням
         `${formData.message}`;
 
       // Кодування повідомлення
