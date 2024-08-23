@@ -1,77 +1,118 @@
 import React, { useState } from "react";
 import "./ContactForm.css";
 
+// const MY_NUMBER_PHONE = "380665166837";
+const MY_NUMBER_PHONE = "380665166837";
+
 const ContactForm = () => {
-    const [formData, setFormData] = useState({
-        name: "",
-        lastName: "",
-        email: "",
-        message: "",
-        phone: "",
-    });
+  const [formData, setFormData] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    message: "",
+    phone: "",
+  });
 
-    const handleChange = (e) => {
-        e.preventDefault();
-console.log('куку');
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-        switch (e.currentTarget.name) {
-            case "name":
-                setFormData({ ...formData, name: e.currentTarget.value });
-                break;
-            case "lastName":
-                setFormData({ ...formData, lastName: e.currentTarget.value });
-                break;
-            case "email":
-                setFormData({ ...formData, email: e.currentTarget.value });
-                break;
-            case "phone":
-                setFormData({ ...formData, phone: e.currentTarget.value });
-                break;
-            case "message":
-                setFormData({ ...formData, message: e.currentTarget.value });
-                break;
-            default:
-                break;
-        };
-    }
 
+    const sendMessage = (e) => {
+      // e.preventDefault();
+      const phoneNumber = MY_NUMBER_PHONE;
+      // Формування повідомлення
+      const messageForSend =
+        `Name: ${formData.name} ${formData.lastName}%0A` +
+        `${formData.email ? `Email: ${formData.email}%0A` : ""}` +
+        `Tel: ${formData.phone}%0A%0A` + // Додаємо два переводи рядка перед повідомленням
+        `${formData.message}`;
+
+      // Кодування повідомлення
+      const message = encodeURIComponent(messageForSend);
+      const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+
+      // Відкриття посилання в новій вкладці
+      window.open(url, "_blank");
+    };
+  
+    
   return (
     <form className="form-container">
       <div className="form-row">
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
+        <div className={`form-group ${formData.name ? "has-content" : ""}`}>
           <input
             type="text"
             id="name"
-            
+            name="name"
             onChange={handleChange}
-          ></input>
+            value={formData.name}
+            required
+          />
+          <label htmlFor="name">Name</label>
         </div>
 
-        <div className="form-group">
+        <div className={`form-group ${formData.lastName ? "has-content" : ""}`}>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            onChange={handleChange}
+            value={formData.lastName}
+            required
+          />
           <label htmlFor="lastName">Last Name</label>
-          <input type="text" id="lastName" ></input>
         </div>
       </div>
 
       <div className="form-row">
-        <div className="form-group">
+        <div className={`form-group ${formData.email ? "has-content" : ""}`}>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            onChange={handleChange}
+            value={formData.email}
+          />
           <label htmlFor="email">Email</label>
-          <input type="text" id="email" ></input>
         </div>
 
-        <div className="form-group">
+        <div className={`form-group ${formData.phone ? "has-content" : ""}`}>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            onChange={handleChange}
+            value={formData.phone}
+            required
+          />
           <label htmlFor="phone">Phone Number</label>
-          <input type="text" id="phone" ></input>
         </div>
       </div>
 
-      <div className="form-message">
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" name="message" />
+      <div
+        className={`form-group form-message ${
+          formData.message ? "has-content" : ""
+        }`}
+      >
+        <textarea
+          id="message"
+          name="message"
+          onChange={handleChange}
+          value={formData.message}
+          required
+        />
+        <label htmlFor="message">Message</label>
       </div>
+
       <div className="box-btnContact">
-        <button className="button-contact">Contact Me</button>
+        <button className="button-contact" type="submit" onClick={sendMessage}>
+          Contact Me
+        </button>
       </div>
     </form>
   );
