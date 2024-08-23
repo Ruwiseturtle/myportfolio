@@ -6,8 +6,8 @@ const ContactPage = () => {
   return (
     <div className="container-contact">
       <div className="text-contactMe">
-        <p className="contact-text-white">My</p>
-        <p className="contact-text-blue">Skills</p>
+        <p className="contact-text-white">Contact</p>
+        <p className="contact-text-blue">Me</p>
       </div>
       <p className="contact-text-contactMe">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor,
