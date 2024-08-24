@@ -2,7 +2,7 @@
     position: fixed;
     top: 56px;
     width: 1282px;
-    height: calc(100vh - 56px);
+    /* height: calc(100vh - 78px); */
     background-color: rgb(18, 17, 17);
     /* background-color: #00A8CD; */
     margin-bottom: 200px;

@@ -41,3 +41,7 @@ margin-right: 70px;
 .box-links >*:not(:last-child){
   margin-right: 30px;
 }
+
+.active{
+  color: #00A8cd;
+}
