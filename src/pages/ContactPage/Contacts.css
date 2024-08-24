@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: calc(100vh - 56px);
+  height: calc(100vh - 78px);
   max-width: 1280px;
   margin-top: 56px;
   background-color: rgb(18, 17, 17);
@@ -65,7 +65,7 @@ color: white;
   padding-left: 22px;
   padding-right: 22px;
   width: 992px;
-  height: 400px;
+  height: 300px;
   background-color: grey;
   background: linear-gradient(
     to bottom, /* Напрямок градієнту: з верхньої частини до нижньої */

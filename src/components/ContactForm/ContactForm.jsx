@@ -29,7 +29,7 @@ const ContactForm = () => {
       const messageForSend =
         `Name: ${formData.name} ${formData.lastName} ` +
         `${formData.email ? `Email: ${formData.email} ` : ""}` +
-        `Tel: ${formData.phone}  ` + // Додаємо два переводи рядка перед повідомленням
+        `Tel: ${formData.phone}  ` + 
         `${formData.message}`;
 
       // Кодування повідомлення
