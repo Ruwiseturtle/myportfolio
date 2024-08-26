@@ -21,4 +21,8 @@
 {
      "skillPhoto": "GroupRedux.png",
     "skillName": "Redux"
+},
+{
+     "skillPhoto": "react-native.png",
+    "skillName": "React-native"
 }]
