@@ -14,25 +14,53 @@
 
 .box-sertificates{
     display: flex;
+    justify-content:space-evenly;
     gap: 20px;
     width: calc(100% - 138px);
     margin-left: auto;
     margin-right: auto;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
-.sertificat-item{
-    /* width: 100%;
-    height: auto;
-    
-   
-    height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
+.sertificat-item1{
+  display: grid; 
+  place-items: center;
+  width: 450px;
+  height: 620px;
+  /* padding: 10px; */
+  background: linear-gradient(
+    to bottom, /* Напрямок градієнту: з верхньої частини до нижньої */
+    rgba(217, 217, 217, 0.13), /* Початковий колір градієнту */
+    rgba(217, 217, 217, 0) /* Кінцевий колір градієнту */
+  );
+  background-color: yellow;
 }
 
-img{
+.sertificat-item2{
+  display: grid;
+  place-items: center;
+  width: 600px;
+  height: 450px;
+  /* padding: 10px; */
+ background: linear-gradient(
+    to bottom, /* Напрямок градієнту: з верхньої частини до нижньої */
+    rgba(217, 217, 217, 0.13), /* Початковий колір градієнту */
+    rgba(217, 217, 217, 0) /* Кінцевий колір градієнту */
+  );
+  background-color: yellow;
+}
+
+
+.sertificat-item1 img{
+  width: 400px;
+  height: 570px;
+    /* width: 380px;
+    height: 500px; */
+}
+
+.sertificat-item2 img{
+  width: 550px;
+  height: 400px;
     /* width: 380px;
     height: 500px; */
 }
