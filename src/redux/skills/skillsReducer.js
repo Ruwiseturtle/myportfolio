@@ -29,7 +29,7 @@ const skillsSlice = createSlice({
       })
       .addCase(getSkillsThunk.rejected, (state, action) => {
         console.log("status error projects");
-        state.isLoading = false;
+        state.isLoading = false;      
         state.error = action.payload;
       }),
 });
