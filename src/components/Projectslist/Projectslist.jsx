@@ -8,17 +8,20 @@ import Card from '../Card/Card';
 
 const Projectslist = () => {
   const [showProjects, setShowProjects] = useState(false);
+
   const dispatch = useDispatch();
   const projects = useSelector(selectors.selectGetProjects);
- 
+
   const clickBtnShowHideProjects = () => {
     setShowProjects(!showProjects);
-  }
-  
+  };
+
   useEffect(() => {
     dispatch(thunks.getProjectsThunk(showProjects));
   }, [dispatch, showProjects]);
 
+  // console.log(filterCriteria);
+  
   return (
     <div className="container-projects-list">
       <ul className="projects-list">
@@ -37,6 +40,6 @@ const Projectslist = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Projectslist

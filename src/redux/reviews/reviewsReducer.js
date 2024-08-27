@@ -26,9 +26,6 @@ const reviewsSlice = createSlice({
       .addCase(getReviewsThunk.fulfilled, (state, action) => {
         state.isLoading = false;
         state.reviews = action.payload;
-        console.log("перевірка");
-
-        console.log(action.payload);
       })
       .addCase(getReviewsThunk.rejected, (state, action) => {
         console.log("status error reviews");
