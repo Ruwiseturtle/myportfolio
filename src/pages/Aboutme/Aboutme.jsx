@@ -1,6 +1,7 @@
 import React from 'react'
 import './Aboutme.css';
 import imageMyphoto2 from '../../assets/images/myphoto2.jpg';
+import ReviewsList from '../../components/ReviewsList/ReviewsList';
 
 const Aboutme = () => {
   return (
@@ -27,15 +28,13 @@ const Aboutme = () => {
               <p className="text-blue">Me</p>
             </div>
             <p className="aboutme-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur ratione nisi obcaecati aut vel architecto
-              reprehenderit ab dolorem? Quisquam ut quia voluptates voluptate
-              magnam porro temporibus corrupti, ducimus dolorum modi? Lorem
-              ipsum dolor, sit amet consectetur adipisicing elit. Nihil
-              blanditiis ad vero provident nostrum temporibus minus saepe atque
-              dolor aut laudantium voluptas nam, accusantium, voluptates sequi
-              incidunt quae dolorum impedit?
+              No rain - no flowers. I had a heavy "rain" and now I can offer such
+              "flowers" that are in my skills - HTML, CSS, JavaScript, React,
+              React-nativ, Redux, Node. You can also read about me in the first
+              reviews about me from my colleagues.
             </p>
+            <p className="title-reviews">Reviews</p>
+            <ReviewsList />
           </h1>
         </li>
       </div>

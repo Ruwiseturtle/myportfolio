@@ -16,8 +16,12 @@ const getImagePath = (imageName) => {
 
 const Card = ({ project }) => {
   // Перевіряємо, чи є URL або локальний шлях
-  const isUrl =
-    project.image.startsWith("http") || project.image.startsWith("https");
+  const isUrl = 
+     project.image &&
+     (project.image.startsWith("http") ||
+      project.image.startsWith("https"));
+  
+    // project.image.startsWith("http") || project.image.startsWith("https");
 
   // Визначаємо джерело зображення
   const imageSrc = isUrl ? project.image : getImagePath(project.image);
