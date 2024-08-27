@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import imageInstagram from "../../assets/images/Instagram1.png"; 
 import imagelinkedin from "../../assets/images/linkedin1.png";
@@ -11,6 +12,12 @@ import imageReact from "../../assets/skills/react.png";
 import imageRedux from "../../assets/skills/redux.png";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+   const handleContactMeClick = () => {
+     navigate("/Contact"); // Перенаправляє користувача на сторінку "Contacts"
+  };
+  
   return (
     <div className="container-homePage">
       <ul className="list-homepage">
@@ -31,7 +38,12 @@ const HomePage = () => {
 
           <div className="box-contacts">
             <div className="box-btnContactMe">
-              <button className="button-contactMe">Contact Me</button>
+              <button
+                className="button-contactMe"
+                onClick={handleContactMeClick}
+              >
+                Contact Me
+              </button>
             </div>
 
             <ul className="box-networks">
@@ -95,7 +107,6 @@ const HomePage = () => {
           </div>
         </li>
       </ul>
-      {/* <div className="line"></div> */}
     </div>
   );
 };
