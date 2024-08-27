@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
+import logoImage from "../../assets/images/logo-code1.png";
 
 const Header = () => { 
 
@@ -8,6 +9,7 @@ const Header = () => {
     <>
       <header className="container-header">
         <div className="myLogo">
+          <img className="logo" src={logoImage} alt="logo" />
           <NavLink
             className={({ isActive }) => (isActive ? "text active" : "text")}
             to="/"

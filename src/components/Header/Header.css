@@ -45,3 +45,9 @@ margin-right: 70px;
 .active{
   color: #00A8cd;
 }
+.logo{
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  /* filter: invert(71%) sepia(11%) saturate(3065%) hue-rotate(156deg) brightness(96%) contrast(91%); */
+}
