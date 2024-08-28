@@ -1,12 +1,30 @@
+.form-container{
+    width: 100%;
+}
+
 .form-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    width: 100%;
+}
+
+@media (max-width: 1140px) {
+ .form-row{
+    flex-direction: column;  
+    margin-bottom: 0;    
+  }
 }
 
 .form-group {
     position: relative;
     width: 48%;
+}
+
+@media (max-width: 1140px) {
+ .form-group{
+   width: 100%;      
+  }
 }
 
 label {

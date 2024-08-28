@@ -31,6 +31,11 @@
   }
 }
 
+@media (max-width: 540px) {
+ .box-sertificates{ 
+    width: calc(100% - 60px);     
+  }
+}
 
 .sertificat-item1{
   display: grid; 

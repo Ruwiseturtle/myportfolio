@@ -3,12 +3,19 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: calc(100vh - 78px);
+  min-height: calc(100vh - 78px);
   max-width: 1280px;
   margin-top: 56px;
   background-color: rgb(18, 17, 17);
   border: 1px solid black;
   color: white;
+}
+
+@media (max-width: 1140px) {
+ .container-contact{
+   min-height: calc(100vh + 140px);
+        
+  }
 }
 
 .text-contactMe{
@@ -43,7 +50,9 @@ color: white;
     margin-right: auto;
     margin-top: 0px;
     margin-bottom: 26px;
-    width: 328px;
+    max-width: 328px;
+    padding-left: 20px;
+    padding-right: 20px;
     color: white;
 
      font-family: "Inter", sans-serif;
@@ -64,7 +73,7 @@ color: white;
   margin-right: auto;
   padding-left: 22px;
   padding-right: 22px;
-  width: 992px;
+  max-width: 992px;
   height: 300px;
   background-color: grey;
   background: linear-gradient(
@@ -72,4 +81,29 @@ color: white;
     rgba(217, 217, 217, 0.13), /* Початковий колір градієнту */
     rgba(217, 217, 217, 0) /* Кінцевий колір градієнту */
   );
+}
+
+
+
+@media (max-width: 1140px) {
+ .box-contact{
+  max-width: calc(100% / 1.5);        
+  }
+}
+
+/* @media (max-width: 1069px) {
+ .box-contact{
+  margin: 0px;
+  margin-left: 20px;
+  margin-right: 20px; 
+  max-width: 100%;      
+  }
+} */
+@media (max-width: 720px) {
+ .box-contact{
+  margin: 0px;
+  margin-left: 20px;
+  margin-right: 20px; 
+  max-width: 100%;      
+  }
 }
