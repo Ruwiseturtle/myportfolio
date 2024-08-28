@@ -43,7 +43,9 @@ color: white;
     margin-right: auto;
     margin-top: 0px;
     margin-bottom: 26px;
-    width: 328px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 328px;
     color: white;
 
      font-family: "Inter", sans-serif;
@@ -62,13 +64,11 @@ color: white;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 1045px;
-  height: 175px;
+  max-width: 1045px;
+  min-height: 175px;
   margin-left: auto;
   margin-right: auto;
   background-color: green;
-  padding-left: 70px;
-  padding-right: 70px;
    background: linear-gradient(
     to left, /* напрямок градієнту: відверху вниз */
     rgba(82, 81, 81), /* початковий колір */
@@ -77,12 +77,48 @@ color: white;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
-.list-skills{  
-  display: flex;
-  /* flex-direction: row;
-  justify-content: center; */
-  gap: 20px;
-  list-style: none;
-  margin: 0;
+@media (max-width: 1140px) {
+ .box-skills{
+   width: calc(100% - 42px);
+   height: auto;
+   /* margin-left: 10px;
+   margin-right: 10px; */
+}
 }
 
+@media (max-width: 1085px) {
+ .box-skills{
+   margin-left: 20.30px;
+   margin-right: 20.30px;
+   padding-top: 20.30px;
+   padding-bottom: 20.30px;
+}
+}
+
+/* @media (max-width: 1245px) {
+ .box-skills{
+   margin-left: 20px;
+   margin-right: 20px;
+}
+} */
+
+
+
+.list-skills{  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  justify-content:space-evenly;
+}
+
+
+@media (max-width: 820px) {
+ .list-item {
+    display: flex;
+    justify-content: space-around;
+     flex-basis: calc(100% / 5);
+  }
+}
