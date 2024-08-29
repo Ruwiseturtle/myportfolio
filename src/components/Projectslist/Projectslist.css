@@ -39,3 +39,8 @@
    /* background-color: bisque; */
 }
 
+@media (max-width: 720px) {
+ .projects-list{
+    margin-top: 320px;
+  }
+}
