@@ -30,7 +30,7 @@
 
 .projects-list{
    display: flex;
-   margin-top: 270px;
+   margin-top: 300px;
    flex-wrap: wrap;
    justify-content: center;
    gap: 20px;
@@ -42,5 +42,23 @@
 @media (max-width: 720px) {
  .projects-list{
     margin-top: 320px;
+  }
+}
+
+@media (max-width: 740px) {
+ .projects-list{
+    margin-top: 340px;
+  }
+}
+
+@media (max-width: 292px) {
+ .projects-list{
+    margin-top: 380px;
+  }
+}
+
+@media (max-width: 269px) {
+ .projects-list{
+    margin-top: 420px;
   }
 }

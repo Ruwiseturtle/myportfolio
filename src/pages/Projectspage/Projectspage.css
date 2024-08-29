@@ -24,17 +24,11 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  /* max-width: 50%; */
   text-align: center;
-  /* padding: 10px; */
   box-sizing: border-box;
   /* background-color: #00A8CD; */
 }
 .title-myProjects{
-   /* display: flex;
-   max-width: 100%;
-   margin-bottom: 17px;
-   justify-content: center; */
    display: flex;
    justify-content: center;
    width: 100%;
@@ -68,9 +62,10 @@ color: #00A8CD;
 
 .myprojects-text-aboutprojects{
     display: block;
-    width: 375px;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
+    overflow-wrap: break-word; /* перенос довгих слів */
     margin-top: 0px;
     margin-bottom: 26px;
     max-width: 1090px;
@@ -83,6 +78,12 @@ color: #00A8CD;
    color: #ffffff;
    letter-spacing: 0.05em;
    /* background-color: #00A8CD; */
+}
+
+@media (max-width: 540px) {
+ .myprojects-text-aboutprojects{
+   width: 80%;
+  }
 }
 
 .filter-box{
