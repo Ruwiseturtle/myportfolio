@@ -21,10 +21,9 @@ const SkillsPage = () => {
         <p className="mySkills-text-blue">Skills</p>
       </div>
       <p className="mySkills-text-aboutSkills">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor,
-        voluptatum id pariatur vitae laboriosam nostrum ratione sapiente
-        suscipit ullam fuga, recusandae, voluptate dignissimos optio fugiat
-        commodi hic laudantium. Iure, reprehenderit!
+        List of my skills. It will increase over time. If you need a developer
+        who has these skills, feel free to contact me. I will always be happy
+        for you!
       </p>
       <div className="box-skills">
         <ul className="list-skills">

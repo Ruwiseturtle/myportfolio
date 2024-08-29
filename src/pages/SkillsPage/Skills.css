@@ -95,14 +95,6 @@ color: white;
 }
 }
 
-/* @media (max-width: 1245px) {
- .box-skills{
-   margin-left: 20px;
-   margin-right: 20px;
-}
-} */
-
-
 
 .list-skills{  
   display: flex;
@@ -119,6 +111,6 @@ color: white;
  .list-item {
     display: flex;
     justify-content: space-around;
-     flex-basis: calc(100% / 5);
+    flex-basis: calc(100% / 5);
   }
 }

@@ -10,13 +10,13 @@ const ContactPage = () => {
         <p className="contact-text-blue">Me</p>
       </div>
       <p className="contact-text-contactMe">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor,
-        voluptatum id pariatur vitae laboriosam nostrum ratione sapiente
-        suscipit ullam fuga, recusandae, voluptate dignissimos optio fugiat
-        commodi hic laudantium. Iure, reprehenderit!
+        You can message me here. When you click on the button, WhatsApp will
+        open, where the message type window will contain the text you have
+        already typed and you will only need to click "send" in the WhatsApp
+        application.
       </p>
       <div className="box-contact">
-        <ContactForm/>
+        <ContactForm />
       </div>
     </div>
   );
