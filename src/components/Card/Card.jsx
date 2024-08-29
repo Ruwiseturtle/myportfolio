@@ -27,7 +27,7 @@ const Card = ({ project }) => {
   const imageSrc = isUrl ? project.image : getImagePath(project.image);
 
   return (
-    <li>
+    <li className="project-list-item">
       <div className="card">
         {imageSrc ? (
           <img className="image-project" src={imageSrc} alt={project.title} />
