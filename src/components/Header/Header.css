@@ -19,6 +19,7 @@
   color: #ffffff;
   letter-spacing: 0.05em;
    font-family: "Poppins", sans-serif;
+   z-index: 900;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -116,3 +117,20 @@
   z-index: 98; /* Just below the header */
   transition: transform 0.5s ease;
 }
+
+@media (max-width: 290px) {
+  .truncate-to-first-letter {
+  display: inline-block;
+  max-width: 1ch; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+}
+
+.truncate-to-first-letter::after {
+  content: "..."; 
+  display: inline;
+}
+}
+

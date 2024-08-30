@@ -24,7 +24,7 @@ const Header = () => {
             to="/"
             onClick={closeMenu}
           >
-            Ruslana
+            <p className="truncate-to-first-letter">Ruslana</p>
           </NavLink>
         </div>
 
