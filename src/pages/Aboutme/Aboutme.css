@@ -12,6 +12,12 @@
   /* background-color: white; */
 }
 
+@media (max-width: 290px){
+    .container-aboutMe{
+        margin-top: 0;
+    }
+}
+
 @media (max-width: 960px){
   .container-aboutMe{
     min-height: 750px;
@@ -37,7 +43,7 @@
 }
 
 .box-aboutme-text{
-  width: 463px;
+  max-width: 463px;
   margin-left: 20px;
   margin-right: 20px;
   font-family: "Poppins", sans-serif;
@@ -177,14 +183,14 @@ color: #00A8CD;
 
 @media (max-width: 1140px){
   .container-aboutme-right{
-   /* padding-right: 40px; */
+   /* padding-right: 40px; */ 
   }
 }
 
 
 .box-aboutme-myphoto2{
   position: relative;
-  width: 300px;
+  max-width: 300px;
   border-radius: 8px;
  z-index: 200;
  
@@ -201,6 +207,14 @@ color: #00A8CD;
   filter: brightness(80%); /* Зменшує яскравість, роблячи зображення темнішим */
 }
 
+@media (max-width: 540px){
+  .myphoto2{ 
+   box-shadow: 5px 5px 100px 10px #00A8cd; /* X:-5, Y:5, Размытие: 10, Расширение: 0, Цвет: #000000 */
+  }
+}
+
+
+
 .circle-aboutme{
 position: absolute;
   right: -55px;
@@ -210,12 +224,21 @@ position: absolute;
   height: 300px;
   border-radius: 50%;
   background: linear-gradient(
-    to right, 
+    to left, 
     rgba(0, 168, 205, 0.30), 
     rgba(217, 217, 217, 0) 
   );  
   /* background-color: white; */
   z-index: -4;
+}
+
+@media (max-width: 540px){
+  .circle-aboutme{    
+   display: none;
+   right: -10px;
+   max-width: 300px;
+   width: 100%;
+  }
 }
 
 .quarter1{
@@ -234,6 +257,16 @@ position: absolute;
 z-index: -2;
 }
 
+@media (max-width: 540px){
+  .quarter1{
+    display: none;
+   right: -10px;
+   max-width: 300px;
+   /* background-color: yellow; */
+  }
+}
+
+
 .quarter2{
   display: block;
   position: absolute;
@@ -251,11 +284,23 @@ z-index: -2;
   z-index: -1;
 }
 
+
+@media (max-width: 540px){
+  .quarter2{
+    display: none;
+   right: -10px;
+   width: 100%;
+   max-width: 300px;
+  }
+}
+
+
 .box-myphoto2{
   display: block;
-  width: 100%;
-   
+  width: 100%;   
 }
+
+
 
 .line-aboutme{
   width: calc(100vw / 2);

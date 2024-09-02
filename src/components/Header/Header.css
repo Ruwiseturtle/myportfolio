@@ -52,16 +52,24 @@
 
 @media (max-width: 960px) {
   .box-links{
-    display: none;
+    margin-right: 0px;
   }
 
   .box-links.open {
-      position: relative;
+      /* position: relative;
       top: 200px;
-      right:0;
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
+      /* right:0; */
+      /* display: flex;
+      flex-direction: column;
+      z-index: 100;  */
+       /* display: flex; */
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  position: absolute;
+  top: 200px; 
+  left: 50%; 
+  transform: translate(-50%, -50%); /* Adjust position to center */
+  z-index: 100;
   }
 }
 
