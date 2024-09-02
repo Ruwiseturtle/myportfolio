@@ -28,7 +28,7 @@ const Header = () => {
           </NavLink>
         </div>
 
-        <div className={`box-links ${isOpen ? "open" : ""}`}>
+        <div className={`box-links ${isOpen ? "open" : "close"}`}>
           <NavLink
             className={({ isActive }) => (isActive ? "text active" : "text")}
             to="/AboutMe"
@@ -71,7 +71,10 @@ const Header = () => {
         </div>
 
         {/* бергер-меню */}
-        <div className="burger" onClick={toggleMenu}>
+        <div
+          className={`burger ${isOpen ? "open" : "close"}`}
+          onClick={toggleMenu}
+        >
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
