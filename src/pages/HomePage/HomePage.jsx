@@ -22,8 +22,10 @@ const HomePage = () => {
     <div className="container-homePage">
       <ul className="list-homepage">
         <li className="item item-left">
-          <h1 className="text text-name">Hi I&apos;m Ruslana Matviienko</h1>
-          <p className="text text-profession">Frontend Developer</p>
+          <div>
+            <h1 className="text text-name">Hi I&apos;m Ruslana Matviienko</h1>
+            <p className="text text-profession">Frontend Developer</p>
+          </div>
           <p className="text text-aboutMe">
             I&apos;m a frontend developer with skills in HTML, CSS, JavaScript,
             (Hooks + Redux), REST API, React, React native, GitHub and have some
@@ -99,10 +101,10 @@ const HomePage = () => {
               <img src={imageCss} alt="LinkedIn logo" />
             </div>
             <div className="skill-photo react">
-              <img src={imageReact} alt="LinkedIn logo" />
+              <img className="imgReact"  src={imageReact} alt="LinkedIn logo" />
             </div>
             <div className="skill-photo redux">
-              <img src={imageRedux} alt="LinkedIn logo" />
+              <img className="imgRedux" src={imageRedux} alt="LinkedIn logo" />
             </div>
           </div>
         </li>
