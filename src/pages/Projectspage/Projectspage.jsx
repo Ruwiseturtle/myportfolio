@@ -34,10 +34,10 @@ const Projectspage = () => {
           </div>
 
           <p className="myprojects-text-aboutprojects">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor,
-            voluptatum id pariatur vitae laboriosam nostrum ratione sapiente
-            suscipit ullam fuga, recusandae, voluptate dignissimos optio fugiat
-            commodi hic laudantium. Iure, reprehenderit!
+            List of my projects created with tools like HTML, CSS, React, Redux.
+            There are individual projects, such as this portfolio site,
+            and team projects with very charming project colleagues, reviews of
+            which are also available on this site.
           </p>
 
           <div className="filter-box">
