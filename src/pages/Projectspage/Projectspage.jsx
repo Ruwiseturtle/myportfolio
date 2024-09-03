@@ -10,6 +10,11 @@ const Projectspage = () => {
 
   const dispatch = useDispatch();
   const projects = useSelector(selectors.selectGetProjects);
+  const isLoading = useSelector(selectors.selectGetStatusLoading);
+
+  console.log("===============isLoading=====================");
+  console.log(isLoading);
+  console.log('====================================');
   
   const clickBtnShowHideProjects = () => {
     setShowProjects(!showProjects);
@@ -42,7 +47,8 @@ const Projectspage = () => {
           </div>
         </div>
       </div>
-      <Projectslist projects={projects} />
+
+      <Projectslist projects={projects} isLoading={isLoading} />
       <div className="box-btnShowAll">
         <button className="button-ShowAll" onClick={clickBtnShowHideProjects}>
           {showProjects ? "Hide" : "Show All"}

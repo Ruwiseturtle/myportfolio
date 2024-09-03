@@ -28,7 +28,7 @@ const Card = ({ project }) => {
 
   return (
     <li className="project-list-item">
-      <div className="card">
+      <div className="card">        
         {imageSrc ? (
           <img className="image-project" src={imageSrc} alt={project.title} />
         ) : (
