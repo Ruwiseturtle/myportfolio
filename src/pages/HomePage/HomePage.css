@@ -106,6 +106,7 @@
    letter-spacing: 0.05em;
    margin-bottom: 0px;
    margin-top: 0px;
+   hyphens: auto; /*для переносу текста*/ 
 }
 
 @media (max-width: 960px){
@@ -114,6 +115,15 @@
     margin-top: 20px;
   }
 }
+
+@media (max-width: 360px){
+  .text-name{
+    letter-spacing: 0.03em;
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
 
 
 .text-profession{
@@ -166,7 +176,7 @@
 @media (max-width: 960px){
   .box-myPfoto{
    margin-bottom: 80px;
-   z-index: 1500;
+   z-index: 700;
   }
 }
 
@@ -254,6 +264,12 @@
    font-family: "Poppins", sans-serif;
 }
 
+@media (max-width: 360px){
+  .button-contactMe{
+    margin-bottom: 14px;
+  }
+}
+
 .button-contactMe:hover{
   background-color: #87E9FE;
 }
@@ -276,6 +292,14 @@
 
 .box-contacts{
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 360px){
+  .box-contacts{
+    flex-direction: column;
+  }
 }
 
 .skill-photo{
