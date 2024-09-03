@@ -23,7 +23,7 @@ const HomePage = () => {
       <ul className="list-homepage">
         <li className="item item-left">
           <div>
-            <h1 className="text text-name">Hi I&apos;m Ruslana Matviienko</h1>
+            <h1 className="text text-name">Hi! I&apos;m Ruslana Matviienko</h1>
             <p className="text text-profession">Frontend Developer</p>
           </div>
           <p className="text text-aboutMe">
