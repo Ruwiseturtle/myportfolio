@@ -4,6 +4,7 @@
    max-width: 400px;
    color: white;
    margin-bottom: 20px;
+   overflow: hidden;
 }
 
 @media (max-width: 540px) {
@@ -36,6 +37,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  transition: scale 400ms;
 }
 
 @media (max-width: 720px) {
@@ -45,6 +47,9 @@
   }
 }
 
+.card:hover img{
+  scale: 105%;
+}
 
 .title-project{
   margin: 0px;

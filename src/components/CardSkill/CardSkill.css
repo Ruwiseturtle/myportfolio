@@ -13,6 +13,7 @@
 .image-wrapper {
   position: relative;
   display: inline-block;
+  overflow: hidden;
 }
 
 .image-text {
@@ -37,4 +38,9 @@
   display: block;
   width: 100%;
   height: auto;
+  transition: scale 400ms;
+}
+
+.image-wrapper:hover img{
+  scale: 120%;
 }
