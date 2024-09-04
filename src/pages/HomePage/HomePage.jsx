@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4"; // Імпорт із react-ga4
 import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import imageInstagram from "../../assets/images/Instagram1.png";
@@ -12,13 +12,17 @@ import imageJavaScript from "../../assets/skills/javaScript.png";
 import imageReact from "../../assets/skills/react.png";
 import imageRedux from "../../assets/skills/redux.png";
 
-const trackingId = "G-XJ7D02Y950"; // Заміни на свій Tracking ID
+// Використання Measurement ID для Google Analytics 4
+const trackingId = "G-XJ7D02Y950";
 ReactGA.initialize(trackingId);
 
 const HomePage = () => {
-  // для google analytics
+  // Відстеження перегляду сторінки з використанням react-ga4
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname + window.location.search,
+    });
   }, []);
 
   const navigate = useNavigate();
