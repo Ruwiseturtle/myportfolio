@@ -55,5 +55,13 @@
     "link": "https://ruwiseturtle.github.io/goit-js-hw-10/",
     "frameworks": "Javascript",
     "project_type": "Individual project"
+  },
+  {
+    "id": 8,
+    "image": "pageForBusiness.jpg",
+    "title": "searching for cats",
+    "link": "https://ruwiseturtle.github.io/goit-markup-hw-07/",
+    "frameworks": "HTML, CSS",
+    "project_type": "Individual project"
   }
 ]
