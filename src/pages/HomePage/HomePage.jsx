@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ReactGA from "react-ga";
 import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
-import imageInstagram from "../../assets/images/Instagram1.png"; 
+import imageInstagram from "../../assets/images/Instagram1.png";
 import imagelinkedin from "../../assets/images/linkedin1.png";
 import imageViber from "../../assets/images/viber.png";
 import imageMyPhoto from "../../assets/images/myphoto1.jpg";
@@ -11,13 +12,21 @@ import imageJavaScript from "../../assets/skills/javaScript.png";
 import imageReact from "../../assets/skills/react.png";
 import imageRedux from "../../assets/skills/redux.png";
 
+const trackingId = "G-XJ7D02Y950"; // Заміни на свій Tracking ID
+ReactGA.initialize(trackingId);
+
 const HomePage = () => {
+  // для google analytics
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   const navigate = useNavigate();
 
-   const handleContactMeClick = () => {
-     navigate("/Contact"); // Перенаправляє користувача на сторінку "Contacts"
+  const handleContactMeClick = () => {
+    navigate("/Contact"); // Перенаправляє користувача на сторінку "Contacts"
   };
-  
+
   return (
     <div className="container-homePage">
       <ul className="list-homepage">
@@ -101,7 +110,7 @@ const HomePage = () => {
               <img src={imageCss} alt="LinkedIn logo" />
             </div>
             <div className="skill-photo react">
-              <img className="imgReact"  src={imageReact} alt="LinkedIn logo" />
+              <img className="imgReact" src={imageReact} alt="LinkedIn logo" />
             </div>
             <div className="skill-photo redux">
               <img className="imgRedux" src={imageRedux} alt="LinkedIn logo" />
