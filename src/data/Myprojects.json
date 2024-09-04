@@ -4,7 +4,7 @@
     "image": "freshHarvestBox.jpeg",
     "title": "Fresh Harvest Box",
     "link": "https://osmax.github.io/project-p_g9_htcs/index.html",
-    "frameworks": "React",
+    "frameworks": "React, Redux",
     "project_type": "Team project"
   },
   {
@@ -28,7 +28,7 @@
     "image": "PHONEBOOK.jpeg",
     "title": "Phonebook",
     "link": "https://ruwiseturtle.github.io/goit-react-hw-08-phonebook/",
-    "frameworks": "React",
+    "frameworks": "React, Redux",
     "project_type": "Individual project"
     
   },
@@ -37,7 +37,7 @@
     "image": "WaterTracker.jpeg",
     "title": "Water tracker",
     "link": "https://argojkee.github.io/dreamteam-water/",
-    "frameworks": "React",
+    "frameworks": "React, Redux",
     "project_type": "Team project"
   },
   {
@@ -78,6 +78,14 @@
     "title": "Image Search2",
     "link": "https://ruwiseturtle.github.io/goit-react-hw-03-image-finder/",
     "frameworks": "React",
+    "project_type": "Individual project"
+  },
+  {
+    "id": 10,
+    "image": "cars_for_rent.jpg",
+    "title": "Сar rental site",
+    "link": "https://ruwiseturtle.github.io/cars-for-rent/catalog",
+    "frameworks": "React, Redux",
     "project_type": "Individual project"
   }
 ]
