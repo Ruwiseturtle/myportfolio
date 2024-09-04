@@ -71,5 +71,13 @@
     "link": "https://ruwiseturtle.github.io/goit-js-hw-11/",
     "frameworks": "Javascript",
     "project_type": "Individual project"
+  },
+  {
+    "id": 9,
+    "image": "image_search2.jpg",
+    "title": "Image Search2",
+    "link": "https://ruwiseturtle.github.io/goit-react-hw-03-image-finder/",
+    "frameworks": "React",
+    "project_type": "Individual project"
   }
 ]
