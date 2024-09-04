@@ -47,5 +47,13 @@
     "link": "https://ruwiseturtle.github.io/goit-react-hw-05-movies/",
     "frameworks": "React",
     "project_type": "Individual project"
+  },
+  {
+    "id": 7,
+    "image": "search_cats.jpg",
+    "title": "searching for cats",
+    "link": "https://github.com/Ruwiseturtle/goit-js-hw-10/",
+    "frameworks": "Javascript",
+    "project_type": "Individual project"
   }
 ]
