@@ -13,7 +13,7 @@ import imageReact from "../../assets/skills/react.png";
 import imageRedux from "../../assets/skills/redux.png";
 
 // Використання Measurement ID для Google Analytics 4
-const trackingId = "G-XJ7D02Y950";
+const trackingId = "G-9DBE2L5FWW";
 ReactGA.initialize(trackingId);
 
 const HomePage = () => {
