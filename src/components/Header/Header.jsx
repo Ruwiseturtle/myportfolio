@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import logoImage from "../../assets/images/logo-code1.png";
+import AvatarBox from "../AvatarBox/AvatarBox";
 
 const Header = () => { 
   const [isOpen, setIsOpen] = useState(false);
@@ -68,6 +69,9 @@ const Header = () => {
           >
             Sertificates
           </NavLink>
+
+          {/* <AvatarBox/> */}
+         
         </div>
 
         {/* бергер-меню */}

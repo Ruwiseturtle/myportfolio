@@ -9,6 +9,7 @@ const MyProjects = lazy(() => import("./pages/Projectspage/Projectspage.jsx"));
 const SkillsPage = lazy(() => import("./pages/SkillsPage/Skills.jsx"));
 const Contact = lazy(() => import("./pages/ContactPage/Contacts.jsx"));
 const SertificatesPage = lazy(() => import('./pages/SertificatesPage/SertificatesPage.jsx'));
+const Authorization = lazy(() => import("./pages/AuthorizationPage/AuthorizationPage.jsx"));
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path="Skills" element={<SkillsPage />} />
         <Route path="Contact" element={<Contact />} />
         <Route path="Sertificates" element={<SertificatesPage />} />
+        
+        <Route path="Authorization" element={<Authorization />} />
       </Route>
     </Routes>
   );
