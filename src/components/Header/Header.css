@@ -83,6 +83,9 @@
   /* filter: invert(71%) sepia(11%) saturate(3065%) hue-rotate(156deg) brightness(96%) contrast(91%); */
 }
 
+.linkActive img{ 
+   box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.6); /* Синя тінь */
+}
 /* для бургера */
 .burger {
   display: none;
