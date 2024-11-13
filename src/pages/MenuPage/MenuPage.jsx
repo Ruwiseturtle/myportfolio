@@ -14,6 +14,7 @@ const MenuPage = () => {
       <div className={style.content}>
         {/* Замість абсолютних шляхів, використовуйте відносні */}
         <Routes>
+          <Route index element={<DescriptionMenu />} />
           <Route path="DescriptionMenu" element={<DescriptionMenu />} />
           <Route path="Authorization" element={<Authorization />} />
         </Routes>
