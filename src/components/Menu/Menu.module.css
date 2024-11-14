@@ -1,32 +1,43 @@
 .containerMenu{
-    width: 300px;
-    margin-left: 70px;
-    padding: 20px 40px 20px 60px;
-    min-height: calc(100vh - 57px - 60px);
-    max-height: calc(100vh - 57px - 60px);;
-    background-color: rgb(52, 50, 50, 0.3);
-     overflow-y: auto; /* Дозволяє вертикальне прокручування */
+     position: absolute;
+     left: 0;
+     width: 25%;
+     min-height: calc(100vh - 57px - 60px);
+         
      scrollbar-width: none; /* Прибирає скролл на Firefox */
+     background-color: rgb(52, 50, 50, 0.3);        
+}
+
+@media (max-width: 960px) {
+ .containerMenu{  
+     width: 100%;
+     z-index: 100;
+     background-color: black;
+  }
+}
+
+
+ul li a{
+    text-decoration: none;
+     
 }
 
 ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+list-style-type: none;  
 }
 
-ul li a {
-  text-decoration: none;
-}
-
-ul li p{
+.nameHref{
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 130%;
   line-height: 36px;
   color: #00A8cd;
   letter-spacing: 0.05em;
 
   word-wrap: break-word; /* Дозволяє переносити слова, які не влазять */
   white-space: normal;   /* Дозволяє переносити текст, якщо він не вміщується в рядок */
+}
+
+.nameHref.active {
+  color: #fafdfd; /* Колір для активного посилання */
 }

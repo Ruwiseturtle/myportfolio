@@ -5,30 +5,34 @@ import { NavLink } from "react-router-dom";
 const Menu = () => {
   return (
     <div className={styles.containerMenu}>
-      <ul>
-        <li>
+      <ul className={styles.menuList}>
+        <li className={styles.menuItem}>
           <NavLink
             to="DescriptionMenu"
-            className={({ isActive }) => (isActive ? styles.active : undefined)}
+            className={({ isActive }) =>
+              isActive ? `${styles.nameHref} ${styles.active}` : styles.nameHref
+            }
           >
             <p> Description</p>
           </NavLink>
         </li>
-        <li>
+        <li className={styles.menuItem}>
           <NavLink
             to="Authorization"
-            className={({ isActive }) => (isActive ? styles.active : undefined)}
+            className={({ isActive }) =>
+              isActive ? `${styles.nameHref} ${styles.active}` : styles.nameHref
+            }
           >
             <p> Authorization</p>
           </NavLink>
         </li>
-        <li>
+        <li className={styles.menuItem}>
           <p>....</p>
         </li>
-        <li>
+        <li className={styles.menuItem}>
           <p>....</p>
         </li>
-        <li>
+        <li className={styles.menuItem}>
           <p>....</p>
         </li>
       </ul>
