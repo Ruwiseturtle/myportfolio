@@ -1,15 +1,17 @@
 import React from "react";
 import style from "./MenuPage.module.css";
-import Menu from "../../components/Menu/Menu";
+// import Menu from "../../components/Menu/Menu";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Authorization from "../../components/Authorization/Authorization";
 import DescriptionMenu from "../../components/DescriptionMenu/DescriptionMenu";
+import BurgerForMenuPage from "../../components/BurgerForMenuPage/BurgerForMenuPage";
 
 const MenuPage = () => {
+
   return (
     <div className={style.containerMenuPage}>
-      {/* Меню залишатиметься постійним */}
-      <Menu />
+     <BurgerForMenuPage/>
+      {/* <Menu /> */}
 
       <div className={style.content}>
         {/* Замість абсолютних шляхів, використовуйте відносні */}

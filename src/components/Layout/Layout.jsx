@@ -9,12 +9,11 @@ import Footer from "../Footer/Footer";
 const Layout = () => {
   return (
     <div className="container-back">
-      <Header />
+      <Header/>
       <Suspense fallback={<Loading />}>
         <Outlet />
       </Suspense>
       <Footer></Footer>
-      
     </div>
   );
 };

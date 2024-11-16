@@ -6,7 +6,7 @@
   border-right: 2px solid #000000;
 }
 
-.line{
+.line-footer{
   width: calc(100vw / 2);
   height: 1px;
   background: linear-gradient(

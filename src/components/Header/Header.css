@@ -76,6 +76,11 @@
 .active{
   color: #00A8cd;
 }
+
+.container-logo{
+
+}
+
 .logo{
   width: 50px;
   height: auto;
@@ -115,7 +120,7 @@
   width: 100%;
   margin-bottom: 10px;
   height: 3px;
-  background-color: white;
+  background-color: rgb(63, 63, 153);
 }
 
 

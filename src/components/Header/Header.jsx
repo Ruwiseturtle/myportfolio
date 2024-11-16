@@ -3,17 +3,17 @@ import "./Header.css";
 import { NavLink } from "react-router-dom";
 import logoImage from "../../assets/images/logo-code1.png";
 
-const Header = () => { 
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
   };
 
   const closeMenu = () => {
     setIsOpen(false);
   };
-  
+
   return (
     <>
       <header className="container-header">
@@ -24,7 +24,7 @@ const Header = () => {
             className={({ isActive }) => (isActive ? "linkActive" : "")}
             to="/MenuPage"
           >
-            <div>
+            <div className="container-logo">
               <img className="logo" src={logoImage} alt="logo" />
             </div>
           </NavLink>
@@ -81,10 +81,7 @@ const Header = () => {
         </div>
 
         {/* бергер-меню */}
-        <div
-          className={`burger ${isOpen ? "open" : "close"}`}
-          onClick={toggleMenu}
-        >
+        <div className={`burger ${isOpen ? "open" : "close"}`} onClick={toggleMenu}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
