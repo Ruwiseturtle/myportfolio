@@ -20,9 +20,16 @@
   background-color: rgb(18, 17, 17);
 }
 
+@media (max-width: 840px) {
+ .content{
+       
+  }
+}
+
 .containerForPicture{
     width: 25%;
-    height: calc(100vh - 57px - 60px);
+    /* height: calc(100vh - 57px - 60px);*/
+    min-height: calc(100vh - 169px); 
 /* добавляємо фон для меню */
      background-image: url('../../assets//images/backgroundForMenu.jpg');
      background-size: cover;

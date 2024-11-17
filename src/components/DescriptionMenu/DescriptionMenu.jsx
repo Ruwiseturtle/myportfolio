@@ -12,7 +12,8 @@ const DescriptionMenu = () => {
         concepts to showcase my growth as a developer. Over time, you’ll find
         more examples of my work here, from innovative solutions to experimental
         projects. Thank you for taking the time to explore this page, and I hope
-        it inspires you to see the range of what I can create!"
+        it inspires you to see the range of what I can create!".
+        <p className={style.descriptionText2}>To view the menu, click on the book!</p>
       </p>
     </div>
   );

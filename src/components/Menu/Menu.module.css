@@ -4,7 +4,8 @@
      padding-top: 90px;
      width: 25%;
      min-width: 184px;
-     min-height: calc(100vh - 57px - 60px - 90px);
+     /* min-height: calc(100vh - 57px - 60px - 90px); */
+     min-height: calc(100vh - 169px);
      word-wrap: break-word; 
      white-space: normal;   
      scrollbar-width: none; /* Прибирає скролл на Firefox */
@@ -22,6 +23,11 @@
      transform: translateY(-110%); /* Початково сховати меню за лівим краєм */
 }
 
+/* @media (max-width: 840px) {
+ .containerMenu{
+    width: 100%;    
+  }
+} */
 
 
 ul li a{

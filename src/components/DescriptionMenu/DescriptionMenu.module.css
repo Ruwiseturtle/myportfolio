@@ -25,3 +25,11 @@
    color: white;
 }
 
+.descriptionText2{
+     text-align: justify;
+    font-weight: 300;
+   font-size: 16px;
+   line-height: 17px;
+   letter-spacing: 0.05em; 
+   color: #00A8CD;
+}
