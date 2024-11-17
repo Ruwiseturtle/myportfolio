@@ -37,9 +37,9 @@ list-style-type: none;
 .nameHref{
   display: block;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 130%;
-  line-height: 36px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
   color: #00A8cd;
   letter-spacing: 0.05em;
 
