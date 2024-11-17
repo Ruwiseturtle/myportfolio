@@ -1,9 +1,16 @@
 .containerBurger{
+  position: absolute;
+  left: 70px;
+  top: 10px;
   width: 70px;
-  height: 70px;
-  margin-left: 70px;
-  margin-top: 10px;
+  height: 70px;  
+  z-index: 200px;
+}
 
+@media (max-width: 960px) {
+ .containerBurger{
+    left: 5%;        
+  }
 }
 
 .menuImage{

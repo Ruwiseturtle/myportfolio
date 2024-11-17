@@ -2,9 +2,11 @@ import React from 'react';
 import styles from './Menu.module.css';
 import { NavLink } from "react-router-dom";
 
-const Menu = () => {
+const Menu = ({ menuOpen }) => {
+  
+
   return (
-    <div className={styles.containerMenu}>
+    <div className={`${styles.containerMenu} ${!menuOpen? styles.close: ""}`} >
       <ul className={styles.menuList}>
         <li className={styles.menuItem}>
           <NavLink
@@ -13,7 +15,7 @@ const Menu = () => {
               isActive ? `${styles.nameHref} ${styles.active}` : styles.nameHref
             }
           >
-            <p> Description</p>
+             Description
           </NavLink>
         </li>
         <li className={styles.menuItem}>
@@ -23,17 +25,17 @@ const Menu = () => {
               isActive ? `${styles.nameHref} ${styles.active}` : styles.nameHref
             }
           >
-            <p> Authorization</p>
+            Authorization
           </NavLink>
         </li>
         <li className={styles.menuItem}>
-          <p>....</p>
+         ....
         </li>
         <li className={styles.menuItem}>
-          <p>....</p>
+          ....
         </li>
         <li className={styles.menuItem}>
-          <p>....</p>
+          ....
         </li>
       </ul>
     </div>

@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+
 import styles from './BurgerForMenuPage.module.css';
 import MenuOpen from '../../assets/images/menuOpen.png';
 import MenuClose from '../../assets/images/menuClose.png';
 
-const BurgerForMenuPage = () => {
-  const [menuOpen, setMenuOpen] = useState(true);
+const BurgerForMenuPage = ({menuOpen, setMenuOpen}) => {
+  
     
     return (
       <div
