@@ -23,6 +23,7 @@ const Header = () => {
           <NavLink
             className={({ isActive }) => (isActive ? "linkActive" : "")}
             to="/MenuPage"
+            onClick={closeMenu}
           >
             <div className="container-logo">
               <img className="logo" src={logoImage} alt="logo" />
@@ -81,7 +82,10 @@ const Header = () => {
         </div>
 
         {/* бергер-меню */}
-        <div className={`burger ${isOpen ? "open" : "close"}`} onClick={toggleMenu}>
+        <div
+          className={`burger ${isOpen ? "open" : "close"}`}
+          onClick={toggleMenu}
+        >
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>

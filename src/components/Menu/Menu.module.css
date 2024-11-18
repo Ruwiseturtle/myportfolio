@@ -23,11 +23,18 @@
      transform: translateY(-110%); /* Початково сховати меню за лівим краєм */
 }
 
-/* @media (max-width: 840px) {
- .containerMenu{
-    width: 100%;    
+@media (max-width: 768px) {
+ .containerMenu.close{
+    display: none;   
   }
-} */
+}
+
+@media (max-width: 768px) {
+ .containerMenu{
+    display: block;
+    width: 100%;   
+  }
+}
 
 
 ul li a{
@@ -39,6 +46,13 @@ ul li a{
 ul{
 list-style-type: none;  
 }
+
+@media (max-width: 768px) {
+ ul{
+    text-align: center;   
+  }
+}
+
 
 .nameHref{
   display: block;

@@ -13,6 +13,12 @@
   }
 }
 
+@media (max-width: 768px) {
+ .containerBurger{
+     z-index: 500;  
+  }
+}
+
 .menuImage{
   width: 70px;
   height: 70px;

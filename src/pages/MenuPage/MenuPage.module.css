@@ -18,11 +18,22 @@
   min-height: calc(100vh - 57px - 60px);
   width: calc(100% - 25%);
   background-color: rgb(18, 17, 17);
+  z-index: 50;
 }
 
-@media (max-width: 840px) {
+@media (max-width: 768px) {
+ .content.contentOpen{
+  display: block;
+  width: 100%;  
+  z-index: 100;
+  }
+}
+
+@media (max-width: 768px) {
  .content{
-       
+     display: none; 
+    
+     /* background-image: url('../../assets//images/backgroundForMenu.jpg'); */
   }
 }
 
@@ -39,3 +50,15 @@
      background-blend-mode: overlay;
 }
  
+@media (max-width: 768px) {
+ .containerForPicture.containerForPictureClose{
+       display: none;
+  }
+}
+
+@media (max-width: 768px) {
+ .containerForPicture{
+       display: block;
+       width: 100%;
+  }
+}

@@ -9,13 +9,17 @@ import BurgerForMenuPage from "../../components/BurgerForMenuPage/BurgerForMenuP
 const MenuPage = () => {
   const [menuOpen, setMenuOpen] = useState(true);
 
+  // containerForPictureClose
+
   return (
     <div className={style.containerMenuPage}>
-      <div className={style.containerForPicture}></div>
-      <Menu menuOpen={menuOpen} />
+      <div
+        className={`${style.containerForPicture} ${!menuOpen ? style.containerForPictureClose : ""}`}
+      ></div>
+      <Menu menuOpen={menuOpen} setMenuOpen={ setMenuOpen} />
       <BurgerForMenuPage menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-      <div className={style.content}>
+      <div className={`${style.content} ${!menuOpen? style.contentOpen: ""}`}>
         {/* Замість абсолютних шляхів, використовуйте відносні */}
         <Routes>
           <Route path="/" element={<Navigate to="DescriptionMenu" replace />} />
