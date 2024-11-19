@@ -15,10 +15,12 @@
 .content{
   position: absolute;
   right: 0;
-  min-height: calc(100vh - 57px - 60px);
+  /* min-height: calc(100vh - 57px - 60px);*/
+  height: 100%; 
   width: calc(100% - 25%);
   background-color: rgb(18, 17, 17);
   z-index: 50;
+  /* background-color: yellow; */
 }
 
 @media (max-width: 768px) {
