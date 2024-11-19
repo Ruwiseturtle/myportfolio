@@ -1,5 +1,10 @@
 .authorizationContainer{   
   background-color: #2c2f38;
+  background: linear-gradient(
+    to bottom, /* Напрямок градієнту: з верхньої частини до нижньої */
+    rgba(217, 217, 217, 0.13), /* Початковий колір градієнту */
+    rgba(217, 217, 217, 0) /* Кінцевий колір градієнту */
+  );
   padding: 20px;
   border-radius: 10px;
   width: 500px;
@@ -18,8 +23,16 @@
 .tab{
     flex:1;
     padding: 10px 0;
+
     color: #ccc;
-    font-weight: bold;
+    /* font-weight: bold; */
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+    font-family: "Poppins", sans-serif;
+
     border: none;
     background: none;
     cursor: pointer;
