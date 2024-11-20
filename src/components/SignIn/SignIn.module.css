@@ -9,7 +9,7 @@
 
 label {
     position: absolute;
-    top: 30px;
+    top: 0;
     left: 0;
     font-size: 16px;
     color: #888;
@@ -41,13 +41,12 @@ input{
 /* Піднімаємо label при фокусі або наявності контенту */
 input:focus + label,
 .formInput.hasContent label {
-    top: 0;
+    top: -10px;
     font-size: 12px;
     color: #15819a;
 }
 
-input:placeholder-shown + label,
-textarea:placeholder-shown + label {
+input:placeholder-shown + label {
     top: 30px;
     font-size: 6px;
     color: #888;
