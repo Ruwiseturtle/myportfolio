@@ -9,7 +9,7 @@ const Authorization = () => {
 
   return (
     <>
-      Authorization in the development process
+      <div className={ style.info}>Authorization in the development process</div>
       <div className={style.authorizationContainer}>
         <div className={style.tabs}>
           <button
