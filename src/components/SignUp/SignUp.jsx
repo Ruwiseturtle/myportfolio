@@ -1,11 +1,135 @@
-import React from 'react'
+import React from "react";
+import styles from "./SignUp.module.css";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const SignUp = () => {
-  return (
-    <div>
-      SignUp
-    </div>
-  )
-}
+  // Використання useFormik
+  const formik = useFormik({
+    initialValues: {
+      fullname: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
 
-export default SignUp
+    validationSchema: Yup.object({
+      fullname: Yup.string()
+        .min(2, "Name must be at least 2 characters") // Мінімум 2 символи
+        .max(50, "Name must be less than 50 characters") // Максимум 50 символів
+        .required("Enter your name"),
+      email: Yup.string()
+        .email("Invalid email address") // Перевірка на валідну пошту
+        .required("Email is required"), // Поле обов'язкове
+      password: Yup.string()
+        .min(8, "Password must be at least 8 characters") // Мінімум 8 символів
+        .matches(/[A-Z]/, "Must contain at least one uppercase letter") // Мінімум одна велика літера
+        .matches(/[a-z]/, "Must contain at least one lowercase letter") // Мінімум одна маленька літера
+        .matches(/[0-9]/, "Must contain at least one number") // Мінімум одна цифра
+        .required("Password is required"),
+      confirmPassword: Yup.string()
+        .oneOf([Yup.ref("password"), null], "Passwords must match") // Перевірка на співпадіння
+        .required("Confirm Password is required"),
+    }),
+    onSubmit: (values, { resetForm }) => {
+      console.log("Form data:", values);
+      resetForm(); // Очищення форми після відправки
+    },
+  });
+
+
+  return (
+    <form className={styles.containerSignUp} onSubmit={formik.handleSubmit}>
+      {/* Поле Full name */}
+      <div
+        className={`${styles.formInput} ${
+          formik.values.fullname ? styles.hasContent : ""
+        }`}
+      >
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur} // Додаткове відстеження втрати фокусу
+          value={formik.values.fullname}
+          required
+        />
+        <label htmlFor="fullname">Full name</label>
+        {formik.touched.fullname && formik.errors.fullname && (
+          <p className={styles.errorMessage}>{formik.errors.fullname}</p>
+        )}
+      </div>
+      {/* Поле Email */}
+      <div
+        className={`${styles.formInput} ${
+          formik.values.email ? styles.hasContent : ""
+        }`}
+      >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur} // Додаткове відстеження втрати фокусу
+          value={formik.values.email}
+          required
+        />
+        <label htmlFor="email">Email</label>
+        {formik.touched.email && formik.errors.email && (
+          <p className={styles.errorMessage}>{formik.errors.email}</p>
+        )}
+      </div>
+
+      {/* Поле Password */}
+      <div
+        className={`${styles.formInput} ${
+          formik.values.password ? styles.hasContent : ""
+        }`}
+      >
+        <input
+          type="password"
+          id="password"
+          name="password"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur} // Додаткове відстеження втрати фокусу
+          value={formik.values.password}
+          required
+        />
+        <label htmlFor="password">Password</label>
+        {formik.touched.password && formik.errors.password && (
+          <p className={styles.errorMessage}>{formik.errors.password}</p>
+        )}
+      </div>
+      {/* Поле confirm Password */}
+      <div
+        className={`${styles.formInput} ${
+          formik.values.confirmPassword ? styles.hasContent : ""
+        }`}
+      >
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur} // Додаткове відстеження втрати фокусу
+          value={formik.values.confirmPassword}
+          required
+        />
+        <label htmlFor="confirmPassword">Confirm password</label>
+        {formik.touched.confirmPassword && formik.errors.confirmPassword && (
+          <p className={styles.errorMessage}>{formik.errors.confirmPassword}</p>
+        )}
+      </div>
+
+      {/* Кнопка Submit */}
+      <div className={styles.boxBtnSignIn}>
+        <button className={styles.buttonSignIn} type="submit">
+          Sign Up
+        </button>
+      </div>
+    </form>
+  );
+};
+
+export default SignUp;

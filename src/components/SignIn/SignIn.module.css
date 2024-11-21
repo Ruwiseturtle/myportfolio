@@ -72,3 +72,10 @@ input:placeholder-shown + label {
 .buttonSignIn:hover {
     background-color: #87E9FE;
 }
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  margin-top: 0px;
+  text-align: left;
+}

@@ -1,63 +1,78 @@
-import React, { useState } from "react";
+import React from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import styles from "./SignIn.module.css";
 
 const SignIn = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSignInClick = (e) => {
-    e.preventDefault();
-    setFormData({
+  // Використання useFormik
+  const formik = useFormik({
+    initialValues: {
       email: "",
       password: "",
-    })
-    console.log("Form data:", formData);
-  };
+    },
+
+
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email("Invalid email address") // Перевірка на валідну пошту
+        .required("Email is required"), // Поле обов'язкове
+      password: Yup.string()
+        .min(8, "Password must be at least 8 characters") // Мінімум 8 символів
+        .matches(/[A-Z]/, "Must contain at least one uppercase letter") // Мінімум одна велика літера
+        .matches(/[a-z]/, "Must contain at least one lowercase letter") // Мінімум одна маленька літера
+        .matches(/[0-9]/, "Must contain at least one number") // Мінімум одна цифра
+        .required("Password is required"), // Поле обов'язкове
+    }),
+    onSubmit: (values, { resetForm }) => {
+      console.log("Form data:", values);
+      resetForm(); // Очищення форми після відправки
+    },
+  });
+
+   
 
   return (
-    <form className={styles.containerSignIn}>
+    <form className={styles.containerSignIn} onSubmit={formik.handleSubmit}>
       {/* Поле Email */}
       <div
         className={`${styles.formInput} ${
-          formData.email ? styles.hasContent : ""
+          formik.values.email ? styles.hasContent : ""
         }`}
       >
         <input
           type="email"
           id="email"
           name="email"
-          onChange={handleChange}
-          value={formData.email}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur} // Додаткове відстеження втрати фокусу
+          value={formik.values.email}
           required
         />
         <label htmlFor="email">Email</label>
+        {formik.touched.email && formik.errors.email && (
+          <p className={styles.errorMessage}>{formik.errors.email}</p>
+        )}
       </div>
 
       {/* Поле Password */}
       <div
         className={`${styles.formInput} ${
-          formData.password ? styles.hasContent : ""
+          formik.values.password ? styles.hasContent : ""
         }`}
       >
         <input
           type="password"
           id="password"
           name="password"
-          onChange={handleChange}
-          value={formData.password}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur} // Додаткове відстеження втрати фокусу
+          value={formik.values.password}
           required
         />
         <label htmlFor="password">Password</label>
+        {formik.touched.password && formik.errors.password && (
+          <p className={styles.errorMessage}>{formik.errors.password}</p>
+        )}
       </div>
 
       {/* Кнопка Submit */}
@@ -65,7 +80,6 @@ const SignIn = () => {
         <button
           className={styles.buttonSignIn}
           type="submit"
-          onClick={handleSignInClick}
         >
           Sign In
         </button>
