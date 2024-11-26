@@ -40,7 +40,7 @@ const SignUp = () => {
 
   return (
     <form className={styles.containerSignUp} onSubmit={formik.handleSubmit}>
-      {/* Поле Full name */}
+      {/* Поле login */}
       <div
         className={`${styles.formInput} ${
           formik.values.login ? styles.hasContent : ""
