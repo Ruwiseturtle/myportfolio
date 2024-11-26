@@ -1,0 +1,28 @@
+[{
+    "skillPhoto": "GroupHtml.png",
+    "skillName": "html"
+},
+{
+     "skillPhoto": "GroupCss.png",
+    "skillName": "CSS"
+},
+{
+     "skillPhoto": "GroupJavascript.png",
+    "skillName": "JavaScript"
+},
+{
+     "skillPhoto": "GroupNode.png",
+    "skillName": "Node.js"
+},
+{
+     "skillPhoto": "GroupReact.png",
+    "skillName": "React"
+},
+{
+     "skillPhoto": "GroupRedux.png",
+    "skillName": "Redux"
+},
+{
+     "skillPhoto": "react-native.png",
+    "skillName": "React-native"
+}]

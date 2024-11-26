@@ -7,17 +7,17 @@ const SignUp = () => {
   // Використання useFormik
   const formik = useFormik({
     initialValues: {
-      fullname: "",
+      login: "",
       email: "",
       password: "",
       confirmPassword: "",
     },
 
     validationSchema: Yup.object({
-      fullname: Yup.string()
+      login: Yup.string()
         .min(2, "Name must be at least 2 characters") // Мінімум 2 символи
         .max(50, "Name must be less than 50 characters") // Максимум 50 символів
-        .required("Enter your name"),
+        .required("Enter your login"),
       email: Yup.string()
         .email("Invalid email address") // Перевірка на валідну пошту
         .required("Email is required"), // Поле обов'язкове
@@ -43,21 +43,21 @@ const SignUp = () => {
       {/* Поле Full name */}
       <div
         className={`${styles.formInput} ${
-          formik.values.fullname ? styles.hasContent : ""
+          formik.values.login ? styles.hasContent : ""
         }`}
       >
         <input
           type="text"
-          id="fullname"
-          name="fullname"
+          id="login"
+          name="login"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur} // Додаткове відстеження втрати фокусу
-          value={formik.values.fullname}
+          value={formik.values.login}
           required
         />
-        <label htmlFor="fullname">Full name</label>
-        {formik.touched.fullname && formik.errors.fullname && (
-          <p className={styles.errorMessage}>{formik.errors.fullname}</p>
+        <label htmlFor="login">Login</label>
+        {formik.touched.login && formik.errors.login && (
+          <p className={styles.errorMessage}>{formik.errors.login}</p>
         )}
       </div>
       {/* Поле Email */}
