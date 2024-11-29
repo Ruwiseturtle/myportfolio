@@ -2,8 +2,13 @@ import React from "react";
 import styles from "./SignUp.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useDispatch } from "react-redux";
+import { registerThunk } from "../../redux/auth/authThunks";
 
-const SignUp = () => {
+//авторизація користувача в системі (вхід користувача)
+const SignUp = ({ setActiveTab }) => {
+  const dispatch = useDispatch();
+
   // Використання useFormik
   const formik = useFormik({
     initialValues: {
@@ -32,11 +37,24 @@ const SignUp = () => {
         .required("Confirm Password is required"),
     }),
     onSubmit: (values, { resetForm }) => {
-      console.log("Form data:", values);
+      sendNewUserToDatabase(values);
+      // console.log("Form data:", values);
       resetForm(); // Очищення форми після відправки
     },
   });
 
+  function sendNewUserToDatabase(dataUser) {
+    const { login, email, password } = dataUser;
+
+    const newUser = {
+      login: login,
+      email: email.trim(),
+      password: password.trim(),
+    };
+
+    dispatch(registerThunk(newUser));
+     setActiveTab("signIn");
+  }
 
   return (
     <form className={styles.containerSignUp} onSubmit={formik.handleSubmit}>

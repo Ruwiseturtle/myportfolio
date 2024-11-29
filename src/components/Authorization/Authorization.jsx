@@ -9,7 +9,7 @@ const Authorization = () => {
 
   return (
     <>
-      <div className={ style.info}>Authorization in the development process</div>
+      <div className={style.info}>Authorization in the development process</div>
       <div className={style.authorizationContainer}>
         <div className={style.tabs}>
           <button
@@ -31,7 +31,7 @@ const Authorization = () => {
         </div>
         <div className={style.content}>
           {activeTab === "signIn" && <SignIn />}
-          {activeTab === "signUp" && <SignUp />}
+          {activeTab === "signUp" && <SignUp setActiveTab={setActiveTab} />}
         </div>
       </div>
     </>

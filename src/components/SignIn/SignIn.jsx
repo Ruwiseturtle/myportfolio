@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import styles from "./SignIn.module.css";
 
+//реєстрація нового користувача в системі
 const SignIn = () => {
   // Використання useFormik
   const formik = useFormik({
