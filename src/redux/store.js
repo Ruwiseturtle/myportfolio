@@ -19,7 +19,7 @@ import {
 
 // Конфігурація для persistReducer у auth редукторі
 const authPersistConfig = {
-  key: "auth", // Ключ для збереження даних
+  key: "authPortfolio", // Ключ для збереження даних
   storage, // Тип сховища (localStorage у цьому випадку)
   whitelist: ["token"], // Тільки token зберігатиметься
 };

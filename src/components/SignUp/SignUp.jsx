@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { registerThunk } from "../../redux/auth/authThunks";
 
-//авторизація користувача в системі (вхід користувача)
+//реєсрація користувача в системі (ввод нового користувача користувача)
 const SignUp = ({ setActiveTab }) => {
   const dispatch = useDispatch();
 
@@ -44,12 +44,12 @@ const SignUp = ({ setActiveTab }) => {
   });
 
   function sendNewUserToDatabase(dataUser) {
-    const { login, email, password } = dataUser;
+    const { login, email, token } = dataUser;
 
     const newUser = {
-      login: login,
+      login: login.trim(),
       email: email.trim(),
-      password: password.trim(),
+      token: token,
     };
 
     dispatch(registerThunk(newUser));

@@ -7,9 +7,15 @@ export const registerThunk = createAsyncThunk(
   "auth/register",
   async (formData, thunkAPI) => {
     try {
-      const authData = await fetchRegisterUser(formData);
+      const user = await fetchRegisterUser(formData);
+      console.log("********ddddddddddddd**********");
+      console.log(user);
+      
+      // localStorage.setItem("authPortfolio", user.token); 
+
       Notify.success("You have registered. To access your account, please log in.");
-      return authData; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
+      return user; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
+
     } catch (error) {
       Notify.failure("Enter the correct data in the form!");
       return thunkAPI.rejectWithValue(error.message);

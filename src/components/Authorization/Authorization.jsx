@@ -7,6 +7,15 @@ import SignUp from "../SignUp/SignUp";
 const Authorization = () => {
   const [activeTab, setActiveTab] = useState("signIn");
 
+// const persistedData = localStorage.getItem("authPortfolio");
+// const token = persistedData ? JSON.parse(persistedData).token : null;
+
+//   if (token) {
+//     console.log('=================token + ===================');
+//     console.log(token);
+//     console.log('====================================');
+//   }
+
   return (
     <>
       <div className={style.info}>Authorization in the development process</div>
