@@ -12,6 +12,8 @@ export const setToken = (token) => {
 export const fetchRegisterUser = async (newUser) => {
   // formData - {name: "Oleg", email: "adwad@gmail.com", password: "123456788"}
   const { data } = await authInstance.post("/api/users/register", newUser);
+  console.log(data);
+  
   setToken(data.token);
   return data;
 };

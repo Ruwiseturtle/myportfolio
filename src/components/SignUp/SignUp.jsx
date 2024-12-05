@@ -44,13 +44,14 @@ const SignUp = ({ setActiveTab }) => {
   });
 
   function sendNewUserToDatabase(dataUser) {
-    const { login, email, token } = dataUser;
+    const { login, email, password } = dataUser;
 
     const newUser = {
       login: login.trim(),
       email: email.trim(),
-      token: token,
+      password: password,
     };
+
 
     dispatch(registerThunk(newUser));
      setActiveTab("signIn");
