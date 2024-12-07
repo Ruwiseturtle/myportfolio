@@ -9,7 +9,6 @@ import BurgerForMenuPage from "../../components/BurgerForMenuPage/BurgerForMenuP
 const MenuPage = () => {
   const [menuOpen, setMenuOpen] = useState(true);
 
-  // containerForPictureClose
 
   return (
     <div className={style.containerMenuPage}>

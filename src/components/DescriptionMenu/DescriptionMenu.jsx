@@ -4,8 +4,8 @@ import style from './DescriptionMenu.module.css';
 const DescriptionMenu = () => {
   return (
     <div className={style.descriptionContainer}>
-      <p className={style.descriptionTitle}>Description</p>
-      <p className={style.descriptionText}>
+      <h1 className={style.descriptionTitle}>Description</h1>
+      <div className={style.descriptionText}>
         "Some elements on this portfolio site may not be essential, but this
         page serves as a creative space to demonstrate additional skills and
         ideas. It’s a place where I experiment with new features, designs, and
@@ -14,7 +14,7 @@ const DescriptionMenu = () => {
         projects. Thank you for taking the time to explore this page, and I hope
         it inspires you to see the range of what I can create!".
         <p className={style.descriptionText2}>To view the menu, click on the book!</p>
-      </p>
+      </div>
     </div>
   );
 }

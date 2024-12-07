@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
+// import { useSelector } from "react-redux";
+import {
+  // selectAuthenticated,
+  // selectUser,
+} from "../../redux/auth/authSelectors";
 import style from './Authorization.module.css';
 import SignIn from "../SignIn/SignIn";
 import SignUp from "../SignUp/SignUp";
-
+// import UserInfo from "../UserInfo/UserInfo";
 
 const Authorization = () => {
   const [activeTab, setActiveTab] = useState("signIn");
+  // const authenticated = useSelector(selectAuthenticated);
+  // const user = useSelector(selectUser);
 
-// const persistedData = localStorage.getItem("authPortfolio");
-// const token = persistedData ? JSON.parse(persistedData).token : null;
-
-//   if (token) {
-//     console.log('=================token + ===================');
-//     console.log(token);
-//     console.log('====================================');
-//   }
+  // if (authenticated) {
+  //    console.log(user);
+     
+  //    return <UserInfo user={user} />;
+  //  }
 
   return (
     <>
@@ -41,6 +45,7 @@ const Authorization = () => {
         <div className={style.content}>
           {activeTab === "signIn" && <SignIn />}
           {activeTab === "signUp" && <SignUp setActiveTab={setActiveTab} />}
+          {/* {authenticated && <UserInfo/>} */}
         </div>
       </div>
     </>

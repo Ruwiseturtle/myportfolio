@@ -7,7 +7,7 @@ const INITIAL_STATE = {
     login: null,
     email: null,
   },
-  authenticated: false,
+  authenticated: true,
   isLoading: false,
   error: null,
 };
@@ -37,9 +37,12 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(registerThunk.fulfilled, (state, action) => {
+        console.log('===================user=================');
+        console.log(action.payload.user);
+        console.log('====================================');
         state.isLoading = false;
         state.authenticated = true;
-        state.token = action.payload.token;
+        state.token = action.payload.user.token;
         state.user = action.payload.user;
       })
       .addCase(registerThunk.rejected, (state, action) => {

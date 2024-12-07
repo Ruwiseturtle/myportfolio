@@ -16,14 +16,14 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Layout/>}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="AboutMe" element={<AboutMe />} />
         <Route path="MyProjects" element={<MyProjects />} />
         <Route path="Skills" element={<SkillsPage />} />
         <Route path="Contact" element={<Contact />} />
         <Route path="Sertificates" element={<SertificatesPage />} />
-        <Route path="MenuPage/*" element={<MenuPage /> } />
+        <Route path="MenuPage/*" element={<MenuPage />} />
       </Route>
     </Routes>
   );

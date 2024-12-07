@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { Notify } from "notiflix";
-import { fetchRegisterUser } from "../../API/Auth/fetchRegisterUser";
+import { fetchRegisterUser, requestLogin } from "../../API/Auth/fetchRegisterUser";
 
 //санка для реєстрації
 export const registerThunk = createAsyncThunk(
@@ -8,37 +8,30 @@ export const registerThunk = createAsyncThunk(
   async (formData, thunkAPI) => {
     try {
       const authData = await fetchRegisterUser(formData);
-       console.log(authData);
-      
-      // localStorage.setItem("authPortfolio", user.token); 
-
+       
       Notify.success("You have registered. To access your account, please log in.");
       return authData; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
 
     } catch (error) {
-      console.log("jjjjjjjjjjjjjjjjj");
-      
-      console.log(error);
-      
       Notify.failure("Enter the correct data in the form!");
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
-// //санка для логінізації
-// export const loginThunk = createAsyncThunk(
-//   "auth/login",
-//   async (formData, thunkAPI) => {
-//     try {
-//       const response = await requestLogin(formData);
-//       return response; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
-//     } catch (error) {
-//       Notify.failure(error.code);
-//       return thunkAPI.rejectWithValue(error.message);
-//     }
-//   }
-// );
+//санка для логінізації
+export const loginThunk = createAsyncThunk(
+  "auth/login",
+  async (formData, thunkAPI) => {
+    try {
+      const response = await requestLogin(formData);
+      return response; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
+    } catch (error) {
+      Notify.failure(error.code);
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
 
 
 

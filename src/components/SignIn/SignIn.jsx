@@ -1,10 +1,14 @@
 import React from "react";
+// import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import styles from "./SignIn.module.css";
+// import { requestLogin } from "../../API/Auth/fetchRegisterUser";
 
 //авторизація користувача в системі(вхід)
 const SignIn = () => {
+  // const dispatch = useDispatch();
+
   // Використання useFormik
   const formik = useFormik({
     initialValues: {
@@ -26,10 +30,21 @@ const SignIn = () => {
     }),
     onSubmit: (values, { resetForm }) => {
       console.log("Form data:", values);
+      authenticationWithData(values);
       resetForm(); // Очищення форми після відправки
     },
   });
 
+  // ф-ція отримує логін та пароль користувача
+  function authenticationWithData(userData) {
+
+    // const user = {
+    //   email: userData.email.trim(),
+    //   password: userData.password.trim(),
+    // }
+    
+    // dispatch(requestLogin(user));
+  }
    
 
   return (

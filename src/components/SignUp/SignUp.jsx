@@ -49,12 +49,12 @@ const SignUp = ({ setActiveTab }) => {
     const newUser = {
       login: login.trim(),
       email: email.trim(),
-      password: password,
+      password: password.trim(),
     };
 
 
     dispatch(registerThunk(newUser));
-     setActiveTab("signIn");
+    //  setActiveTab("signIn");
   }
 
   return (
