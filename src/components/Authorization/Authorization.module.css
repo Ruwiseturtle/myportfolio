@@ -1,3 +1,9 @@
+.authorizationContainerMain{
+  width: 100%;
+  height: 100%;
+ 
+}
+
 .authorizationContainer{   
   background-color: #2c2f38;
   background: linear-gradient(
@@ -36,7 +42,7 @@
 .tab{
     flex:1;
     padding: 10px 0;
-
+    text-decoration: none;
     color: #ccc;
     /* font-weight: bold; */
 

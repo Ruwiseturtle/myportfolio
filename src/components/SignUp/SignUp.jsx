@@ -1,8 +1,8 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import styles from "./SignUp.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useDispatch } from "react-redux";
 import { registerThunk } from "../../redux/auth/authThunks";
 
 //реєсрація користувача в системі (ввод нового користувача користувача)
@@ -52,9 +52,8 @@ const SignUp = ({ setActiveTab }) => {
       password: password.trim(),
     };
 
-
     dispatch(registerThunk(newUser));
-    //  setActiveTab("signIn");
+   
   }
 
   return (

@@ -16,7 +16,6 @@ const SignIn = () => {
       password: "",
     },
 
-
     validationSchema: Yup.object({
       email: Yup.string()
         .email("Invalid email address") // Перевірка на валідну пошту
@@ -37,15 +36,12 @@ const SignIn = () => {
 
   // ф-ція отримує логін та пароль користувача
   function authenticationWithData(userData) {
-
     // const user = {
     //   email: userData.email.trim(),
     //   password: userData.password.trim(),
     // }
-    
     // dispatch(requestLogin(user));
   }
-   
 
   return (
     <form className={styles.containerSignIn} onSubmit={formik.handleSubmit}>
@@ -93,10 +89,7 @@ const SignIn = () => {
 
       {/* Кнопка Submit */}
       <div className={styles.boxBtnSignIn}>
-        <button
-          className={styles.buttonSignIn}
-          type="submit"
-        >
+        <button className={styles.buttonSignIn} type="submit">
           Sign In
         </button>
       </div>

@@ -1,15 +1,13 @@
-import React from 'react';
-import styles from './Menu.module.css';
+import React from "react";
+import styles from "./Menu.module.css";
 import { NavLink } from "react-router-dom";
 
 const Menu = ({ menuOpen, setMenuOpen }) => {
-
   const handleClick = () => {
     if (window.innerWidth <= 768) {
       setMenuOpen(false);
     }
-  }
-
+  };
 
   return (
     <div className={`${styles.containerMenu} ${!menuOpen ? styles.close : ""}`}>
@@ -44,4 +42,4 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
   );
 };
 
-export default Menu
+export default Menu;

@@ -1,5 +1,4 @@
-import React from 'react'
-import style from './DescriptionMenu.module.css';
+import style from "./DescriptionMenu.module.css";
 
 const DescriptionMenu = () => {
   return (
@@ -13,10 +12,12 @@ const DescriptionMenu = () => {
         more examples of my work here, from innovative solutions to experimental
         projects. Thank you for taking the time to explore this page, and I hope
         it inspires you to see the range of what I can create!".
-        <p className={style.descriptionText2}>To view the menu, click on the book!</p>
+        <p className={style.descriptionText2}>
+          To view the menu, click on the book!
+        </p>
       </div>
     </div>
   );
-}
+};
 
-export default DescriptionMenu
+export default DescriptionMenu;

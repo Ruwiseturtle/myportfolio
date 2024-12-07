@@ -23,7 +23,7 @@ const MenuPage = () => {
         <Routes>
           <Route path="/" element={<Navigate to="DescriptionMenu" replace />} />
           <Route path="DescriptionMenu" element={<DescriptionMenu />} />
-          <Route path="Authorization" element={<Authorization />} />
+          <Route path="Authorization/*" element={<Authorization />} />
         </Routes>
       </div>
     </div>

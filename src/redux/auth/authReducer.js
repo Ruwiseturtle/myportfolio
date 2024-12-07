@@ -7,9 +7,10 @@ const INITIAL_STATE = {
     login: null,
     email: null,
   },
-  authenticated: true,
+  registered: false,
   isLoading: false,
   error: null,
+  switch: true,
 };
 
 const authSlice = createSlice({
@@ -24,9 +25,15 @@ const authSlice = createSlice({
         login: null,
         email: null,
       };
-      state.authenticated = false;
+      state.registered = false;
       state.isLoading = false;
       state.error = null;
+    },
+    checkSwitchTrue(state) {
+      state.switch = true;
+    },
+    checkSwitchFalse(state) {
+      state.switch = false;
     },
   },
   extraReducers: (builder) =>
@@ -37,48 +44,49 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(registerThunk.fulfilled, (state, action) => {
-        console.log('===================user=================');
+        console.log("===================user=================");
         console.log(action.payload.user);
-        console.log('====================================');
+        console.log("====================================");
         state.isLoading = false;
-        state.authenticated = true;
+        state.registered = true;
+        state.switch = false;
         state.token = action.payload.user.token;
         state.user = action.payload.user;
       })
       .addCase(registerThunk.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
-      })
-    //   // ---------- LOGIN USER ----------------
-    //   .addCase(loginThunk.pending, (state) => {
-    //     state.isLoading = true;
-    //     state.error = null;
-    //   })
-    //   .addCase(loginThunk.fulfilled, (state, action) => {
-    //     state.isLoading = false;
-    //     state.authenticated = true;
-    //     state.token = action.payload.token;
-    //     state.user = action.payload.user;
-    //   })
-    //   .addCase(loginThunk.rejected, (state, action) => {
-    //     state.isLoading = false;
-    //     state.error = action.payload;
-    //   })
-    //   // ---------- REFRESH USER ----------------
-    //   .addCase(refreshThunk.pending, (state) => {
-    //     state.isLoading = true;
-    //     state.error = null;
-    //   })
-    //   .addCase(refreshThunk.fulfilled, (state, action) => {
-    //     state.isLoading = false;
-    //     state.authenticated = true;
-    //     state.user = action.payload;
-    //   })
-    //   .addCase(refreshThunk.rejected, (state, action) => {
-    //     state.isLoading = false;
-    //     state.error = action.payload;
-    //   }),
+      }),
+  //   // ---------- LOGIN USER ----------------
+  //   .addCase(loginThunk.pending, (state) => {
+  //     state.isLoading = true;
+  //     state.error = null;
+  //   })
+  //   .addCase(loginThunk.fulfilled, (state, action) => {
+  //     state.isLoading = false;
+  //     state.authenticated = true;
+  //     state.token = action.payload.token;
+  //     state.user = action.payload.user;
+  //   })
+  //   .addCase(loginThunk.rejected, (state, action) => {
+  //     state.isLoading = false;
+  //     state.error = action.payload;
+  //   })
+  //   // ---------- REFRESH USER ----------------
+  //   .addCase(refreshThunk.pending, (state) => {
+  //     state.isLoading = true;
+  //     state.error = null;
+  //   })
+  //   .addCase(refreshThunk.fulfilled, (state, action) => {
+  //     state.isLoading = false;
+  //     state.authenticated = true;
+  //     state.user = action.payload;
+  //   })
+  //   .addCase(refreshThunk.rejected, (state, action) => {
+  //     state.isLoading = false;
+  //     state.error = action.payload;
+  //   }),
 });
 
 export const authReducer = authSlice.reducer;
-export const { logOut } = authSlice.actions;
+export const { logOut, checkSwitchTrue, checkSwitchFalse } = authSlice.actions;
