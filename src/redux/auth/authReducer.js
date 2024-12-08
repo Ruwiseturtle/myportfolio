@@ -26,6 +26,7 @@ const authSlice = createSlice({
         email: null,
       };
       state.registered = false;
+      state.switch = true;
       state.isLoading = false;
       state.error = null;
     },
@@ -50,7 +51,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.registered = true;
         state.switch = false;
-        state.token = action.payload.user.token;
         state.user = action.payload.user;
       })
       .addCase(registerThunk.rejected, (state, action) => {

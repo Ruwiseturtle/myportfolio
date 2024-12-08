@@ -12,8 +12,6 @@ const Authorization = () => {
   const switcher = useSelector(selectSwitch);
   // const user = useSelector(selectUser);
 
- 
-
   return (
     <>
       <div className="authorizationContainerMain">

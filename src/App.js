@@ -9,24 +9,17 @@ const MyProjects = lazy(() => import("./pages/Projectspage/Projectspage.jsx"));
 const SkillsPage = lazy(() => import("./pages/SkillsPage/Skills.jsx"));
 const UserInfo = lazy(() => import("./components/UserInfo/UserInfo.jsx"));
 const Contact = lazy(() => import("./pages/ContactPage/Contacts.jsx"));
-const SertificatesPage = lazy(() =>
-  import("./pages/SertificatesPage/SertificatesPage.jsx")
-);
+const SertificatesPage = lazy(() => import("./pages/SertificatesPage/SertificatesPage.jsx"));
 const MenuPage = lazy(() => import("./pages/MenuPage/MenuPage.jsx"));
-const Authorization = lazy(() =>
-  import("./components/Authorization/Authorization")
-);
+const Authorization = lazy(() => import("./components/Authorization/Authorization"));
 const SignIn = lazy(() => import("./components/SignIn/SignIn"));
 const SignUp = lazy(() => import("./components/SignUp/SignUp"));
-const DescriptionMenu = lazy(() =>
-  import("./components/DescriptionMenu/DescriptionMenu")
-);
+const DescriptionMenu = lazy(() => import("./components/DescriptionMenu/DescriptionMenu"));
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        {/* Основні маршрути */}
         <Route index element={<HomePage />} />
         <Route path="AboutMe" element={<AboutMe />} />
         <Route path="MyProjects" element={<MyProjects />} />
@@ -34,11 +27,9 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="Sertificates" element={<SertificatesPage />} />
         <Route path="MenuPage/*" element={<MenuPage />}>
-          {/* Вкладені маршрути для MenuPage */}
           <Route path="DescriptionMenu" element={<DescriptionMenu />} />
           <Route path="Authorization/*" element={<Authorization />}>
-          <Route path="userInfo" element={<UserInfo />} />
-            {/* Вкладені маршрути для Authorization */}
+            <Route path="userInfo" element={<UserInfo />} />
             <Route path="signIn" element={<SignIn />} />
             <Route path="signUp" element={<SignUp />} />
           </Route>
