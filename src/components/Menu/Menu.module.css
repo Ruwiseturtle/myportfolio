@@ -1,0 +1,72 @@
+.containerMenu{
+     position: absolute;
+     left: 0;
+     padding-top: 90px;
+     width: 25%;
+     min-width: 184px;
+     /* min-height: calc(100vh - 57px - 60px - 90px); */
+     min-height: calc(100vh - 169px);
+     word-wrap: break-word; 
+     white-space: normal;   
+     scrollbar-width: none; /* Прибирає скролл на Firefox */
+        
+    /* Створюємо фонове затемнення */
+     background-color: rgba(30, 30, 30, 0.8);
+     transform: translateY(0);
+     overflow: visible;
+     transition: transform 0.7s ease-in-out; /* Додає плавний ефект відкриття */ 
+}
+
+.containerMenu.close{      
+     background-blend-mode: overlay;
+     overflow: hidden; /* Сховує вміст при закритті меню */
+     transform: translateY(-110%); /* Початково сховати меню за лівим краєм */
+}
+
+@media (max-width: 768px) {
+ .containerMenu.close{
+    display: none;   
+  }
+}
+
+@media (max-width: 768px) {
+ .containerMenu{
+    display: block;
+    width: 100%;   
+  }
+}
+
+
+ul li a{
+    text-decoration: none;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+ul{
+list-style-type: none;  
+}
+
+@media (max-width: 768px) {
+ ul{
+    text-align: center;   
+  }
+}
+
+
+.nameHref{
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #00A8cd;
+  letter-spacing: 0.05em;
+
+  word-wrap: break-word; /* Дозволяє переносити слова, які не влазять */
+  white-space: normal;   /* Дозволяє переносити текст, якщо він не вміщується в рядок */
+}
+
+.nameHref.active {
+  color: #fafdfd; /* Колір для активного посилання */
+}

@@ -1,0 +1,52 @@
+containerUserInfo{
+    width: 100%;
+    color: white
+}
+
+.boxGreeting{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 29px;
+   letter-spacing: 0.05em;
+  color: #00A8CD;
+}
+
+.textForExit{
+     width: 100%;
+    text-align: center;
+
+    font-weight: 300;
+   font-size: 14px;
+   line-height: 17px;
+   letter-spacing: 0.05em;  
+   color: white;
+}
+
+.box-btnExitAcount{
+  display: block;
+  width: 118px;
+  height: 34px;
+ 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.btnExitAcount{
+width: 100%;
+  height: 100%;
+  background-color: #00A8CD;
+  border-radius: 5px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: white;
+  cursor: pointer;
+}

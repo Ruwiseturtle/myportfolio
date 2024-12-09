@@ -1,0 +1,35 @@
+.descriptionContainer{
+    display: block;
+    width: 90%;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.descriptionTitle{  
+    text-align: center;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 29px;
+   letter-spacing: 0.05em;
+  color: #00A8CD;
+}
+
+.descriptionText{  
+    text-align: justify;
+    font-weight: 300;
+   font-size: 14px;
+   line-height: 17px;
+   letter-spacing: 0.05em;  
+   color: white;
+}
+
+.descriptionText2{
+     text-align: justify;
+    font-weight: 300;
+   font-size: 16px;
+   line-height: 17px;
+   letter-spacing: 0.05em; 
+   color: #00A8CD;
+}

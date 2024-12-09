@@ -1,0 +1,50 @@
+.avatar-menu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.avatar-menu{
+  position: absolute;
+  padding: 20px;
+  top: 100%;
+  right: 0;
+  display: block;
+  width: 200px;
+  height: auto;
+  
+  background-color: grey;
+  background: linear-gradient(
+    to bottom, /* Напрямок градієнту: з верхньої частини до нижньої */
+    rgba(217, 217, 217, 0.13), /* Початковий колір градієнту */
+    rgba(217, 217, 217, 0) /* Кінцевий колір градієнту */
+  );
+
+  opacity: 0; /* Початково приховане */
+  visibility: hidden; /* Щоб елемент не займав місце */
+  transform: translateY(0); /* Легке зміщення вгору */
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+  z-index: 99; /* Щоб меню було над іншими елементами */
+}
+
+.openAvatarMenu{
+  opacity: 1; /* З'являється */
+  visibility: visible; /* Робимо видимим */
+  transform: translateY(0); /* Повертаємо на місце */
+}
+
+.text{  
+  color: white;
+  text-decoration: none;
+}
+
+.active{
+  color: #00A8cd;
+}
+
+.avatar-menu-list .text {
+    margin-bottom: 10px;
+  word-wrap: break-word; /* Дозволяє переносити слова, що не поміщаються */
+  overflow-wrap: break-word; /* Додатково для кращої підтримки браузерів */
+  text-decoration: none;
+}

@@ -1,0 +1,109 @@
+.container-contact{
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: calc(100vh - 78px);
+  max-width: 1280px;
+  margin-top: 56px;
+  background-color: rgb(18, 17, 17);
+  border: 1px solid black;
+  color: white;
+}
+
+@media (max-width: 1140px) {
+ .container-contact{
+   min-height: calc(100vh + 140px);
+        
+  }
+}
+
+.text-contactMe{
+  display: flex;
+   margin-top: 20px;
+   margin-bottom: 17px;
+   justify-content: center;
+   font-family: "Inter", sans-serif;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 29px;
+   color: #ffffff;
+   letter-spacing: 0.05em;
+}
+
+.contact-text-white{
+color: white;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.contact-text-blue{
+  color: #00A8CD;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.contact-text-contactMe{
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 26px;
+    max-width: 328px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+
+     font-family: "Inter", sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 17px;
+   color: #ffffff;
+   letter-spacing: 0.05em;
+   /* background-color: #00A8CD; */
+
+    hyphens: auto;
+  word-wrap: break-word;
+}
+
+.box-contact{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 22px;
+  padding-right: 22px;
+  max-width: 992px;
+  height: 300px;
+  background-color: grey;
+  background: linear-gradient(
+    to bottom, /* Напрямок градієнту: з верхньої частини до нижньої */
+    rgba(217, 217, 217, 0.13), /* Початковий колір градієнту */
+    rgba(217, 217, 217, 0) /* Кінцевий колір градієнту */
+  );
+}
+
+
+
+@media (max-width: 1140px) {
+ .box-contact{
+  max-width: calc(100% / 1.5);        
+  }
+}
+
+/* @media (max-width: 1069px) {
+ .box-contact{
+  margin: 0px;
+  margin-left: 20px;
+  margin-right: 20px; 
+  max-width: 100%;      
+  }
+} */
+@media (max-width: 720px) {
+ .box-contact{
+  margin: 0px;
+  margin-left: 20px;
+  margin-right: 20px; 
+  max-width: 100%;      
+  }
+}

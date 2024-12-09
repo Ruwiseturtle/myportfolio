@@ -1,0 +1,65 @@
+.container-projects-list{
+    margin-left: 69px;
+    margin-right: 69px;
+    overflow: auto; 
+    max-width: 1090px;
+    max-height: 500px; 
+    position: relative;
+
+         /* Приховуємо скролбар повністю */
+  scrollbar-width: none; /* Для Firefox */
+  -ms-overflow-style: none; /* Для Inrnet Explorer та Edge */
+}
+
+/* Приховуємо стандартний скролбар для WebKit-браузерів (Chrome, Safari) */
+.container-with-images::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Приховуємо скролбар в Internet Explorer та Edge */
+.container-with-images {
+  -ms-overflow-style: none; /* Для IE і Edge */
+  scrollbar-width: none; /* Для Firefox */
+}
+
+/* Приховуємо скролбар в Firefox */
+.container-with-images {
+  scrollbar-width: none;
+}
+
+.projects-list{
+   display: flex;
+   margin-top: 300px;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 0;
+   list-style: none;
+   /* background-color: bisque; */
+}
+
+@media (max-width: 720px) {
+ .projects-list{
+    margin-top: 320px;
+  }
+}
+
+@media (max-width: 740px) {
+ .projects-list{
+    margin-top: 340px;
+  }
+}
+
+@media (max-width: 292px) {
+ .projects-list{
+    margin-top: 380px;
+  }
+}
+
+@media (max-width: 269px) {
+ .projects-list{
+    margin-top: 420px;
+  }
+}
+

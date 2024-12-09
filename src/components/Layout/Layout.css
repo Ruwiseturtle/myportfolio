@@ -1,0 +1,15 @@
+.container-back{
+  display: flex;
+  height: 100vh;
+  height: auto;
+  flex-direction: column; /* вирівнює елементи вертикально */
+  align-items: center; /* центрує по горизонталі */
+  justify-content: center; /* центрує по вертикалі */
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(18, 17, 17);
+}
+
+

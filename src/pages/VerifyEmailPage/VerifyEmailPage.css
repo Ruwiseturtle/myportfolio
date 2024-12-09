@@ -1,0 +1,12 @@
+.verifyEmailContainer{
+    width: 100%;
+    color: white;
+}
+
+.VerifyEmailText{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: green;
+}

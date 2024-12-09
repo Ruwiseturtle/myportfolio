@@ -1,0 +1,433 @@
+.container-homePage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: calc(100vh - 78px);
+  margin-top: 56px;
+  background-color: rgb(18, 17, 17);
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  color: white;
+}
+
+.list-homepage{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* height: 100%; */
+}
+
+@media (max-width: 960px){
+  .list-homepage{
+    flex-direction: column;
+  }
+}
+
+.line{
+  width: calc(100vw / 2);
+  height: 1px;
+  background: linear-gradient(
+    to right, /* напрямок градієнту: відверху вниз */
+    rgba(0, 168, 205), /* початковий колір */
+    rgba(0, 168, 205, 0) /* кінцевий колір */
+  );  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item{
+  flex: 1;
+  /* border: 1px solid white; */
+  
+}
+
+
+.item-left{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: calc(100% / 2);
+  padding-left: 69px;
+  padding-top: 84px;
+}
+
+@media (max-width: 960px){
+  .item-left{
+    width: calc(100% - 30%);
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    /* align-items: center; */
+  }
+}
+
+@media (max-width: 720px){
+  .item-left{
+    width: calc(100% - 20%);
+  }
+}
+
+.item-right{
+  position: relative;
+  padding-right: 69px;
+}
+
+@media (max-width: 960px){
+  .item-right{
+    width: calc(100% - 30%);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 720px){
+  .item-right{
+    width: calc(100% - 20%);
+  }
+}
+
+
+
+
+.text-name{
+  display: block;
+  width: 95%;
+  overflow-wrap: break-word; /* перенос довгих слів */  
+   font-family: "Poppins", sans-serif;
+   font-weight: 500;
+   font-size: 40px;
+   line-height: 60px;
+   color: #ffffff;
+   letter-spacing: 0.05em;
+   margin-bottom: 0px;
+   margin-top: 0px;
+   hyphens: auto; /*для переносу текста*/ 
+}
+
+@media (max-width: 960px){
+  .text-name{
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 360px){
+  .text-name{
+    letter-spacing: 0.03em;
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+
+
+.text-profession{
+   font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #00A8cd;
+  letter-spacing: 0.05em;
+  margin-top: -5px;
+  margin-bottom: 14px;
+}
+
+
+
+.text-aboutMe{
+  font-family: "Poppins", sans-serif;
+  max-width: 485px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  hyphens: auto; /*для переносу текста*/  
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  margin-top: 0;
+}
+
+@media (max-width: 960px){
+  .text-aboutMe{
+   max-width: 100%;
+  }
+}
+
+
+.box-myPfoto{
+  position: relative;
+  display: block;
+  max-width: 260px;
+  /* height: 380px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 124px;
+  margin-bottom: 160px;
+  /* background-color: #00A8cd; */
+
+}
+
+@media (max-width: 960px){
+  .box-myPfoto{
+   margin-bottom: 80px;
+   z-index: 700;
+  }
+}
+
+
+.myPhoto{
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.circle{
+  position: absolute;
+  top:58px;
+  left:0;
+  transform: rotate(30deg);
+  width: 344px;
+  height: 344px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right, /* напрямок градієнту: відверху вниз */
+    rgba(0, 168, 205, 0.30), /* початковий колір */
+    rgba(9, 21, 148, 0) /* кінцевий колір */
+  );  
+  z-index: 90;
+}
+
+@media (max-width: 960px){
+.circle{
+  width: 50%;
+  height: 50%;
+  border-radius: 0;
+  transform: rotate(0deg);
+}
+}
+
+
+.circle2{
+  position: absolute;
+  top: 290px;
+  right: 69px;
+  width: 273px;
+  height: 273px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to left, /* напрямок градієнту: відверху вниз */
+    rgba(217, 217, 217, 0.26), /* початковий колір */
+    rgba(217, 217, 217, 0) /* кінцевий колір */
+  );  
+  z-index: 92;
+}
+
+@media (max-width: 1140px){
+.circle2{
+  top: 250px;
+  
+}
+}
+
+@media (max-width: 960px){
+.circle2{
+  right: 0;
+  width: 50%;
+  height: 50%;
+  border-radius: 0;
+  transform: rotate(0deg);
+}
+}
+
+
+.box-btnContactMe{
+  margin-right: 26px;
+}
+
+.button-contactMe{
+  width: 128px;
+  height: 43px;
+  border-radius: 5px;
+  background-color: #00A8cd;
+  color: white;
+  cursor: pointer;
+   font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 360px){
+  .button-contactMe{
+    margin-bottom: 14px;
+  }
+}
+
+.button-contactMe:hover{
+  background-color: #87E9FE;
+}
+
+.box-networks{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.box-Imagecontact{
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.box-contacts{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 360px){
+  .box-contacts{
+    flex-direction: column;
+  }
+}
+
+.skill-photo{
+  position: relative;
+}
+
+.javascript{
+  position: absolute;
+  top: -50px;
+  right: 30px;
+  opacity: 0.5;
+}
+
+.html{
+  position: absolute;
+  top: 200px;
+  right: 230px;
+}
+
+@media (max-width: 540px){
+  .html{
+   top: 250px;
+   left: -1px;
+  }
+}
+
+.css{
+  position: absolute;
+  top: 150px;
+  right: -50px;
+  opacity: 0.5;
+}
+
+
+@media (max-width: 960px){
+  .css{
+   top: 220px;
+   right: -20px;
+  }
+}
+
+.react{
+position: absolute;
+top: -50px;
+left: -80px;
+height: 40%;
+opacity: 0.5;
+
+}
+
+.imgReact{
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.redux{
+position: absolute;
+top: 5%;
+left: 90%;
+height: 30%;
+opacity: 0.5;
+}
+
+.imgRedux{
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 960px) {
+  .react {
+    top: 10px;
+    left: -50px;
+    height: 30%;
+  }
+
+  .redux {
+   top: 5%;
+    left: 80%;
+    height: 30%;
+  }
+}
+@media (max-width: 720px) {
+  .react {
+    top: 30px;
+    left: -70px;
+    height: 35%;
+  }
+
+  .redux {
+   top: 5%;
+    top: 30px;
+    left: 80%;
+    height: 30%;
+  }
+}
+
+@media (max-width: 540px) {
+  .react {
+    top: 30px;
+    left: -10%;
+    width: 25%;
+    height: 25%;
+  }
+
+  .redux {
+     top: 5%;
+    left: 70%;
+    width: 25%;
+    height: 25%;
+  }
+}
+
+@media (max-width: 360px) {
+  .react {
+    top: 30px;
+    left: 1px;
+    width: 25%;
+    height: 25%;
+  }
+
+  .redux {
+     top: 5%;
+    left: 60%;
+    width: 25%;
+    height: 25%;
+  }
+}

@@ -1,0 +1,326 @@
+.container-aboutMe{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1056px;
+  min-height: calc(100vh - 78px);
+  margin-top: 56px;
+  background-color: rgb(18, 17, 17);
+  border: 1px solid black;
+  color: white;
+  /* background-color: white; */
+}
+
+@media (max-width: 290px){
+    .container-aboutMe{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 960px){
+  .container-aboutMe{
+    min-height: 750px;
+  }
+}
+
+.list-aboutme{
+  display: flex;
+  align-items: flex-start;
+  max-width: 1056px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* height: 100%; */
+}
+
+@media (max-width: 960px){
+  .list-aboutme{
+    flex-direction: column;
+  }
+}
+
+.box-aboutme-text{
+  max-width: 463px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Poppins", sans-serif;
+  /* background-color: green; */
+}
+
+
+
+.container-aboutme-left{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: calc(100% / 2);
+  /* padding-left: 69px; */
+  padding-top: 150px;
+  padding-left: 80px;
+  /* border: 1px white solid; */
+  /* background-color:bisque; */
+}
+
+@media (max-width: 960px){
+  .container-aboutme-left{
+    position: relative;
+    display: flex;
+    padding-top: 50px;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.text-title{
+  display: flex;
+  margin-top: 150px;
+   font-family: "Inter", sans-serif;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 29px;
+   color: #ffffff;
+   letter-spacing: 0.05em;  
+}
+
+@media (max-width: 960px){
+  .text-title{
+    margin-top: 0px;
+  }
+}
+
+
+.title-reviews{
+   font-family: "Inter", sans-serif;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 29px;
+   color: #00A8CD;
+   letter-spacing: 0.05em; 
+   margin-bottom: 7px;
+}
+
+@media (max-width: 960px){
+  .title-reviews{
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+
+.aboutme-text{
+   display: block;
+   width: 100%;
+   margin-top: 0;
+   margin-bottom: 0;
+   font-family: "Inter", sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 17px;
+   color: #ffffff;
+   letter-spacing: 0.05em;
+}
+
+@media (max-width: 960px){
+  .aboutme-text{
+    margin-bottom: 15px;
+  }
+}
+
+
+
+.text-white{
+  color: white;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+@media (max-width: 960px){
+  .text-white{
+   margin-bottom: 10px;
+  }
+}
+
+.text-blue{
+color: #00A8CD;
+ margin-top: 0;
+  margin-bottom: 7px;
+}
+
+@media (max-width: 960px){
+  .text-blue{
+   margin-bottom: 10px;
+  }
+}
+
+.container-aboutme-right{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-left: 20px;
+  margin-right: 20px; */
+  /* position: relative; */
+  flex:1;
+  /* border: 1px white solid; */
+  /* background-color: cadetblue; */
+  z-index: 500;
+}
+
+@media (max-width: 960px){
+  .container-aboutme-right{
+    top: calc(100% / 1.47);
+    left: calc(100% / 4);
+    
+  }
+}
+
+@media (max-width: 1140px){
+  .container-aboutme-right{
+   /* padding-right: 40px; */ 
+  }
+}
+
+
+.box-aboutme-myphoto2{
+  position: relative;
+  max-width: 300px;
+  border-radius: 8px;
+ z-index: 200;
+ 
+
+}
+
+.myphoto2{
+   width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 5px 10px 10px #000000; /* X:-5, Y:5, Размытие: 10, Расширение: 0, Цвет: #000000 */
+  filter: brightness(80%); /* Зменшує яскравість, роблячи зображення темнішим */
+}
+
+@media (max-width: 540px){
+  .myphoto2{ 
+   box-shadow: 5px 5px 100px 10px #00A8cd; /* X:-5, Y:5, Размытие: 10, Расширение: 0, Цвет: #000000 */
+  }
+}
+
+
+
+.circle-aboutme{
+position: absolute;
+  right: -55px;
+  top:-20px;
+  transform: rotate(30deg);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to left, 
+    rgba(0, 168, 205, 0.30), 
+    rgba(217, 217, 217, 0) 
+  );  
+  /* background-color: white; */
+  z-index: -4;
+}
+
+@media (max-width: 540px){
+  .circle-aboutme{    
+   display: none;
+   right: -10px;
+   max-width: 300px;
+   width: 100%;
+  }
+}
+
+.quarter1{
+  display: block;
+  position: absolute;
+  top:-10px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+   background: linear-gradient(
+    to right, 
+     rgba(0, 0, 0), /* початковий колір */
+    rgba(217, 217, 217, 0) /* кінцевий колір */
+  ); 
+  /* background-color: white; */
+z-index: -2;
+}
+
+@media (max-width: 540px){
+  .quarter1{
+    display: none;
+   right: -10px;
+   max-width: 300px;
+   /* background-color: yellow; */
+  }
+}
+
+
+.quarter2{
+  display: block;
+  position: absolute;
+  right: -50px;
+  top:-20px;
+  transform: rotate(8deg); /* Змінює нахил на 45 градусів */
+  width: 300px;
+  height: 300px;
+ background: linear-gradient(
+    to right, /* напрямок градієнту: відверху вниз */
+    rgba(0, 168, 205), /* початковий колір */
+    rgba(217, 217, 217, 0) /* кінцевий колір */
+  ); 
+  /* background-color: yellow; */
+  z-index: -1;
+}
+
+
+@media (max-width: 540px){
+  .quarter2{
+    display: none;
+   right: -10px;
+   width: 100%;
+   max-width: 300px;
+  }
+}
+
+
+.box-myphoto2{
+  display: block;
+  width: 100%;   
+}
+
+
+
+.line-aboutme{
+  width: calc(100vw / 2);
+  height: 1px;
+  background: linear-gradient(
+    to right, /* напрямок градієнту: відверху вниз */
+    rgba(0, 168, 205), /* початковий колір */
+    rgba(0, 168, 205, 0) /* кінцевий колір */
+  );  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.box-reviews{
+  height: 200px;
+  /* background-color:chocolate; */
+}
+
+.box-aboutme{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,81 @@
+.containerSignIn{
+    width: 100%;
+  
+}
+
+.formInput{
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: #888;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px #15819a solid;
+    outline: none;
+
+    font-family: "Inter", sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 17px;
+   color: #ffffff;
+   letter-spacing: 0.05em;
+}
+
+
+
+/* Піднімаємо label при фокусі або наявності контенту */
+input:focus + label,
+.formInput.hasContent label {
+    top: -10px;
+    font-size: 12px;
+    color: #15819a;
+}
+
+input:placeholder-shown + label {
+    top: 30px;
+    font-size: 6px;
+    color: #888;
+}
+
+.boxBtnSignIn{
+    display: flex;
+   justify-content: center; 
+   align-items: center;
+   height: 100%;
+}
+
+.buttonSignIn{
+     width: 128px;
+    height: 43px;
+    border-radius: 5px;
+    background-color: #00A8cd;
+    color: white;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.buttonSignIn:hover {
+    background-color: #87E9FE;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  margin-top: 0px;
+  text-align: left;
+}

@@ -1,0 +1,25 @@
+.containerBurger{
+  position: absolute;
+  left: 70px;
+  top: 10px;
+  width: 70px;
+  height: 70px;  
+  z-index: 200px;
+}
+
+@media (max-width: 960px) {
+ .containerBurger{
+    left: 5%;        
+  }
+}
+
+@media (max-width: 768px) {
+ .containerBurger{
+     z-index: 500;  
+  }
+}
+
+.menuImage{
+  width: 70px;
+  height: 70px;
+}

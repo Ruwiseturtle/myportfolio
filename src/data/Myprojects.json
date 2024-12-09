@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "image": "freshHarvestBox.jpeg",
+    "title": "Fresh Harvest Box",
+    "link": "https://osmax.github.io/project-p_g9_htcs/index.html",
+    "frameworks": "React, Redux",
+    "project_type": "Team project"
+  },
+  {
+    "id": 2,
+    "image": "network-React-native.jpeg",
+    "title": "Social network",
+    "link": "https://expo.dev/accounts/ruslanawisemouse/projects/your-app-slug/builds/a0a65fed-8526-4755-9e0e-c09450105eef",
+    "frameworks": "React-native",
+    "project_type": "Individual project"
+  },
+  {
+    "id": 3,
+    "image": "Bookshelf.jpeg",
+    "title": "Bookshelf",
+    "link": "https://argojkee.github.io/bookshelf/",
+    "frameworks": "Javascript",
+    "project_type": "Team project"
+  },
+  {
+    "id": 4,
+    "image": "PHONEBOOK.jpeg",
+    "title": "Phonebook",
+    "link": "https://ruwiseturtle.github.io/goit-react-hw-08-phonebook/",
+    "frameworks": "React, Redux",
+    "project_type": "Individual project"
+    
+  },
+  {
+    "id": 5,
+    "image": "WaterTracker.jpeg",
+    "title": "Water tracker",
+    "link": "https://argojkee.github.io/dreamteam-water/",
+    "frameworks": "React, Redux",
+    "project_type": "Team project"
+  },
+  {
+    "id": 6,
+    "image": "MOVIESSEARCH.jpeg",
+    "title": "Movie search",
+    "link": "https://ruwiseturtle.github.io/goit-react-hw-05-movies/",
+    "frameworks": "React",
+    "project_type": "Individual project"
+  },
+  {
+    "id": 7,
+    "image": "search_cats.jpg",
+    "title": "searching for cats",
+    "link": "https://ruwiseturtle.github.io/goit-js-hw-10/",
+    "frameworks": "Javascript",
+    "project_type": "Individual project"
+  },
+  {
+    "id": 8,
+    "image": "pageForBusiness.jpg",
+    "title": "Searching for cats",
+    "link": "https://ruwiseturtle.github.io/goit-markup-hw-07/",
+    "frameworks": "HTML, CSS",
+    "project_type": "Individual project"
+  },
+  {
+    "id": 9,
+    "image": "image_search.jpg",
+    "title": "Image Search",
+    "link": "https://ruwiseturtle.github.io/goit-js-hw-11/",
+    "frameworks": "Javascript",
+    "project_type": "Individual project"
+  },
+  {
+    "id": 9,
+    "image": "image_search2.jpg",
+    "title": "Image Search2",
+    "link": "https://ruwiseturtle.github.io/goit-react-hw-03-image-finder/",
+    "frameworks": "React",
+    "project_type": "Individual project"
+  },
+  {
+    "id": 10,
+    "image": "cars_for_rent.jpg",
+    "title": "Сar rental site",
+    "link": "https://ruwiseturtle.github.io/cars-for-rent/catalog",
+    "frameworks": "React, Redux",
+    "project_type": "Individual project"
+  }
+]

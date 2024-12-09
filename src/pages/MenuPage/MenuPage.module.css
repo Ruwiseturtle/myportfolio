@@ -1,0 +1,66 @@
+.containerMenuPage{
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-height: calc(100vh - 78px);
+  margin-top: 56px;
+  background-color: rgb(18, 17, 17);
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  color: white;
+}
+
+.content{
+  position: absolute;
+  right: 0;
+  /* min-height: calc(100vh - 57px - 60px);*/
+  height: 100%; 
+  width: calc(100% - 25%);
+  background-color: rgb(18, 17, 17);
+  z-index: 50;
+  /* background-color: yellow; */
+}
+
+@media (max-width: 768px) {
+ .content.contentOpen{
+  display: block;
+  width: 100%;  
+  z-index: 100;
+  }
+}
+
+@media (max-width: 768px) {
+ .content{
+     display: none; 
+    
+     /* background-image: url('../../assets//images/backgroundForMenu.jpg'); */
+  }
+}
+
+.containerForPicture{
+    width: 25%;
+    /* height: calc(100vh - 57px - 60px);*/
+    min-height: calc(100vh - 169px); 
+/* добавляємо фон для меню */
+     background-image: url('../../assets//images/backgroundForMenu.jpg');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-color: rgba(30, 30, 30, 0.8);
+     background-blend-mode: overlay;
+}
+ 
+@media (max-width: 768px) {
+ .containerForPicture.containerForPictureClose{
+       display: none;
+  }
+}
+
+@media (max-width: 768px) {
+ .containerForPicture{
+       display: block;
+       width: 100%;
+  }
+}
