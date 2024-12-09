@@ -8,11 +8,19 @@ const AboutMe = lazy(() => import("./pages/Aboutme/Aboutme.jsx"));
 const MyProjects = lazy(() => import("./pages/Projectspage/Projectspage.jsx"));
 const SkillsPage = lazy(() => import("./pages/SkillsPage/Skills.jsx"));
 const Contact = lazy(() => import("./pages/ContactPage/Contacts.jsx"));
-const SertificatesPage = lazy(() => import("./pages/SertificatesPage/SertificatesPage.jsx"));
+const SertificatesPage = lazy(() =>
+  import("./pages/SertificatesPage/SertificatesPage.jsx")
+);
 const MenuPage = lazy(() => import("./pages/MenuPage/MenuPage.jsx"));
-const DescriptionMenu = lazy(() => import("./pages/DescriptionMenuPage/DescriptionMenuPage.jsx"));
-const AuthorizationPage = lazy(() => import("./pages/AuthorizationPage/AuthorizationPage.jsx"));
-const VerifyEmailPage = lazy(() => import("./pages/VerifyEmailPage/VerifyEmailPage.jsx"));
+const DescriptionMenu = lazy(() =>
+  import("./pages/DescriptionMenuPage/DescriptionMenuPage.jsx")
+);
+const AuthorizationPage = lazy(() =>
+  import("./pages/AuthorizationPage/AuthorizationPage.jsx")
+);
+const VerifyEmailPage = lazy(() =>
+  import("./pages/VerifyEmailPage/VerifyEmailPage.jsx")
+);
 
 function App() {
   return (
@@ -36,6 +44,7 @@ function App() {
         </Route>
       </Route>
     </Routes>
+    //
   );
 }
 
