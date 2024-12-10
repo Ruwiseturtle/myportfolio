@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const authInstance = axios.create({
-  // baseURL: "https://myportfolio-backend-oncj.onrender.com",
-  baseURL:
-    process.env.REACT_APP_ENVIRONMENT === 'development'
-      ? "http://localhost:3000"
-      : "https://myportfolio-backend-oncj.onrender.com",
+  baseURL: "https://myportfolio-backend-oncj.onrender.com",
+  // baseURL:
+  //   process.env.REACT_APP_ENVIRONMENT === 'development'
+  //     ? "http://localhost:3000"
+  //     : "https://myportfolio-backend-oncj.onrender.com",
 });
 
 export const setToken = (token) => {

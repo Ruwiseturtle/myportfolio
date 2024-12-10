@@ -15,7 +15,7 @@ const SignInForm = () => {
   const dispatch = useDispatch();
   const token = useSelector(selectToken); 
 
-  
+
   useEffect(() => {
     console.log("=============== token =====================");
     console.log(token);
@@ -47,7 +47,7 @@ const SignInForm = () => {
         .required("Password is required"), // Поле обов'язкове
     }),
     onSubmit: (values, { resetForm }) => {
-      console.log("Form data:", values);
+   
       authenticationWithData(values);
       resetForm(); // Очищення форми після відправки
     },
@@ -55,7 +55,7 @@ const SignInForm = () => {
 
   // ф-ція отримує логін та пароль користувача
   function authenticationWithData(userData) {
-
+    console.log('======================шаг1==============');
     const user = {
       email: userData.email.trim(),
       password: userData.password.trim(),
