@@ -20,7 +20,7 @@ export const fetchRegisterUser = async (newUser) => {
     // Зберігаємо токен у localStorage
     // localStorage.setItem("token", data.user?.token);
 
-    setToken(data.user?.token);
+    // setToken(data.user?.token);
     return data; 
  
 };
