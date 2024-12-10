@@ -42,8 +42,12 @@ export const loginThunk = createAsyncThunk(
 export const logOutThunk = createAsyncThunk(
   "auth/logOut",
   async (formData, thunkAPI) => {
+    console.log("================ logOutThunk санка ====================");
     try {
-      const response = await requestLogout();     
+      const response = await requestLogout(); 
+      console.log("===============logOutThunk========response=============");
+      console.log(response);
+      console.log('====================================');
       return response; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
     } catch (error) {
       Notify.failure(error.code);

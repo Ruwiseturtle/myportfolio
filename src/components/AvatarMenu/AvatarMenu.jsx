@@ -13,7 +13,7 @@ const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
   
   useEffect(() => {
     
-  },[dispatch])
+  },[token, dispatch])
 
   return (
     <div className={`avatar-menu ${isAvatarMenuOpen ? "openAvatarMenu" : ""}`}>

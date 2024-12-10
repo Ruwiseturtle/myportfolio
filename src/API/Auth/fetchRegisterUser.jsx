@@ -42,13 +42,13 @@ export const dellToken = () => {
   delete authInstance.defaults.headers.common["Authorization"];
 };
 
+//для розрогінізації користувача (в базі даних видаляє токен)
 export const requestLogout = async () => {
   console.log("logOut");
   
-  const result = await authInstance.post("/users/logout");
-  dellToken();
-   console.log("result");
-  console.log(result);
   
-  return result;
+  const { data } = await authInstance.post("/users/logout");
+  setToken();
+  
+  return data;
 };

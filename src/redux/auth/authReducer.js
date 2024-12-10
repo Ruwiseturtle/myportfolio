@@ -77,6 +77,7 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(logOutThunk.fulfilled, (state, action) => {
+        console.log('==================reducer log out==================');
         state.token = null;
         state.user.login = null;
         state.user.email = null;
