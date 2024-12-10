@@ -1,18 +1,21 @@
 import React, {useEffect} from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { selectToken } from "../../redux/auth/authSelectors";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom"; 
 import styles from "./SignInForm.module.css";
+import { loginThunk } from "../../redux/auth/authThunks";
+
 // import { requestLogin } from "../../API/Auth/fetchRegisterUser";
 
 //авторизація користувача в системі(вхід)
 const SignInForm = () => {
-  const token = useSelector(selectToken);
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const token = useSelector(selectToken); 
 
+  
   useEffect(() => {
     console.log("=============== token =====================");
     console.log(token);
@@ -52,11 +55,12 @@ const SignInForm = () => {
 
   // ф-ція отримує логін та пароль користувача
   function authenticationWithData(userData) {
-    // const user = {
-    //   email: userData.email.trim(),
-    //   password: userData.password.trim(),
-    // }
-    // dispatch(requestLogin(user));
+
+    const user = {
+      email: userData.email.trim(),
+      password: userData.password.trim(),
+    }
+    dispatch(loginThunk(user));
   }
 
   return (
