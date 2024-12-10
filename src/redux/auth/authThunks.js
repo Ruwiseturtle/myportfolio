@@ -24,13 +24,8 @@ export const loginThunk = createAsyncThunk(
   "auth/login",
   async (formData, thunkAPI) => {
     try {
-      console.log("======================шаг2==============");
-      console.log(formData);
-      const response = await requestLogin(formData);
-      console.log("============response===шаг3=====================");
-      console.log(response);
-      console.log('====================================');
-      return response; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
+      const response = await requestLogin(formData);     
+      return response.ResponseBody; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
     } catch (error) {
       Notify.failure(error.code);
       return thunkAPI.rejectWithValue(error.message);

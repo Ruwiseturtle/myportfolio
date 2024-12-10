@@ -30,9 +30,7 @@ export const fetchRegisterUser = async (newUser) => {
 export const requestLogin = async formData => {
     // formData - {email: "adwad@gmail.com", password: "123456788"}
   const { data } = await authInstance.post("/api/users/login", formData);
-  console.log('=============login=======================');
-  console.log(data);
-  console.log('====================================');
-  // setToken(data.token);
+
+   setToken(data.ResponseBody.token);
   return data;
 };
