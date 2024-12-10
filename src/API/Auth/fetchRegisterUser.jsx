@@ -47,8 +47,9 @@ export const requestLogout = async () => {
   console.log("logOut");
   
   
-  const { data } = await authInstance.post("/users/logout");
-  setToken();
+  const { data } = await authInstance.post("/api/users/logout");
+  console.log("=============== requestLogout =====================");
+
   
   return data;
 };
