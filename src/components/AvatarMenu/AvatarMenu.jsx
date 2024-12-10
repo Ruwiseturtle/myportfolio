@@ -10,9 +10,6 @@ const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
     const dispatch = useDispatch();
     const token = useSelector(selectToken);
   
-  console.log("token");
-  console.log(token);
-  
 
   return (
     <div className={`avatar-menu ${isAvatarMenuOpen ? "openAvatarMenu" : ""}`}>
@@ -40,7 +37,16 @@ const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
           </NavLink>
         </div>
       ) : (
-        <div className="avatar-menu-list">ddd</div>
+        <NavLink
+          className={({ isActive }) => (isActive ? "text active" : "text")}
+          to="/"
+          onClick={() => {
+            setIsAvatarMenuOpen(false);
+            dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
+          }}
+        >
+         Log Out
+        </NavLink>
       )}
     </div>
   );

@@ -13,13 +13,10 @@ const AuthorizationPage = () => {
   const authPageToShow = useSelector(selectAuthSwitchToShow);
   const dispatch = useDispatch();
   
-  console.log("@@@@@@@@@@@@@authPageToShow");
-  console.log(authPageToShow);
-
 
   useEffect(() => {
-    console.log("@@@@@@@@@@@@@authPageToShow");
-    console.log(authPageToShow);
+    // console.log("@@@@@@@@@@@@@authPageToShow");
+    // console.log(authPageToShow);
   }, [authPageToShow]);
 
   return (

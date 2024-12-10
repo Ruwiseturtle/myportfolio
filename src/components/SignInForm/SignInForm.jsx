@@ -1,13 +1,29 @@
-import React from "react";
-// import { useDispatch } from "react-redux";
+import React, {useEffect} from "react";
+import { useSelector } from "react-redux";
+import { selectToken } from "../../redux/auth/authSelectors";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom"; 
 import styles from "./SignInForm.module.css";
 // import { requestLogin } from "../../API/Auth/fetchRegisterUser";
 
 //авторизація користувача в системі(вхід)
 const SignInForm = () => {
+  const token = useSelector(selectToken);
+  const navigate = useNavigate();
   // const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log("=============== token =====================");
+    console.log(token);
+
+    if (String(token) !== "null") {
+      navigate("UserPage");
+    }
+    
+  }, [token, navigate]);
+
+
 
   // Використання useFormik
   const formik = useFormik({

@@ -22,6 +22,8 @@ const VerifyEmailPage = lazy(() =>
   import("./pages/VerifyEmailPage/VerifyEmailPage.jsx")
 );
 
+const UserPage = lazy(() => import("./pages/UserPage/UserPage.jsx"));
+
 function App() {
   return (
     <Routes>
@@ -32,6 +34,7 @@ function App() {
         <Route path="Skills" element={<SkillsPage />} />
         <Route path="Contact" element={<Contact />} />
         <Route path="Sertificates" element={<SertificatesPage />} />
+        <Route path="UserPage" element={<UserPage />} />
         <Route path="AuthorizationPage/*" element={<AuthorizationPage />}>
           {/* <Route path="userInfo" element={<UserInfo />} /> */}
           <Route path="SignIn" element={<AuthorizationPage />} />

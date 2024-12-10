@@ -3,7 +3,7 @@ import { registerThunk } from "./authThunks";
 import AuthStatus from "../../constants/userRolesEnum";
 
 const INITIAL_STATE = {
-  token: null,
+  token: "dssdfdsfsd",
   user: {
     login: null,
     email: null,

@@ -1,6 +1,6 @@
 .authorizationContainerMain{
   width: 100%;
-   min-height: calc(100vh - 78px);
+  min-height: calc(100vh - 78px);
   margin-top: 56px;
  
 }
