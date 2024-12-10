@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import './AvatarMenu.css';
 import { selectToken } from "../../redux/auth/authSelectors";
 import AuthStatus from "../../constants/userRolesEnum";
 import { setAuthSwitchToShow } from "../../redux/auth/authReducer";
+import { logOutThunk } from "../../redux/auth/authThunks";
 
 const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
     const dispatch = useDispatch();
     const token = useSelector(selectToken);
   
+  useEffect(() => {
+    
+  },[dispatch])
 
   return (
     <div className={`avatar-menu ${isAvatarMenuOpen ? "openAvatarMenu" : ""}`}>
@@ -42,7 +46,7 @@ const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
           to="/"
           onClick={() => {
             setIsAvatarMenuOpen(false);
-            dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
+            dispatch(logOutThunk());
           }}
         >
          Log Out

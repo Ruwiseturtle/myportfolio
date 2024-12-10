@@ -1,6 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { Notify } from "notiflix";
-import { fetchRegisterUser, requestLogin } from "../../API/Auth/fetchRegisterUser";
+import {
+  fetchRegisterUser,
+  requestLogin,
+  requestLogout,
+} from "../../API/Auth/fetchRegisterUser";
 
 //санка для реєстрації
 export const registerThunk = createAsyncThunk(
@@ -33,6 +37,20 @@ export const loginThunk = createAsyncThunk(
   }
 );
 
+
+//санка для розлогінізації (користувач виходить із системи)
+export const logOutThunk = createAsyncThunk(
+  "auth/logOut",
+  async (formData, thunkAPI) => {
+    try {
+      const response = await requestLogout();     
+      return response; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
+    } catch (error) {
+      Notify.failure(error.code);
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
 
 
 // export const refreshThunk = createAsyncThunk(

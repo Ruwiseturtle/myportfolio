@@ -11,17 +11,16 @@ import { loginThunk } from "../../redux/auth/authThunks";
 
 //авторизація користувача в системі(вхід)
 const SignInForm = () => {
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const token = useSelector(selectToken); 
 
 
   useEffect(() => {
-    console.log("=============== token =====================");
-    console.log(token);
-
+    
     if (String(token) !== "null") {
-      navigate("UserPage");
+      navigate("/UserPage");
     }
     
   }, [token, navigate]);
@@ -55,7 +54,7 @@ const SignInForm = () => {
 
   // ф-ція отримує логін та пароль користувача
   function authenticationWithData(userData) {
-    console.log('======================шаг1==============');
+  
     const user = {
       email: userData.email.trim(),
       password: userData.password.trim(),

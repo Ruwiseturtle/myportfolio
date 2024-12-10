@@ -28,9 +28,27 @@ export const fetchRegisterUser = async (newUser) => {
 
 //__________________логінізація користувача___________
 export const requestLogin = async formData => {
-    // formData - {email: "adwad@gmail.com", password: "123456788"}
+  // formData - {email: "adwad@gmail.com", password: "123456788"}
   const { data } = await authInstance.post("/api/users/login", formData);
 
-   setToken(data.ResponseBody.token);
+  // Зберігаємо токен у localStorage
+   localStorage.setItem("token", data.ResponseBody?.token);
+
+  setToken(data.ResponseBody.token);
   return data;
+};
+
+export const dellToken = () => {
+  delete authInstance.defaults.headers.common["Authorization"];
+};
+
+export const requestLogout = async () => {
+  console.log("logOut");
+  
+  const result = await authInstance.post("/users/logout");
+  dellToken();
+   console.log("result");
+  console.log(result);
+  
+  return result;
 };

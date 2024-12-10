@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { registerThunk, loginThunk } from "./authThunks";
+import { registerThunk, loginThunk, logOutThunk } from "./authThunks";
 import AuthStatus from "../../constants/userRolesEnum";
 
 const INITIAL_STATE = {
@@ -21,16 +21,16 @@ const authSlice = createSlice({
   // Початковий стан редюсера слайсу
   initialState: INITIAL_STATE,
   reducers: {
-    logOut(state) {
-      state.token = null;
-      state.user = {
-        login: null,
-        email: null,
-      };
-      state.registered = false;
-      state.authSwitchToShow = AuthStatus.LogIn;
-      state.error = null;
-    },
+    // logOut(state) {
+    //   state.token = null;
+    //   state.user = {
+    //     login: null,
+    //     email: null,
+    //   };
+    //   state.registered = false;
+    //   state.authSwitchToShow = AuthStatus.LogIn;
+    //   state.error = null;
+    // },
     setAuthSwitchToShow(state, action) {
       state.authSwitchToShow = action.payload;
     },
@@ -55,36 +55,56 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
-    // ---------- LOGIN USER ----------------
-    .addCase(loginThunk.pending, (state) => {
-      state.isLoading = true;
-      state.error = null;
-    })
-    .addCase(loginThunk.fulfilled, (state, action) => {
-      state.isLoading = false;
-      state.authenticated = true;
-      state.token = action.payload.token;
-      state.user = action.payload.user;
-    })
-    .addCase(loginThunk.rejected, (state, action) => {
-      state.isLoading = false;
-      state.error = action.payload;
-    })
-    // // ---------- REFRESH USER ----------------
-    // .addCase(refreshThunk.pending, (state) => {
-    //   state.isLoading = true;
-    //   state.error = null;
-    // })
-    // .addCase(refreshThunk.fulfilled, (state, action) => {
-    //   state.isLoading = false;
-    //   state.authenticated = true;
-    //   state.user = action.payload;
-    // })
-    // .addCase(refreshThunk.rejected, (state, action) => {
-    //   state.isLoading = false;
-    //   state.error = action.payload;
-    // }),
+      // ---------- LOGIN USER ----------------
+      .addCase(loginThunk.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(loginThunk.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.authenticated = true;
+        state.token = action.payload.token;
+        state.user = action.payload.user;
+      })
+      .addCase(loginThunk.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+
+      // // ---------- LOG OUT USER ----------------
+      .addCase(logOutThunk.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(logOutThunk.fulfilled, (state, action) => {
+        state.token = null;
+        state.user.login = null;
+        state.user.email = null;
+        state.registered = false;
+        state.authSwitchToShow = AuthStatus.LogIn;        
+        state.isLoading = false;
+        state.error = null;       
+      
+      })
+      .addCase(logOutThunk.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      }),
+  // // ---------- REFRESH USER ----------------
+  // .addCase(refreshThunk.pending, (state) => {
+  //   state.isLoading = true;
+  //   state.error = null;
+  // })
+  // .addCase(refreshThunk.fulfilled, (state, action) => {
+  //   state.isLoading = false;
+  //   state.authenticated = true;
+  //   state.user = action.payload;
+  // })
+  // .addCase(refreshThunk.rejected, (state, action) => {
+  //   state.isLoading = false;
+  //   state.error = action.payload;
+  // }),
 });
 
 export const authReducer = authSlice.reducer;
-export const { logOut, setAuthSwitchToShow } = authSlice.actions;
+export const { setAuthSwitchToShow } = authSlice.actions;
