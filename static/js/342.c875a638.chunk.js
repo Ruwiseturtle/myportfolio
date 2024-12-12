@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmyportfolio=self.webpackChunkmyportfolio||[]).push([[342],{7342:(e,s,r)=>{r.r(s),r.d(s,{default:()=>c});r(5043);var a=r(3003),t=r(7723),o=r(579);const c=()=>{const e=(0,a.d4)(t.mB);return(0,o.jsxs)("div",{className:"containerUserPage",children:["xxx",(0,o.jsxs)("div",{className:"textUserPage",children:["it's your page, ",e.login]})]})}}}]);
-//# sourceMappingURL=342.c875a638.chunk.js.map
