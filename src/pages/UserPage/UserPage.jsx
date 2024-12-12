@@ -9,7 +9,9 @@ const UserPage = () => {
   return (
     <div className="containerUserPage">
       xxx
-      <div className="textUserPage">it's your page `$,{currentUser.login}`</div>
+      <div className="textUserPage">
+        it's your page {currentUser?.login ? `, ${currentUser.login}` : ""}
+      </div>
     </div>
   );
 }

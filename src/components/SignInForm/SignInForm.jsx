@@ -6,29 +6,22 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom"; 
 import styles from "./SignInForm.module.css";
 import { loginThunk } from "../../redux/auth/authThunks";
-import { selectError } from "../../redux/auth/authSelectors";
 
 // import { requestLogin } from "../../API/Auth/fetchRegisterUser";
 
 //авторизація користувача в системі(вхід)
 const SignInForm = () => {
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const error = useSelector(selectError);
   const token = useSelector(selectToken); 
-
-  console.log("error SignInForm");
-  console.log(error);
-  
+ 
 
   useEffect(() => {
-    
     if (String(token) !== "null") {
       navigate("/UserPage");
     }
-    
   }, [token, navigate]);
+
 
 
 
@@ -117,6 +110,7 @@ const SignInForm = () => {
           Sign In
         </button>
       </div>
+      
     </form>
   );
 };

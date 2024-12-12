@@ -6,11 +6,16 @@ import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import SignInForm from "../../components/SignInForm/SignInForm";
 import VerifyEmailPage from "../VerifyEmailPage/VerifyEmailPage";
 import  AuthStatus  from "../../constants/userRolesEnum";
-import { selectAuthSwitchToShow } from '../../redux/auth/authSelectors';
+import {
+  selectAuthSwitchToShow,
+  selectIsLoading,
+} from "../../redux/auth/authSelectors";
 import { setAuthSwitchToShow } from "../../redux/auth/authReducer";
+import Loader from "../../components/Loader/Loader";
 
 const AuthorizationPage = () => {
   const authPageToShow = useSelector(selectAuthSwitchToShow);
+   const isLoading = useSelector(selectIsLoading);
   const dispatch = useDispatch();
   
 
@@ -55,6 +60,7 @@ const AuthorizationPage = () => {
         ) : (
           <VerifyEmailPage />
         )}
+        {isLoading && <Loader/>}
       </div>
     </>
   );
