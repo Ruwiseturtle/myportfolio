@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmyportfolio=self.webpackChunkmyportfolio||[]).push([[342],{7342:(e,s,l)=>{l.r(s),l.d(s,{default:()=>i});l(5043);var o=l(3003),r=l(7723),a=l(579);const i=()=>{const e=(0,o.d4)(r.mB);return(0,a.jsxs)("div",{className:"containerUserPage",children:["xxx",(0,a.jsxs)("div",{className:"textUserPage",children:["it's your page ",null!==e&&void 0!==e&&e.login?`, ${e.login}`:""]})]})}}}]);
+//# sourceMappingURL=342.16f0049b.chunk.js.map
