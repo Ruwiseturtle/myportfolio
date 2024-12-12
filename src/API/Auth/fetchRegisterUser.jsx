@@ -29,10 +29,14 @@ export const fetchRegisterUser = async (newUser) => {
 //__________________логінізація користувача___________
 export const requestLogin = async formData => {
   // formData - {email: "adwad@gmail.com", password: "123456788"}
+    
   const { data } = await authInstance.post("/api/users/login", formData);
-
+  
   // Зберігаємо токен у localStorage
-   localStorage.setItem("token", data.ResponseBody?.token);
+  localStorage.setItem("token", data.ResponseBody?.token);
+  console.log("requestLogin");
+  
+console.log(data);
 
   setToken(data.ResponseBody.token);
   return data;

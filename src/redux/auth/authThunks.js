@@ -23,16 +23,17 @@ export const registerThunk = createAsyncThunk(
   }
 );
 
+
 //санка для логінізації
 export const loginThunk = createAsyncThunk(
   "auth/login",
-  async (formData, thunkAPI) => {
+  async (data, { rejectWithValue }) => {
     try {
-      const response = await requestLogin(formData);     
-      return response.ResponseBody; // ЦЕ БУДЕ ЗАПИСАНО В ЕКШИН ПЕЙЛОАД
-    } catch (error) {
-      Notify.failure(error.code);
-      return thunkAPI.rejectWithValue(error.message);
+      const result = await requestLogin(data);
+      return result;
+    } catch ({ response }) {
+       Notify.info(response.data.msg);
+      return rejectWithValue(response.data);
     }
   }
 );
