@@ -5,7 +5,7 @@ import './AvatarMenu.css';
 import { selectToken } from "../../redux/auth/authSelectors";
 import AuthStatus from "../../constants/userRolesEnum";
 import { setAuthSwitchToShow } from "../../redux/auth/authReducer";
-import { logOutThunk } from "../../redux/auth/authThunks";
+import { logOut } from "../../redux/auth/authReducer";
 
 const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
     const dispatch = useDispatch();
@@ -46,7 +46,7 @@ const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
           to="/"
           onClick={() => {
             setIsAvatarMenuOpen(false);
-            dispatch(logOutThunk());
+            dispatch(logOut());
           }}
         >
          Log Out
