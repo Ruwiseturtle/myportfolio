@@ -1,14 +1,16 @@
 .projects-container{    
     top: 56px;
+    width: 100%;
     max-width: 1090px;  
     /* height: calc(100vh - 78px); */
     background-color: rgb(18, 17, 17);
     /* background-color: red; */
-  
+   min-height: calc(100vh - 78px);
 }
 
 .fixed-container-text{
   position: fixed;
+  /* left: 0; */
   display: flex;
   justify-content: center;
   align-items: center;

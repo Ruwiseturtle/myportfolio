@@ -35,9 +35,9 @@ const Projectspage = () => {
 
           <p className="myprojects-text-aboutprojects">
             List of my projects created with tools like HTML, CSS, React, Redux.
-            There are individual projects, such as this portfolio site,
-            and team projects with very charming project colleagues, reviews of
-            which are also available on this site.
+            There are individual projects, such as this portfolio site, and team
+            projects with very charming project colleagues, reviews of which are
+            also available on this site.
           </p>
 
           <div className="filter-box">
@@ -49,11 +49,13 @@ const Projectspage = () => {
       </div>
 
       <Projectslist projects={projects} isLoading={isLoading} />
-      <div className="box-btnShowAll">
-        <button className="button-ShowAll" onClick={clickBtnShowHideProjects}>
-          {showProjects ? "Hide" : "Show All"}
-        </button>
-      </div>
+      {!isLoading && (
+        <div className="box-btnShowAll">
+          <button className="button-ShowAll" onClick={clickBtnShowHideProjects}>
+            {showProjects ? "Hide" : "Show All"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

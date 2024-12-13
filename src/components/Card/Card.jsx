@@ -2,6 +2,7 @@ import React from "react";
 import "./Card.css";
 import imageHref from "../../assets/images/href.png";
 
+//лоадер не завантажувати, бо тут лінива загрузка картинок!!!
 // зображення знаходяться в папці `src/assets/projects/`
 const getImagePath = (imageName) => {
   try {
