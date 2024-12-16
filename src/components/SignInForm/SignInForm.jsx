@@ -6,21 +6,23 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom"; 
 import styles from "./SignInForm.module.css";
 import { loginThunk } from "../../redux/auth/authThunks";
-
+import { selectIsLoading } from "../../redux/auth/authSelectors";
+import Loader from "../Loader/Loader";
 // import { requestLogin } from "../../API/Auth/fetchRegisterUser";
 
 //авторизація користувача в системі(вхід)
 const SignInForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
   const token = useSelector(selectToken); 
  
 
   useEffect(() => {
     if (String(token) !== "null") {
-      navigate("/UserPage");
+      isLoading ? <Loader /> : navigate("/UserPage");
     }
-  }, [token, navigate]);
+  }, [token, isLoading, navigate]);
 
 
 
