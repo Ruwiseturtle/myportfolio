@@ -27,6 +27,14 @@ const AuthorizationPage = () => {
     console.log('====================================');
   }, [authPageToShow, isLoading]);
 
+  if (isLoading) {
+    return (
+      <div className="AuthorizationLoader">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="authorizationContainerMain">

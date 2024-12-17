@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./SignInForm.module.css";
 import { loginThunk } from "../../redux/auth/authThunks";
 import { selectIsLoading } from "../../redux/auth/authSelectors";
-import Loader from "../Loader/Loader";
+// import Loader from "../Loader/Loader";
 // import { requestLogin } from "../../API/Auth/fetchRegisterUser";
 
 //авторизація користувача в системі(вхід)
@@ -20,7 +20,7 @@ const SignInForm = () => {
 
   useEffect(() => {
     if (String(token) !== "null") {
-      isLoading ? <Loader /> : navigate("/UserPage");
+      navigate("/UserPage");
     }
   }, [token, isLoading, navigate]);
 
@@ -61,6 +61,8 @@ const SignInForm = () => {
     }
     dispatch(loginThunk(user));
   }
+
+    
 
   return (
     <form className={styles.containerSignIn} onSubmit={formik.handleSubmit}>
