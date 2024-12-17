@@ -46,6 +46,7 @@ const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
           to="/"
           onClick={() => {
             setIsAvatarMenuOpen(false);
+            dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
             dispatch(logOut());
           }}
         >

@@ -20,11 +20,7 @@ const AuthorizationPage = () => {
   
 
   useEffect(() => {
-    // console.log("@@@@@@@@@@@@@authPageToShow");
-    // console.log(authPageToShow);
-    console.log("==============isLoading======================");
-    console.log(isLoading);
-    console.log('====================================');
+    
   }, [authPageToShow, isLoading]);
 
   if (isLoading) {
@@ -41,8 +37,7 @@ const AuthorizationPage = () => {
         <div>
           <div className="info">
             Authorization in the development process!!!
-          </div>
-          {authPageToShow !== AuthStatus.Registered ? (
+          </div>         
             <div className="authorizationContainer">
               <div className="tabs">
                 <Link
@@ -74,11 +69,7 @@ const AuthorizationPage = () => {
                 {authPageToShow === AuthStatus.LogUp && <SignUpForm />}
                 {/* {authenticated && <UserInfo/>} */}
               </div>
-            </div>
-          ) :
-            // !isLoading ? (<VerifyEmailPage />) : (<div className="loaderInProjectsPage"><Loader /> </div>)
-            isLoading && <Loader />
-          }
+            </div>          
         </div>
       </div>
     </>
