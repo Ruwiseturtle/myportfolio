@@ -58,7 +58,7 @@ const authSlice = createSlice({
       .addCase(registerThunk.fulfilled, (state, action) => {
         state.isLoading = false;
         state.registered = true;
-        state.authSwitchToShow = AuthStatus.Registered; //на сторінці авторизації показуємо логінізацію
+        state.authSwitchToShow = AuthStatus.LogIn; //на сторінці авторизації показуємо логінізацію
         state.user = action.payload.user;
       })
       .addCase(registerThunk.rejected, (state, action) => {

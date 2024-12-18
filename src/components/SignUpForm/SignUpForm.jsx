@@ -55,7 +55,7 @@ const SignUpForm = () => {
     };
 
     dispatch(registerThunk(newUser));
-    dispatch(setAuthSwitchToShow(AuthStatus.Registered));
+    dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
   }
 
   return (
