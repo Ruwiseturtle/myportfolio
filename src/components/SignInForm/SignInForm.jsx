@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectToken } from "../../redux/auth/authSelectors";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate, Link } from "react-router-dom"; 
 import styles from "./SignInForm.module.css";
 import { loginThunk } from "../../redux/auth/authThunks";
 import { selectIsLoading } from "../../redux/auth/authSelectors";
@@ -114,7 +114,9 @@ const SignInForm = () => {
           Sign In
         </button>
       </div>
-      
+      <div className={styles.hrefToForgotPassword}>
+        <Link to="/ForgotPassword">Forgot your password?</Link>
+      </div>
     </form>
   );
 };

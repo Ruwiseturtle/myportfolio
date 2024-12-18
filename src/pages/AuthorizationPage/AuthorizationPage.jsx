@@ -37,39 +37,35 @@ const AuthorizationPage = () => {
         <div>
           <div className="info">
             Authorization in the development process!!!
-          </div>         
-            <div className="authorizationContainer">
-              <div className="tabs">
-                <Link
-                  to="SignIn"
-                  className={`${"tab"} ${
-                    authPageToShow === AuthStatus.LogIn ? "active" : ""
-                  }`}
-                  onClick={() =>
-                    dispatch(setAuthSwitchToShow(AuthStatus.LogIn))
-                  }
-                >
-                  SIGN IN
-                </Link>
+          </div>
+          
+          <div className="authorizationContainer">
+            <div className="tabs">
+              <Link
+                to="SignIn"
+                className={`${"tab"} ${
+                  authPageToShow === AuthStatus.LogIn ? "active" : ""
+                }`}
+                onClick={() => dispatch(setAuthSwitchToShow(AuthStatus.LogIn))}
+              >
+                SIGN IN
+              </Link>
 
-                <Link
-                  to="SignUp"
-                  className={`${"tab"} ${
-                    authPageToShow === AuthStatus.LogUp ? "active" : ""
-                  }`}
-                  onClick={() =>
-                    dispatch(setAuthSwitchToShow(AuthStatus.LogUp))
-                  }
-                >
-                  SIGN UP
-                </Link>
-              </div>
-              <div className="content">
-                {authPageToShow === AuthStatus.LogIn && <SignInForm />}
-                {authPageToShow === AuthStatus.LogUp && <SignUpForm />}
-                {/* {authenticated && <UserInfo/>} */}
-              </div>
-            </div>          
+              <Link
+                to="SignUp"
+                className={`${"tab"} ${
+                  authPageToShow === AuthStatus.LogUp ? "active" : ""
+                }`}
+                onClick={() => dispatch(setAuthSwitchToShow(AuthStatus.LogUp))}
+              >
+                SIGN UP
+              </Link>
+            </div>
+            <div className="content">
+              {authPageToShow === AuthStatus.LogIn && <SignInForm />}
+              {authPageToShow === AuthStatus.LogUp && <SignUpForm />}
+            </div>
+          </div>
         </div>
       </div>
     </>

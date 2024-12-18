@@ -3,6 +3,7 @@ const AuthStatus = {
   Registered: "VerifyEmail", // Зареєструвався
   LogUp: "LogUp", // Реєстрація
   LogOut: "LogOut", //віхід
+  ForfotPassword: "forgotPassword", //забув пароль
 };
 
 export default AuthStatus;

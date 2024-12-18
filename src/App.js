@@ -1,7 +1,9 @@
-import React, { lazy } from "react";
+import React, { lazy, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout.jsx";
-
+import { setToken } from "./redux/auth/authReducer.js";
+import { requestGetCurrentUser } from "./API/Auth/fetchRegisterUser.jsx";
 // Лейзі імпорти компонентів
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
 const AboutMe = lazy(() => import("./pages/Aboutme/Aboutme.jsx"));
@@ -23,8 +25,24 @@ const VerifyEmailPage = lazy(() =>
 );
 
 const UserPage = lazy(() => import("./pages/UserPage/UserPage.jsx"));
+const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage/ForgotPasswordPage.jsx"));
 
 function App() {
+  const dispatch = useDispatch();
+  
+  //якщо в сторедж є токен, то зчитуємо його
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      dispatch(setToken(token));
+      const currentUser = requestGetCurrentUser(token);
+      console.log("================currentUser====================");
+      console.log(currentUser);
+      console.log('====================================');
+    }
+  }, [dispatch]);
+
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -35,6 +53,7 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="Sertificates" element={<SertificatesPage />} />
         <Route path="UserPage" element={<UserPage />} />
+        <Route path="ForgotPassword" element={<ForgotPasswordPage />} />
         <Route path="AuthorizationPage/*" element={<AuthorizationPage />}>
           {/* <Route path="userInfo" element={<UserInfo />} /> */}
           <Route path="SignIn" element={<AuthorizationPage />} />

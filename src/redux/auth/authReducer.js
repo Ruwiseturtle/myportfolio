@@ -34,6 +34,9 @@ const authSlice = createSlice({
     setAuthSwitchToShow(state, action) {
       state.authSwitchToShow = action.payload;
     },
+    setToken(state, action) {
+      state.token = action.token;
+    }
   },
   extraReducers: (builder) =>
     builder
@@ -93,4 +96,4 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
-export const { logOut, setAuthSwitchToShow } = authSlice.actions;
+export const { logOut, setAuthSwitchToShow, setToken } = authSlice.actions;

@@ -59,6 +59,10 @@ input:placeholder-shown + label {
    height: 100%;
 }
 
+.hrefToSignUp{
+    color: rgb(95, 94, 94);
+}
+
 .buttonSignIn{
      width: 128px;
     height: 43px;
@@ -78,4 +82,15 @@ input:placeholder-shown + label {
   font-size: 14px;
   margin-top: 0px;
   text-align: left;
+}
+
+.hrefToForgotPassword a{
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+     color: gray;
+}
+
+.hrefToForgotPassword a:hover {
+  color: darkgray; /* Опціонально: змінити колір при наведенні */
 }

@@ -16,13 +16,8 @@ export const setToken = (token) => {
 export const fetchRegisterUser = async (newUser) => {
   // formData - {name: "Oleg", email: "adwad@gmail.com", password: "123456788"}
     const { data } = await authInstance.post("/api/users/register", newUser);
-
-    // Зберігаємо токен у localStorage
-    // localStorage.setItem("token", data.user?.token);
-
-    // setToken(data.user?.token);
-    return data; 
- 
+     setToken(data.user?.token);
+    return data;  
 };
 
 
@@ -42,7 +37,7 @@ export const dellToken = () => {
   delete authInstance.defaults.headers.common["Authorization"];
 };
 
-//для розрогінізації користувача (в базі даних видаляє токен)
+//для розлогінізації користувача (в базі даних видаляє токен)
 export const requestLogout = async () => {
   console.log("logOut");
   
@@ -52,4 +47,16 @@ export const requestLogout = async () => {
 
   
   return data;
+};
+
+//отримуємо поточного юзера
+export const requestGetCurrentUser = async (token) => {
+  try {
+    setToken(token);
+    const { data } = await authInstance.get("/users/current");
+    return data;
+  } catch (error) {
+    setToken();
+    throw error;
+  }
 };
