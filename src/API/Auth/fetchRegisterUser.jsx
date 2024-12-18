@@ -53,7 +53,10 @@ export const requestLogout = async () => {
 export const requestGetCurrentUser = async (token) => {
   try {
     setToken(token);
-    const { data } = await authInstance.get("/users/current");
+    const { data } = await authInstance.get("/api/users/current");
+    console.log('==================data==================');
+    console.log(data);
+    console.log('====================================');
     return data;
   } catch (error) {
     setToken();

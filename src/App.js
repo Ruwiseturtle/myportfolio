@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout.jsx";
 import { setToken } from "./redux/auth/authReducer.js";
+import { setCurrentUserWithToken } from "./redux/auth/authReducer.js";
 import { requestGetCurrentUser } from "./API/Auth/fetchRegisterUser.jsx";
 // Лейзі імпорти компонентів
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
@@ -29,18 +30,20 @@ const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage/ForgotP
 
 function App() {
   const dispatch = useDispatch();
-  
-  //якщо в сторедж є токен, то зчитуємо його
+
+  //якщо в сторедж є токен, то зчитуємо його і юзера
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
       dispatch(setToken(token));
-      const currentUser = requestGetCurrentUser(token);
-      console.log("================currentUser====================");
-      console.log(currentUser);
-      console.log('====================================');
+      requestGetCurrentUser(token)
+        .then((data) => {
+          dispatch(setCurrentUserWithToken(data));
+        })
+        .catch((error) => console.log(error));
     }
   }, [dispatch]);
+
 
 
   return (

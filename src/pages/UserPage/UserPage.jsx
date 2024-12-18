@@ -11,7 +11,11 @@ const UserPage = () => {
 
   useEffect(() => {
     dispatch(setAuthSwitchToShow(AuthStatus.LogOut));
-   })
+    console.log("UserPage");
+    console.log(currentUser);
+    
+    
+  }, [currentUser, dispatch]);
   
   return (
     <div className="containerUserPage">

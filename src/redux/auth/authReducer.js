@@ -5,8 +5,8 @@ import AuthStatus from "../../constants/userRolesEnum";
 const INITIAL_STATE = {
   token: null,
   user: {
-    login: null,
     email: null,
+    login: null,
   },
   registered: false,
   authSwitchToShow: AuthStatus.LogIn,
@@ -36,6 +36,16 @@ const authSlice = createSlice({
     },
     setToken(state, action) {
       state.token = action.token;
+    },
+    setCurrentUserWithToken(state, action) {
+      console.log("reducer setCurrentUserWithToken");
+      console.log(action.payload);
+      
+      
+      state.user = action.payload;
+      state.registered = true;
+      state.authSwitchToShow = AuthStatus.LogOut;
+      state.error = null;
     }
   },
   extraReducers: (builder) =>
@@ -46,9 +56,6 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(registerThunk.fulfilled, (state, action) => {
-        console.log("===================user=================");
-        console.log(action.payload.user);
-        console.log("====================================");
         state.isLoading = false;
         state.registered = true;
         state.authSwitchToShow = AuthStatus.Registered; //на сторінці авторизації показуємо логінізацію
@@ -96,4 +103,5 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
-export const { logOut, setAuthSwitchToShow, setToken } = authSlice.actions;
+export const { logOut, setAuthSwitchToShow, setToken, setCurrentUserWithToken } =
+  authSlice.actions;
