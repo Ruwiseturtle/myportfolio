@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmyportfolio=self.webpackChunkmyportfolio||[]).push([[342],{7342:(e,s,t)=>{t.r(s),t.d(s,{default:()=>c});var o=t(5043),l=t(3003),r=t(7723),a=t(8814),i=t(8195),n=t(579);const c=()=>{const e=(0,l.d4)(r.mB),s=(0,l.wA)();return(0,o.useEffect)((()=>{s((0,a.tW)(i.A.LogOut))})),(0,n.jsxs)("div",{className:"containerUserPage",children:["xxx",(0,n.jsxs)("div",{className:"textUserPage",children:["it's your page ",null!==e&&void 0!==e&&e.login?`, ${e.login}`:""]})]})}}}]);
-//# sourceMappingURL=342.0a487b0b.chunk.js.map
