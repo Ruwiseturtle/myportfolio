@@ -19,7 +19,6 @@ const skillsSlice = createSlice({
     builder
       //кейси для отримання каталогу скілів заданої сторінки
       .addCase(getSkillsThunk.pending, (state) => {
-        console.log("status pending projects");
         state.isLoading = true;
         state.error = null;
       })
@@ -28,7 +27,6 @@ const skillsSlice = createSlice({
         state.skills = action.payload;
       })
       .addCase(getSkillsThunk.rejected, (state, action) => {
-        console.log("status error projects");
         state.isLoading = false;      
         state.error = action.payload;
       }),

@@ -4,6 +4,7 @@ import imageMyphoto2 from "../../assets/images/myphoto2.jpg";
 import ReviewsList from "../../components/ReviewsList/ReviewsList";
 
 const Aboutme = () => {
+  
   return (
     <div className="container-aboutMe">
       <div className="list-aboutme">

@@ -8,7 +8,7 @@ import AuthStatus from "../../constants/userRolesEnum";
 const UserPage = () => {
   const currentUser = useSelector(selectUser);
   const dispatch = useDispatch();
-
+  
   useEffect(() => {
     dispatch(setAuthSwitchToShow(AuthStatus.LogOut));
     console.log("UserPage");
@@ -21,7 +21,9 @@ const UserPage = () => {
     <div className="containerUserPage">
       xxx
       <div className="textUserPage">
-        it's your page {currentUser?.login ? `, ${currentUser.login}` : ""}
+        it's your page {currentUser?.login ? `, ${currentUser.login}` : ""}. The
+        page is under development. I want to come up with interesting content
+        for you
       </div>
     </div>
   );

@@ -19,7 +19,6 @@ const reviewsSlice = createSlice({
     builder
       //кейси для отримання каталогу reviews
       .addCase(getReviewsThunk.pending, (state) => {
-        console.log("status pending reviews");
         state.isLoading = true;
         state.error = null;
       })
@@ -28,7 +27,6 @@ const reviewsSlice = createSlice({
         state.reviews = action.payload;
       })
       .addCase(getReviewsThunk.rejected, (state, action) => {
-        console.log("status error reviews");
         state.isLoading = false;
         state.error = action.payload;
       }),

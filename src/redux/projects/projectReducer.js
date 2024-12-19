@@ -19,7 +19,6 @@ const projectsSlice = createSlice({
     builder
       //кейси для отримання каталогу проектів заданої сторінки
       .addCase(getProjectsThunk.pending, (state) => {
-        console.log("status pending projects");
         state.isLoading = true;
         state.error = null;
       })
@@ -28,7 +27,6 @@ const projectsSlice = createSlice({
         state.projects = action.payload;        
       })
       .addCase(getProjectsThunk.rejected, (state, action) => {
-        console.log("status error projects");
         state.isLoading = false;
         state.error = action.payload;
       }),

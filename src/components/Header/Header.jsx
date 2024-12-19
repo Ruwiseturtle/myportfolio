@@ -97,6 +97,17 @@ const Header = () => {
           >
             Sertificates
           </NavLink>
+
+          <NavLink
+            className={({ isActive }) => (isActive ? "text active" : "text")}
+            to="/UserPage"
+            onClick={() => {
+              setIsOpen(false);
+              setIsAvatarMenuOpen(false);
+            }}
+          >
+            Your page
+          </NavLink>
         </div>
 
         <div

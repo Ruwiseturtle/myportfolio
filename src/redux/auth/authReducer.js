@@ -8,7 +8,7 @@ const INITIAL_STATE = {
     email: null,
     login: null,
   },
-  registered: false,
+  isAuthenticated: false, //чи зайшов користувач під своїм паролем
   authSwitchToShow: AuthStatus.LogIn,
   isLoading: false,
   error: null,
@@ -27,7 +27,7 @@ const authSlice = createSlice({
         login: null,
         email: null,
       };
-      state.registered = false;
+      state.isAuthenticated = false; //чи зайшов користувач під своїм паролем
       state.authSwitchToShow = AuthStatus.LogIn;
       state.error = null;
     },
@@ -57,7 +57,6 @@ const authSlice = createSlice({
       })
       .addCase(registerThunk.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.registered = true;
         state.authSwitchToShow = AuthStatus.LogIn; //на сторінці авторизації показуємо логінізацію
         state.user = action.payload.user;
       })
@@ -72,7 +71,7 @@ const authSlice = createSlice({
       })
       .addCase(loginThunk.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.authenticated = true;
+        state.isAuthenticated = true;
         state.token = action.payload.token;
         state.user = action.payload.user;
         console.log("user data ssssssssssssssssss");        

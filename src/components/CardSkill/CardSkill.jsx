@@ -6,7 +6,7 @@ const getImagePath = (imageName) => {
   try {
     return require(`../../assets/skills/${imageName}`);
   } catch (err) {
-    console.error(`Image ${imageName} not found`);
+    console.error(`Image ${imageName} not found kakashka`);
     return null;
   }
 };
@@ -14,15 +14,15 @@ const getImagePath = (imageName) => {
 const CardSkill = ({ skill }) => {
   // Перевіряємо, чи є URL або локальний шлях
   const isUrl =
-    skill.skillPhoto.startsWith("http") || skill.skillPhoto.startsWith("https");
+    skill?.skillPhoto.startsWith("http") || skill?.skillPhoto.startsWith("https");
 
   // Визначаємо джерело зображення
-  const imageSrc = isUrl ? skill.skillPhoto : getImagePath(skill.skillPhoto);
+  const imageSrc = isUrl ? skill?.skillPhoto : getImagePath(skill?.skillPhoto);
 
   return (
     <li className="list-item">
       <div className="skill-item">
-        {skill.skillPhoto ? (
+        {skill?.skillPhoto ? (
           <div className="image-wrapper">
             <img className="image-skill" src={imageSrc} alt={skill.skillName} />
             <div className="image-text">{skill.skillName}</div>

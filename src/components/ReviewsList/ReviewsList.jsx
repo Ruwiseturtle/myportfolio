@@ -3,19 +3,20 @@ import { useSelector, useDispatch } from "react-redux";
 import * as selectors from "../../redux/reviews/reviewsSelectors";
 import * as thunks from "../../redux/reviews/reviewsThunks";
 import "./ReviewsList.css";
-// import projects from '../../data/Myprojects.json';
+// import projects1 from '../../data/Myprojects.json';
 import CardReviews from "../CardReviews/CardReviews";
 import imageArrowNext from "../../assets/images/right-arrow.png";
 
 const ReviewsList = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  
   const dispatch = useDispatch();
   const reviews = useSelector(selectors.selectGetReviews);
 
-    useEffect(() => {
+  
+  useEffect(() => {
     dispatch(thunks.getReviewsThunk());
-  }, [dispatch]);
+    
+  }, [dispatch, currentPage]);
 
     const handleNextPage = () => {
       setCurrentPage(

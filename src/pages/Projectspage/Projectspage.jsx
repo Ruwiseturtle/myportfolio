@@ -11,10 +11,6 @@ const Projectspage = () => {
   const dispatch = useDispatch();
   const projects = useSelector(selectors.selectGetProjects);
   const isLoading = useSelector(selectors.selectGetStatusLoading);
-
-  console.log("===============isLoading=====================");
-  console.log(isLoading);
-  console.log('====================================');
   
   const clickBtnShowHideProjects = () => {
     setShowProjects(!showProjects);
