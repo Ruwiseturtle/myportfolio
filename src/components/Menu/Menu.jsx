@@ -16,14 +16,16 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
           <NavLink
             to="/MenuPage/DescriptionMenu"
             className={({ isActive }) =>
-              isActive ? `${styles.nameHref} ${styles.active}` : styles.nameHref
+              isActive
+                ? `${styles.nameHref} ${styles.activeMenu}`
+                : styles.nameHref
             }
             onClick={handleClick}
           >
             Description
           </NavLink>
         </li>
-       
+
         <li className={styles.menuItem}>....</li>
         <li className={styles.menuItem}>....</li>
         <li className={styles.menuItem}>....</li>

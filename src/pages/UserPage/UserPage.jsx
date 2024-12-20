@@ -1,32 +1,40 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './UserPage.css';
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectUser } from '../../redux/auth/authSelectors';
-import { setAuthSwitchToShow } from '../../redux/auth/authReducer';
-import AuthStatus from "../../constants/userRolesEnum";
+import { selectIsAuthenticated } from '../../redux/auth/authSelectors';
 
 const UserPage = () => {
   const currentUser = useSelector(selectUser);
-  const dispatch = useDispatch();
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+  const navigate = useNavigate();
   
   useEffect(() => {
-    dispatch(setAuthSwitchToShow(AuthStatus.LogOut));
+    if (!isAuthenticated) {
+      navigate("/AuthorizationPage/SignIn");
+    }
+
     console.log("UserPage");
     console.log(currentUser);
-    
-    
-  }, [currentUser, dispatch]);
+  }, [isAuthenticated, currentUser, navigate]);
   
-  return (
-    <div className="containerUserPage">
-      xxx
-      <div className="textUserPage">
-        it's your page {currentUser?.login ? `, ${currentUser.login}` : ""}. The
-        page is under development. I want to come up with interesting content
-        for you
+
+  console.log("UserPage isAuthenticated");
+  console.log(isAuthenticated);
+  
+ 
+
+    return (
+      <div className="containerUserPage">
+        xxx
+        <div className="textUserPage">
+          it's your page {currentUser?.login ? `, ${currentUser.login}` : ""}.
+          The page is under development. I want to come up with interesting
+          content for you
+        </div>
       </div>
-    </div>
-  );
+    );
 }
 
 export default UserPage

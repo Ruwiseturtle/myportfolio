@@ -39,12 +39,7 @@ export const dellToken = () => {
 
 //для розлогінізації користувача (в базі даних видаляє токен)
 export const requestLogout = async () => {
-  console.log("logOut");
-  
-  
   const { data } = await authInstance.post("/api/users/logout");
-  console.log("=============== requestLogout =====================");
-
   
   return data;
 };
@@ -54,9 +49,7 @@ export const requestGetCurrentUser = async (token) => {
   try {
     setToken(token);
     const { data } = await authInstance.get("/api/users/current");
-    console.log('==================data==================');
-    console.log(data);
-    console.log('====================================');
+   
     return data;
   } catch (error) {
     setToken();

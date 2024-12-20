@@ -65,7 +65,7 @@
   color: #fff;
 }
 
-.active {
+.activeHref {
   color: #fff;
   border-bottom: 2px solid #00A8cd;
 }

@@ -1,32 +1,16 @@
-import React, {useEffect} from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { selectToken } from "../../redux/auth/authSelectors";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate, Link } from "react-router-dom"; 
 import styles from "./SignInForm.module.css";
 import { loginThunk } from "../../redux/auth/authThunks";
-import { selectIsLoading } from "../../redux/auth/authSelectors";
-// import Loader from "../Loader/Loader";
-// import { requestLogin } from "../../API/Auth/fetchRegisterUser";
 
 //авторизація користувача в системі(вхід)
 const SignInForm = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
-  const token = useSelector(selectToken); 
  
-
-  useEffect(() => {
-    if (String(token) !== "null") {
-      navigate("/UserPage");
-    }
-  }, [token, isLoading, navigate]);
-
-
-
-
+  
   // Використання useFormik
   const formik = useFormik({
     initialValues: {
@@ -46,7 +30,6 @@ const SignInForm = () => {
         .required("Password is required"), // Поле обов'язкове
     }),
     onSubmit: (values, { resetForm }) => {
-   
       authenticationWithData(values);
       resetForm(); // Очищення форми після відправки
     },
@@ -54,15 +37,12 @@ const SignInForm = () => {
 
   // ф-ція отримує логін та пароль користувача
   function authenticationWithData(userData) {
-  
     const user = {
       email: userData.email.trim(),
       password: userData.password.trim(),
-    }
+    };
     dispatch(loginThunk(user));
   }
-
-    
 
   return (
     <form className={styles.containerSignIn} onSubmit={formik.handleSubmit}>

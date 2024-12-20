@@ -12,7 +12,6 @@ const INITIAL_STATE = {
   authSwitchToShow: AuthStatus.LogIn,
   isLoading: false,
   error: null,
-  switch: true,
 };
 
 const authSlice = createSlice({
@@ -28,7 +27,7 @@ const authSlice = createSlice({
         email: null,
       };
       state.isAuthenticated = false; //чи зайшов користувач під своїм паролем
-      state.authSwitchToShow = AuthStatus.LogIn;
+      state.authSwitchToShow = AuthStatus.LogIn; // який компонент показувати на сторінці авторизації (signin чи signup)
       state.error = null;
     },
     setAuthSwitchToShow(state, action) {
@@ -36,14 +35,12 @@ const authSlice = createSlice({
     },
     setToken(state, action) {
       state.token = action.token;
+      state.isAuthenticated = true;
+      state.authSwitchToShow = AuthStatus.LogOut;
     },
     setCurrentUserWithToken(state, action) {
-      console.log("reducer setCurrentUserWithToken");
-      console.log(action.payload);
-      
-      
       state.user = action.payload;
-      state.registered = true;
+      state.isAuthenticated = true;
       state.authSwitchToShow = AuthStatus.LogOut;
       state.error = null;
     }
@@ -72,10 +69,9 @@ const authSlice = createSlice({
       .addCase(loginThunk.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isAuthenticated = true;
+        state.authSwitchToShow = AuthStatus.LogOut;
         state.token = action.payload.token;
         state.user = action.payload.user;
-        console.log("user data ssssssssssssssssss");        
-        console.log(action.payload.user);
         
       })
       .addCase(loginThunk.rejected, (state, action) => {

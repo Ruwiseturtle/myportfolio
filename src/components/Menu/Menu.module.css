@@ -67,6 +67,6 @@ list-style-type: none;
   white-space: normal;   /* Дозволяє переносити текст, якщо він не вміщується в рядок */
 }
 
-.nameHref.active {
+.nameHref.activeMenu {
   color: #fafdfd; /* Колір для активного посилання */
 }

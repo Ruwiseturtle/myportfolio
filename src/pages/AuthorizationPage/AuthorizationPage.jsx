@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './AuthorizationPage.css';
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import SignInForm from "../../components/SignInForm/SignInForm";
-// import VerifyEmailPage from "../VerifyEmailPage/VerifyEmailPage";
 import  AuthStatus  from "../../constants/userRolesEnum";
 import {
   selectAuthSwitchToShow,
@@ -12,16 +11,21 @@ import {
 } from "../../redux/auth/authSelectors";
 import { setAuthSwitchToShow } from "../../redux/auth/authReducer";
 import Loader from "../../components/Loader/Loader";
+import { selectIsAuthenticated } from "../../redux/auth/authSelectors";
 
 const AuthorizationPage = () => {
   const authPageToShow = useSelector(selectAuthSwitchToShow);
+  const isAuthenticated = useSelector(selectIsAuthenticated);
    const isLoading = useSelector(selectIsLoading);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   
 
   useEffect(() => {
-    
-  }, [authPageToShow, isLoading]);
+     if (isAuthenticated) {
+       navigate("/UserPage");
+     }
+  }, [authPageToShow, isLoading, isAuthenticated, navigate]);
 
   if (isLoading) {
     return (
@@ -31,6 +35,8 @@ const AuthorizationPage = () => {
     );
   }
 
+
+  
   return (
     <>
       <div className="authorizationContainerMain">
@@ -38,13 +44,13 @@ const AuthorizationPage = () => {
           <div className="info">
             Authorization in the development process!!!
           </div>
-          
+
           <div className="authorizationContainer">
             <div className="tabs">
               <Link
                 to="SignIn"
                 className={`${"tab"} ${
-                  authPageToShow === AuthStatus.LogIn ? "active" : ""
+                  authPageToShow === AuthStatus.LogIn ? "activeHref" : ""
                 }`}
                 onClick={() => dispatch(setAuthSwitchToShow(AuthStatus.LogIn))}
               >
@@ -54,7 +60,7 @@ const AuthorizationPage = () => {
               <Link
                 to="SignUp"
                 className={`${"tab"} ${
-                  authPageToShow === AuthStatus.LogUp ? "active" : ""
+                  authPageToShow === AuthStatus.LogUp ? "activeHref" : ""
                 }`}
                 onClick={() => dispatch(setAuthSwitchToShow(AuthStatus.LogUp))}
               >

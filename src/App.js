@@ -1,10 +1,11 @@
 import React, { lazy, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout.jsx";
-import { setToken } from "./redux/auth/authReducer.js";
-import { setCurrentUserWithToken } from "./redux/auth/authReducer.js";
 import { requestGetCurrentUser } from "./API/Auth/fetchRegisterUser.jsx";
+import { selectIsAuthenticated } from "./redux/auth/authSelectors.js";
+import { selectAuthSwitchToShow } from "./redux/auth/authSelectors.js";
+
 // Лейзі імпорти компонентів
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
 const AboutMe = lazy(() => import("./pages/Aboutme/Aboutme.jsx"));
@@ -29,20 +30,26 @@ const UserPage = lazy(() => import("./pages/UserPage/UserPage.jsx"));
 const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage/ForgotPasswordPage.jsx"));
 
 function App() {
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+  const authSwitchToShow = useSelector(selectAuthSwitchToShow);
   const dispatch = useDispatch();
+
 
   //якщо в сторедж є токен, то зчитуємо його і юзера
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token) {
-      dispatch(setToken(token));
+
+    if (token !== null && token !== "null") {
+      // dispatch(setToken(token));
       requestGetCurrentUser(token)
         .then((data) => {
-          dispatch(setCurrentUserWithToken(data));
+          // dispatch(setCurrentUserWithToken(data));
+      
         })
         .catch((error) => console.log(error));
+    } else {
     }
-  }, [dispatch]);
+  }, [dispatch, authSwitchToShow, isAuthenticated]);
 
 
 
@@ -56,6 +63,14 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="Sertificates" element={<SertificatesPage />} />
         <Route path="UserPage" element={<UserPage />} />
+
+        {/* <Route path="UserPage" element={
+            <RestictedRoute>
+              <UserPage />
+            </RestictedRoute>
+          }
+        /> */}
+
         <Route path="ForgotPassword" element={<ForgotPasswordPage />} />
         <Route path="AuthorizationPage/*" element={<AuthorizationPage />}>
           {/* <Route path="userInfo" element={<UserInfo />} /> */}

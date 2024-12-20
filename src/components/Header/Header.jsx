@@ -1,15 +1,20 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import  {useDispatch } from "react-redux";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import logoImage from "../../assets/images/logo-code1.png";
-import avatar from "../../assets/images/avatar.png";
+// import avatar from "../../assets/images/avatar.png";
+import avatarWhite from "../../assets/images/avatarSVGwhite.svg";
+import avatarBlue from "../../assets/images/avatarSVGblue.svg";
 import AvatarMenu from "../AvatarMenu/AvatarMenu";
+import { setAuthSwitchToShow } from "../../redux/auth/authReducer";
+import AuthStatus from "../../constants/userRolesEnum";
 
 const Header = () => {
+  const dispatch = useDispatch();
   const [isOpen, setIsOpen] = useState(false);
   const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false);
-
-
+  // const navigate = useNavigate();
 
   return (
     <>
@@ -110,12 +115,25 @@ const Header = () => {
           </NavLink>
         </div>
 
-        <div
-          className="box-avatar"
-          onClick={() => setIsAvatarMenuOpen(!isAvatarMenuOpen)}
+        <NavLink
+          to="/AuthorizationPage"
+          className={({ isActive }) =>
+            isActive ? "box-avatar activeImage" : "box-avatar"
+          }
+          onClick={() => {
+            setIsAvatarMenuOpen(!isAvatarMenuOpen);
+            dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
+          }}
         >
-          <img className="avatar" src={avatar} alt="avatar" />
-        </div>
+          {/* Оновлення логіки src для аватара */}
+          {({ isActive }) => (
+            <img
+              className="avatar"
+              src={isActive ? avatarBlue : avatarWhite} // Використовуємо isActive для зміни зображення
+              alt="avatar"
+            />
+          )}
+        </NavLink>
         {/* випливаюче вікно для авторизації, логінізації та виходу */}
         <AvatarMenu
           isAvatarMenuOpen={isAvatarMenuOpen}
