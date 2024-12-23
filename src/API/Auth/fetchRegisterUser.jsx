@@ -50,7 +50,12 @@ export const requestGetCurrentUser = async (token) => {
     setToken(token);
     const { data } = await authInstance.get("/api/users/current");
    
+    console.log("requestGetCurrentUser");
+    console.log(data);
+    
     return data;
+    
+    
   } catch (error) {
     setToken();
     throw error;

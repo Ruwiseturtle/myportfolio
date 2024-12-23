@@ -127,8 +127,7 @@ const Header = () => {
         >
           {/* Оновлення логіки src для аватара */}
           {({ isActive }) => (
-            <img
-              className="avatar"
+            <img className="avatar"
               src={isActive ? avatarBlue : avatarWhite} // Використовуємо isActive для зміни зображення
               alt="avatar"
             />
