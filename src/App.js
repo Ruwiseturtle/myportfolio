@@ -37,12 +37,19 @@ function App() {
 
   //якщо в сторедж є токен, то зчитуємо його і юзера
   useEffect(() => {
+    console.log("app шаг1");
+    
     const token = localStorage.getItem("token");
+    console.log("app шаг2");
 
     if (token !== null && token !== "null") {
+      console.log("app шаг3");
       // dispatch(setToken(token));
       requestGetCurrentUser(token)
         .then((data) => {
+          console.log("page app");          
+          console.log(data);
+          
           // dispatch(setCurrentUserWithToken(data));
       
         })
