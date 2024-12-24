@@ -2,10 +2,11 @@ import React, { lazy, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout.jsx";
-import { requestGetCurrentUser } from "./API/Auth/fetchRegisterUser.jsx";
+// import { requestGetCurrentUser } from "./API/Auth/fetchRegisterUser.jsx";
 import { selectIsAuthenticated } from "./redux/auth/authSelectors.js";
 import { selectAuthSwitchToShow } from "./redux/auth/authSelectors.js";
-
+import isUserLoggedIn from "./helpers/isUserLoggedIn.js";
+import { setUserLoginedWithToken } from "./redux/auth/authReducer.js";
 // Лейзі імпорти компонентів
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
 const AboutMe = lazy(() => import("./pages/Aboutme/Aboutme.jsx"));
@@ -35,29 +36,25 @@ function App() {
   const dispatch = useDispatch();
 
 
-  //якщо в сторедж є токен, то зчитуємо його і юзера
-  useEffect(() => {
-    console.log("app шаг1");
-    
-    const token = localStorage.getItem("token");
-    console.log("app шаг2");
+  //якщо в сторедж є токен, то зчитуємо його і юзера. якщо токен валідний
+ useEffect(() => {
+   const checkUser = async () => {
+     try {
+       //узнаємо, чи токен є і чи він валідний (тобто, чи залогінений користувач). Якщо так, то вертаємо дані юзера та токен
+       const isLoggedIn = await isUserLoggedIn();
 
-    if (token !== null && token !== "null") {
-      console.log("app шаг3");
-      // dispatch(setToken(token));
-      requestGetCurrentUser(token)
-        .then((data) => {
-          console.log("page app");          
-          console.log(data);
-          
-          // dispatch(setCurrentUserWithToken(data));
-      
-        })
-        .catch((error) => console.log(error));
-    } else {
-    }
-  }, [dispatch, authSwitchToShow, isAuthenticated]);
+       if (isLoggedIn) {
+         const { user, token } = isLoggedIn;
 
+         dispatch(setUserLoginedWithToken({user, token}));
+       }
+     } catch (error) {
+       console.error("Помилка при перевірці авторизації:", error);
+     }
+   };
+
+   checkUser();
+ }, [dispatch, authSwitchToShow, isAuthenticated]);
 
 
   return (

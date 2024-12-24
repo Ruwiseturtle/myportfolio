@@ -33,8 +33,9 @@ const authSlice = createSlice({
     setAuthSwitchToShow(state, action) {
       state.authSwitchToShow = action.payload;
     },
-    setToken(state, action) {
+    setUserLoginedWithToken(state, action) {
       state.token = action.token;
+      state.user = action.user;
       state.isAuthenticated = true;
       state.authSwitchToShow = AuthStatus.LogOut;
     },
@@ -98,5 +99,9 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
-export const { logOut, setAuthSwitchToShow, setToken, setCurrentUserWithToken } =
-  authSlice.actions;
+export const {
+  logOut,
+  setAuthSwitchToShow,
+  setUserLoginedWithToken,
+  setCurrentUserWithToken,
+} = authSlice.actions;

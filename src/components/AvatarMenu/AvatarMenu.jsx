@@ -53,8 +53,8 @@ const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
           to="/"
           onClick={() => {
             setIsAvatarMenuOpen(false);
-            dispatch(logOut());
             deleteTokenFromStorage();
+            dispatch(logOut());            
           }}
         >
           Log Out

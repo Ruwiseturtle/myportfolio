@@ -30,6 +30,9 @@ export const loginThunk = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const result = await requestLogin(data);
+      console.log("loginThunk");
+      console.log(result);
+      
            
       return result;
     } catch ({ response }) {

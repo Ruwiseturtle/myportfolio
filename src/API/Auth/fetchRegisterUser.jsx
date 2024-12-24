@@ -3,7 +3,7 @@ import axios from "axios";
 const authInstance = axios.create({
   baseURL: "https://myportfolio-backend-oncj.onrender.com",
   // baseURL:
-  //   process.env.REACT_APP_ENVIRONMENT === 'development'
+  //   process.env.REACT_APP_ENVIRONMENT === "development"
   //     ? "http://localhost:3000"
   //     : "https://myportfolio-backend-oncj.onrender.com",
 });
@@ -22,7 +22,7 @@ export const fetchRegisterUser = async (newUser) => {
 
 
 //__________________логінізація користувача___________
-export const requestLogin = async formData => {
+export const  requestLogin = async formData => {
   // formData - {email: "adwad@gmail.com", password: "123456788"}
     
   const { data } = await authInstance.post("/api/users/login", formData);
@@ -40,14 +40,20 @@ export const dellToken = () => {
 //для розлогінізації користувача (в базі даних видаляє токен)
 export const requestLogout = async () => {
   const { data } = await authInstance.post("/api/users/logout");
-  
+  setToken();
   return data;
 };
 
 //отримуємо поточного юзера
 export const requestGetCurrentUser = async (token) => {
+  setToken(token);
+  console.log("======requestGetCurrentUser===testToken==========");
+  console.log(setToken(token));
+  console.log(token);
+  console.log('====================================');
+
   try {
-    setToken(token);
+    
     const { data } = await authInstance.get("/api/users/current");
    
     console.log("requestGetCurrentUser");
