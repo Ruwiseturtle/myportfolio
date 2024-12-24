@@ -4,6 +4,7 @@ import {
   fetchRegisterUser,
   requestLogin,
   requestLogout,
+  requestGetCurrentUser
 } from "../../API/Auth/fetchRegisterUser";
 
 //санка для реєстрації
@@ -55,6 +56,22 @@ export const logOutThunk = createAsyncThunk(
     } catch (error) {
       Notify.failure(error.code);
       return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+//санка для отримання потоного користувача
+export const currentUserThunk = createAsyncThunk(
+  "auth/current",
+  async (formData, thunkAPI) => {
+    try {      
+   
+      const result = await requestGetCurrentUser(formData.token);
+      console.log("================= ШАГ3 ===================");
+      console.log(result);
+      return result;
+    } catch ({ response }) {
+      return thunkAPI.rejectWithValue(response);
     }
   }
 );

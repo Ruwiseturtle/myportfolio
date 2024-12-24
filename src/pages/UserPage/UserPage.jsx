@@ -10,6 +10,10 @@ const UserPage = () => {
   const isAuthenticated = useSelector(selectIsAuthenticated);
   const navigate = useNavigate();
   
+  console.log("=================UserPage===================");
+  console.log(currentUser);
+  console.log('====================================');
+
   useEffect(() => {
     if (!isAuthenticated) {
       navigate("/AuthorizationPage/SignIn");

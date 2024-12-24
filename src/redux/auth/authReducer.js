@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { registerThunk, loginThunk } from "./authThunks";
+import { registerThunk, loginThunk, currentUserThunk } from "./authThunks";
 import AuthStatus from "../../constants/userRolesEnum";
 
 const INITIAL_STATE = {
@@ -30,21 +30,12 @@ const authSlice = createSlice({
       state.authSwitchToShow = AuthStatus.LogIn; // який компонент показувати на сторінці авторизації (signin чи signup)
       state.error = null;
     },
+    setToken(state, action) {
+      state.token = action.payload;
+    },
     setAuthSwitchToShow(state, action) {
       state.authSwitchToShow = action.payload;
     },
-    setUserLoginedWithToken(state, action) {
-      state.token = action.token;
-      state.user = action.user;
-      state.isAuthenticated = true;
-      state.authSwitchToShow = AuthStatus.LogOut;
-    },
-    setCurrentUserWithToken(state, action) {
-      state.user = action.payload;
-      state.isAuthenticated = true;
-      state.authSwitchToShow = AuthStatus.LogOut;
-      state.error = null;
-    }
   },
   extraReducers: (builder) =>
     builder
@@ -57,6 +48,7 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.authSwitchToShow = AuthStatus.LogIn; //на сторінці авторизації показуємо логінізацію
         state.user = action.payload.user;
+        state.error = null;
       })
       .addCase(registerThunk.rejected, (state, action) => {
         state.isLoading = false;
@@ -73,15 +65,31 @@ const authSlice = createSlice({
         state.authSwitchToShow = AuthStatus.LogOut;
         state.token = action.payload.token;
         state.user = action.payload.user;
-        
+        state.error = null;
       })
       .addCase(loginThunk.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.payload;       
+        state.error = action.payload;
+      })
+      // ---------- CURRENT USER ----------------
+      .addCase(currentUserThunk.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(currentUserThunk.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.user = payload;
+        state.isAuthenticated = true;
+        state.authSwitchToShow = AuthStatus.LogOut;
+        state.error = null;
         
       })
+      .addCase(currentUserThunk.rejected, (state, { payload }) => {
+        state.isLoading = false;
+        state.token = null;
+        state.error = payload;
+      }),
 
-  
   // // ---------- REFRESH USER ----------------
   // .addCase(refreshThunk.pending, (state) => {
   //   state.isLoading = true;
@@ -102,6 +110,5 @@ export const authReducer = authSlice.reducer;
 export const {
   logOut,
   setAuthSwitchToShow,
-  setUserLoginedWithToken,
-  setCurrentUserWithToken,
+  setToken,
 } = authSlice.actions;

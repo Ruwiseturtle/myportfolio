@@ -47,20 +47,12 @@ export const requestLogout = async () => {
 //отримуємо поточного юзера
 export const requestGetCurrentUser = async (token) => {
   setToken(token);
-  console.log("======requestGetCurrentUser===testToken==========");
-  console.log(setToken(token));
-  console.log(token);
-  console.log('====================================');
 
   try {
     
     const { data } = await authInstance.get("/api/users/current");
    
-    console.log("requestGetCurrentUser");
-    console.log(data);
-    
-    return data;
-    
+    return data;    
     
   } catch (error) {
     setToken();

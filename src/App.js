@@ -6,7 +6,8 @@ import Layout from "./components/Layout/Layout.jsx";
 import { selectIsAuthenticated } from "./redux/auth/authSelectors.js";
 import { selectAuthSwitchToShow } from "./redux/auth/authSelectors.js";
 import isUserLoggedIn from "./helpers/isUserLoggedIn.js";
-import { setUserLoginedWithToken } from "./redux/auth/authReducer.js";
+import { currentUserThunk } from "./redux/auth/authThunks.js";
+import { setToken } from "./redux/auth/authReducer.js";
 // Лейзі імпорти компонентів
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
 const AboutMe = lazy(() => import("./pages/Aboutme/Aboutme.jsx"));
@@ -39,14 +40,21 @@ function App() {
   //якщо в сторедж є токен, то зчитуємо його і юзера. якщо токен валідний
  useEffect(() => {
    const checkUser = async () => {
+     console.log("================= ШАГ0 ===================");
      try {
        //узнаємо, чи токен є і чи він валідний (тобто, чи залогінений користувач). Якщо так, то вертаємо дані юзера та токен
        const isLoggedIn = await isUserLoggedIn();
 
        if (isLoggedIn) {
+         console.log("app isLoggedIn");
+         console.log(isLoggedIn);
+                  
          const { user, token } = isLoggedIn;
+         console.log('================= ШАГ1 ===================');
 
-         dispatch(setUserLoginedWithToken({user, token}));
+        dispatch(setToken(token));
+        dispatch(currentUserThunk({ user, token }));
+        
        }
      } catch (error) {
        console.error("Помилка при перевірці авторизації:", error);
