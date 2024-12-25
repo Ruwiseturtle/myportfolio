@@ -27,6 +27,18 @@
   z-index: 99; /* Щоб меню було над іншими елементами */
 }
 
+@media (max-width: 960px){
+  .avatar-menu{
+    width: 100%;
+    height: 100vh;
+     background-color: black;
+  }
+  .avatar-menu-list{
+    align-items: center;
+  }
+ 
+}
+
 .openAvatarMenu{
   opacity: 1; /* З'являється */
   visibility: visible; /* Робимо видимим */
