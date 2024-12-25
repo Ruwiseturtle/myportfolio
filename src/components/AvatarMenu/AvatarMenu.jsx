@@ -7,20 +7,17 @@ import { setAuthSwitchToShow } from "../../redux/auth/authReducer";
 import { logOut } from "../../redux/auth/authReducer";
 import { selectIsAuthenticated } from "../../redux/auth/authSelectors";
 
-const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
+const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isAuthenticated = useSelector(selectIsAuthenticated);
 
-  useEffect(() => {   
-    
-  }, [isAuthenticated, dispatch]);
+  useEffect(() => {}, [isAuthenticated, dispatch]);
 
   const deleteTokenFromStorage = () => {
     localStorage.removeItem("token");
-     navigate("/AuthorizationPage/SignIn");
-}
-
+    navigate("/AuthorizationPage/SignIn");
+  };
 
   return (
     <div className={`avatar-menu ${isAvatarMenuOpen ? "openAvatarMenu" : ""}`}>
@@ -31,6 +28,7 @@ const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
             to="/AuthorizationPage/SignIn"
             onClick={() => {
               setIsAvatarMenuOpen(false);
+              setisMenuOpen(false);
               dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
             }}
           >
@@ -41,6 +39,7 @@ const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
             to="/AuthorizationPage/SignUp"
             onClick={() => {
               setIsAvatarMenuOpen(false);
+              setisMenuOpen(false);
               dispatch(setAuthSwitchToShow(AuthStatus.LogUp));
             }}
           >
@@ -53,8 +52,9 @@ const AvatarMenu = ({ isAvatarMenuOpen, setIsAvatarMenuOpen }) => {
           to="/"
           onClick={() => {
             setIsAvatarMenuOpen(false);
+            setisMenuOpen(false);
             deleteTokenFromStorage();
-            dispatch(logOut());            
+            dispatch(logOut());
           }}
         >
           Log Out

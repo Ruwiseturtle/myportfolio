@@ -12,7 +12,7 @@ import AuthStatus from "../../constants/userRolesEnum";
 
 const Header = () => {
   const dispatch = useDispatch();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setisMenuOpen] = useState(false);
   const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false);
   // const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ const Header = () => {
             className={({ isActive }) => (isActive ? "linkActive" : "")}
             to="/MenuPage"
             onClick={() => {
-              setIsOpen(false);
+              setisMenuOpen(false);
               setIsAvatarMenuOpen(false);
             }}
           >
@@ -39,7 +39,7 @@ const Header = () => {
             className={({ isActive }) => (isActive ? "text active" : "text")}
             to="/"
             onClick={() => {
-              setIsOpen(false);
+              setisMenuOpen(false);
               setIsAvatarMenuOpen(false);
             }}
           >
@@ -47,12 +47,12 @@ const Header = () => {
           </NavLink>
         </div>
 
-        <div className={`box-links ${isOpen ? "open" : "close"}`}>
+        <div className={`box-links ${isMenuOpen ? "open" : "close"}`}>
           <NavLink
             className={({ isActive }) => (isActive ? "text active" : "text")}
             to="/AboutMe"
             onClick={() => {
-              setIsOpen(false);
+              setisMenuOpen(false);
               setIsAvatarMenuOpen(false);
             }}
           >
@@ -63,7 +63,7 @@ const Header = () => {
             className={({ isActive }) => (isActive ? "text active" : "text")}
             to="/MyProjects"
             onClick={() => {
-              setIsOpen(false);
+              setisMenuOpen(false);
               setIsAvatarMenuOpen(false);
             }}
           >
@@ -74,7 +74,7 @@ const Header = () => {
             className={({ isActive }) => (isActive ? "text active" : "text")}
             to="/Skills"
             onClick={() => {
-              setIsOpen(false);
+              setisMenuOpen(false);
               setIsAvatarMenuOpen(false);
             }}
           >
@@ -85,7 +85,7 @@ const Header = () => {
             className={({ isActive }) => (isActive ? "text active" : "text")}
             to="/Contact"
             onClick={() => {
-              setIsOpen(false);
+              setisMenuOpen(false);
               setIsAvatarMenuOpen(false);
             }}
           >
@@ -96,7 +96,7 @@ const Header = () => {
             className={({ isActive }) => (isActive ? "text active" : "text")}
             to="/Sertificates"
             onClick={() => {
-              setIsOpen(false);
+              setisMenuOpen(false);
               setIsAvatarMenuOpen(false);
             }}
           >
@@ -107,7 +107,7 @@ const Header = () => {
             className={({ isActive }) => (isActive ? "text active" : "text")}
             to="/UserPage"
             onClick={() => {
-              setIsOpen(false);
+              setisMenuOpen(false);
               setIsAvatarMenuOpen(false);
             }}
           >
@@ -121,13 +121,15 @@ const Header = () => {
             isActive ? "box-avatar activeImage" : "box-avatar"
           }
           onClick={() => {
+            setisMenuOpen(false);
             setIsAvatarMenuOpen(!isAvatarMenuOpen);
             dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
           }}
         >
           {/* Оновлення логіки src для аватара */}
           {({ isActive }) => (
-            <img className="avatar"
+            <img
+              className="avatar"
               src={isActive ? avatarBlue : avatarWhite} // Використовуємо isActive для зміни зображення
               alt="avatar"
             />
@@ -137,11 +139,15 @@ const Header = () => {
         <AvatarMenu
           isAvatarMenuOpen={isAvatarMenuOpen}
           setIsAvatarMenuOpen={setIsAvatarMenuOpen}
+          setisMenuOpen={setisMenuOpen}
         />
         {/* бергер-меню */}
         <div
-          className={`burger ${isOpen ? "open" : "close"}`}
-          onClick={() => setIsOpen(!isOpen)}
+          className={`burger ${isMenuOpen ? "open" : "close"}`}
+          onClick={() => {
+            setisMenuOpen(!isMenuOpen);
+            setIsAvatarMenuOpen(false);
+          }}
         >
           <div className="line"></div>
           <div className="line"></div>
@@ -149,8 +155,8 @@ const Header = () => {
         </div>
 
         {/* backdrop */}
-        {isOpen && (
-          <div className="backdrop" onClick={() => setIsOpen(false)}></div>
+        {isMenuOpen && (
+          <div className="backdrop" onClick={() => setisMenuOpen(false)}></div>
         )}
       </header>
     </>

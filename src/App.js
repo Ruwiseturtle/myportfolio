@@ -14,20 +14,11 @@ const AboutMe = lazy(() => import("./pages/Aboutme/Aboutme.jsx"));
 const MyProjects = lazy(() => import("./pages/Projectspage/Projectspage.jsx"));
 const SkillsPage = lazy(() => import("./pages/SkillsPage/Skills.jsx"));
 const Contact = lazy(() => import("./pages/ContactPage/Contacts.jsx"));
-const SertificatesPage = lazy(() =>
-  import("./pages/SertificatesPage/SertificatesPage.jsx")
-);
+const SertificatesPage = lazy(() => import("./pages/SertificatesPage/SertificatesPage.jsx"));
 const MenuPage = lazy(() => import("./pages/MenuPage/MenuPage.jsx"));
-const DescriptionMenu = lazy(() =>
-  import("./pages/DescriptionMenuPage/DescriptionMenuPage.jsx")
-);
-const AuthorizationPage = lazy(() =>
-  import("./pages/AuthorizationPage/AuthorizationPage.jsx")
-);
-const VerifyEmailPage = lazy(() =>
-  import("./pages/VerifyEmailPage/VerifyEmailPage.jsx")
-);
-
+const DescriptionMenu = lazy(() => import("./pages/DescriptionMenuPage/DescriptionMenuPage.jsx"));
+const AuthorizationPage = lazy(() => import("./pages/AuthorizationPage/AuthorizationPage.jsx"));
+const VerifyEmailPage = lazy(() => import("./pages/VerifyEmailPage/VerifyEmailPage.jsx"));
 const UserPage = lazy(() => import("./pages/UserPage/UserPage.jsx"));
 const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage/ForgotPasswordPage.jsx"));
 
@@ -40,17 +31,12 @@ function App() {
   //якщо в сторедж є токен, то зчитуємо його і юзера. якщо токен валідний
  useEffect(() => {
    const checkUser = async () => {
-     console.log("================= ШАГ0 ===================");
      try {
        //узнаємо, чи токен є і чи він валідний (тобто, чи залогінений користувач). Якщо так, то вертаємо дані юзера та токен
        const isLoggedIn = await isUserLoggedIn();
 
-       if (isLoggedIn) {
-         console.log("app isLoggedIn");
-         console.log(isLoggedIn);
-                  
+       if (isLoggedIn) {                  
          const { user, token } = isLoggedIn;
-         console.log('================= ШАГ1 ===================');
 
         dispatch(setToken(token));
         dispatch(currentUserThunk({ user, token }));
