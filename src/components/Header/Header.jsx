@@ -138,7 +138,7 @@ const avatarMenuRef = useRef(null);
         </div>
 
         <NavLink
-          // to="/AuthorizationPage"
+          to="/"
           className={({ isActive }) =>
             isActive ? "box-avatar activeImage" : "box-avatar"
           }

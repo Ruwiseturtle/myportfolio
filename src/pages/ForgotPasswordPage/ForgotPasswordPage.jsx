@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './ForgotPasswordPage.module.css';
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { sendEmailForResetPassword } from '../../API/Auth/fetchRegisterUser';
 
 const ForgotPasswordPage = () => {
     //  const [email, setEmail] = useState("");
@@ -25,10 +26,13 @@ const ForgotPasswordPage = () => {
       },
   });
   
-  function sendNewUserToDatabase(email) {
+  async function sendNewUserToDatabase(email) {
    console.log("==============email======================");
    console.log(email);
-   console.log('====================================');
+    let res = await sendEmailForResetPassword(email);
+    console.log("ForgotPasswordPage sendNewUserToDatabase");    
+    console.log(res);
+    
   }
 
     
