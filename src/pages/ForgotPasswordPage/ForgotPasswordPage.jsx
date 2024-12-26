@@ -29,9 +29,9 @@ const ForgotPasswordPage = () => {
   async function sendNewUserToDatabase(email) {
    console.log("==============email======================");
    console.log(email);
-    let res = await sendEmailForResetPassword(email);
+     await sendEmailForResetPassword(email);
     console.log("ForgotPasswordPage sendNewUserToDatabase");    
-    console.log(res);
+    // console.log(res);
     
   }
 
