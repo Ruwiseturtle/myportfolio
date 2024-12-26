@@ -9,8 +9,7 @@ async function isUserLoggedIn() {
   if (token && token !== "null") {
     try {
       const data = await requestGetCurrentUser(token);
-      console.log("Користувач авторизований:", data);
-      
+         
         result = {
           user: data,
           token: token,

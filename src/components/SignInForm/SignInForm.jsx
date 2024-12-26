@@ -9,8 +9,8 @@ import { loginThunk } from "../../redux/auth/authThunks";
 //авторизація користувача в системі(вхід)
 const SignInForm = () => {
   const dispatch = useDispatch();
+
  
-  
   // Використання useFormik
   const formik = useFormik({
     initialValues: {
@@ -95,7 +95,9 @@ const SignInForm = () => {
         </button>
       </div>
       <div className={styles.hrefToForgotPassword}>
-        <Link to="/ForgotPassword">Forgot your password?</Link>
+        <Link to="/ForgotPassword" >
+          Forgot your password?
+        </Link>
       </div>
     </form>
   );

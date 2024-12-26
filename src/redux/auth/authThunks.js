@@ -67,8 +67,7 @@ export const currentUserThunk = createAsyncThunk(
     try {      
    
       const result = await requestGetCurrentUser(formData.token);
-      console.log("================= ШАГ3 ===================");
-      console.log(result);
+
       return result;
     } catch ({ response }) {
       return thunkAPI.rejectWithValue(response);

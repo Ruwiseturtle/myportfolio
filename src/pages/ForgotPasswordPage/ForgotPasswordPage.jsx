@@ -6,7 +6,7 @@ import * as Yup from "yup";
 const ForgotPasswordPage = () => {
     //  const [email, setEmail] = useState("");
     //  const [message, setMessage] = useState("");
-    // const [error, setError] = useState("");
+    //  const [error, setError] = useState("");
     
   const formik = useFormik({
       initialValues: {

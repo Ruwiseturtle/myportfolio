@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import  {useDispatch } from "react-redux";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
@@ -15,6 +15,28 @@ const Header = () => {
   const [isMenuOpen, setisMenuOpen] = useState(false);
   const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false);
   // const navigate = useNavigate();
+
+const avatarMenuRef = useRef(null);
+
+ // Закриття AvatarMenu при кліку поза ним
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        avatarMenuRef.current &&
+        !avatarMenuRef.current.contains(event.target)
+      ) {
+        setIsAvatarMenuOpen(false);
+      }
+    };
+    // Додаємо слухач подій
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      // Видаляємо слухач подій при розмонтуванні
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
 
   return (
     <>
@@ -116,7 +138,7 @@ const Header = () => {
         </div>
 
         <NavLink
-          to="/AuthorizationPage"
+          // to="/AuthorizationPage"
           className={({ isActive }) =>
             isActive ? "box-avatar activeImage" : "box-avatar"
           }
@@ -136,11 +158,14 @@ const Header = () => {
           )}
         </NavLink>
         {/* випливаюче вікно для авторизації, логінізації та виходу */}
-        <AvatarMenu
-          isAvatarMenuOpen={isAvatarMenuOpen}
-          setIsAvatarMenuOpen={setIsAvatarMenuOpen}
-          setisMenuOpen={setisMenuOpen}
-        />
+        <div ref={avatarMenuRef}>
+          <AvatarMenu
+            isAvatarMenuOpen={isAvatarMenuOpen}
+            setIsAvatarMenuOpen={setIsAvatarMenuOpen}
+            setisMenuOpen={setisMenuOpen}
+          />
+        </div>
+
         {/* бергер-меню */}
         <div
           className={`burger ${isMenuOpen ? "open" : "close"}`}

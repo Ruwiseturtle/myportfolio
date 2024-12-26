@@ -10,8 +10,8 @@ import { selectIsAuthenticated } from "../../redux/auth/authSelectors";
 const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isAuthenticated = useSelector(selectIsAuthenticated);
-
+  const isAuthenticated = useSelector(selectIsAuthenticated);  
+  
   useEffect(() => {}, [isAuthenticated, dispatch]);
 
   const deleteTokenFromStorage = () => {
@@ -31,6 +31,7 @@ const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
               setisMenuOpen(false);
               dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
             }}
+           
           >
             Sign In
           </NavLink>
