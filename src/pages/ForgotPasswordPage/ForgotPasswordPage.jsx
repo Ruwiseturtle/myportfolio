@@ -28,7 +28,11 @@ const ForgotPasswordPage = () => {
   
   async function sendNewUserToDatabase(email) {
    console.log("==============email======================");
-   console.log(email);
+    console.log(email);
+    
+    const data = {
+      email: email,
+    }
      await sendEmailForResetPassword(email);
     console.log("ForgotPasswordPage sendNewUserToDatabase");    
     // console.log(res);
