@@ -30,10 +30,15 @@ const ForgotPasswordPage = () => {
     console.log("==============email======================");
     console.log(email);
     
-    const msg = await sendEmailForResetPassword(email);
-    console.log("ForgotPasswordPage sendNewUserToDatabase"); 
-    console.log(msg);
-    // console.log(res);
+    try {
+      const msg = await sendEmailForResetPassword(email);
+      console.log("ForgotPasswordPage sendNewUserToDatabase");
+      console.log(msg);
+      alert(msg); // Повідомляємо користувача про результат
+    } catch (error) {
+      console.error("Error in sendNewUserToDatabase:", error.message);
+      alert(error.message); // Показуємо користувачу повідомлення про помилку
+    }
     
   }
 

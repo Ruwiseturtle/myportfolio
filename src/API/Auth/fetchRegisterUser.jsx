@@ -65,7 +65,7 @@ export const sendEmailForResetPassword = async (email) => {
   console.log("===============sendEmailForResetPassword=====================");
   console.log(email);
   try {
-    const response = await authInstance.post("/api/users/sendEmailForResetPassword", { email: email });
+    const response = await authInstance.post("/api/users/sendEmailForResetPassword", { email });
 
     const { status, data } = response;
 
@@ -77,6 +77,8 @@ export const sendEmailForResetPassword = async (email) => {
     return data.message;
   } catch (error) {
     console.error("Error:", error.response?.data || error.message);
-    throw error;
+     const errorMessage =
+       error.response?.data?.message || "An unexpected error occurred.";
+     throw new Error(errorMessage);
   }
 };
