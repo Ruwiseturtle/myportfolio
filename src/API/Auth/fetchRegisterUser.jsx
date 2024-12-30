@@ -65,7 +65,7 @@ export const sendEmailForResetPassword = async (email) => {
   console.log("===============sendEmailForResetPassword=====================");
   console.log(email);
   try {
-    const response = await authInstance.post("/api/users/sendEmailForResetPassword",email);
+    const response = await authInstance.post("/api/users/sendEmailForResetPassword", { email });
 
     const { status, data } = response;
 
