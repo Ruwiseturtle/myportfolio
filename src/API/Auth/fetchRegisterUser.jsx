@@ -62,11 +62,19 @@ export const requestGetCurrentUser = async (token) => {
 
 // ф-ція відправляє емейл на бекенд для скидання паролю і вертає повідомлення і статус вийшло чи ні
 export const sendEmailForResetPassword = async (email) => {
- 
-  const { data } = await authInstance.post("/api/users/sendEmailForResetPassword", email.email);
+  try {
+    const response = await authInstance.post("/api/users/sendEmailForResetPassword",{ email: email.email });
 
-  console.log("==============sendEmailForResetPassword======================");
-  console.log(data);
-  console.log('====================================');
-  return data;
-}
+    const { status, data } = response;
+
+    console.log("==============sendEmailForResetPassword======================");
+    console.log("Status:", status); 
+    console.log("Message:", data.message); 
+    console.log("====================================");
+
+    return data.message;
+  } catch (error) {
+    console.error("Error:", error.response?.data || error.message);
+    throw error;
+  }
+};
