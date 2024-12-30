@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './ForgotPasswordPage.module.css';
 import { useFormik } from "formik";
+import { Notify } from "notiflix";
 import * as Yup from "yup";
 import { sendEmailForResetPassword } from '../../API/Auth/fetchRegisterUser';
 
@@ -34,10 +35,10 @@ const ForgotPasswordPage = () => {
       const msg = await sendEmailForResetPassword(email);
       console.log("ForgotPasswordPage sendNewUserToDatabase");
       console.log(msg);
-      alert(msg); // Повідомляємо користувача про результат
+      Notify.success(msg);
     } catch (error) {
       console.error("Error in sendNewUserToDatabase:", error.message);
-      alert(error.message); // Показуємо користувачу повідомлення про помилку
+      Notify.failure(error.message);
     }
     
   }
