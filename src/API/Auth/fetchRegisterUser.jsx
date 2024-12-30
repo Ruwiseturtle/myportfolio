@@ -62,23 +62,16 @@ export const requestGetCurrentUser = async (token) => {
 
 // ф-ція відправляє емейл на бекенд для скидання паролю і вертає повідомлення і статус вийшло чи ні
 export const sendEmailForResetPassword = async (email) => {
-  console.log("===============sendEmailForResetPassword=====================");
-  console.log(email);
+
   try {
-    const response = await authInstance.post("/api/users/sendEmailForResetPassword", { email });
-
-    const { status, data } = response;
-
-    console.log("==============sendEmailForResetPassword======================");
-    console.log("Status:", status); 
-    console.log("Message:", data.message); 
-    console.log("====================================");
+      const {data} = await authInstance.post("/api/users/sendEmailForResetPassword",{ email });
+    //const { status, data } = await authInstance.post("/api/users/sendEmailForResetPassword", { email });
+    // console.log("Message:", data.message);
 
     return data.message;
   } catch (error) {
-    console.error("Error:", error.response?.data || error.message);
-     const errorMessage =
-       error.response?.data?.message || "An unexpected error occurred.";
+    // console.error("Error:", error.response?.data || error.message);
+     const errorMessage = error.response?.data?.message || "An unexpected error occurred.";
      throw new Error(errorMessage);
   }
 };
