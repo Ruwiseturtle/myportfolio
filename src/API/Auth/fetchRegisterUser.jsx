@@ -62,6 +62,8 @@ export const requestGetCurrentUser = async (token) => {
 
 // ф-ція відправляє емейл на бекенд для скидання паролю і вертає повідомлення і статус вийшло чи ні
 export const sendEmailForResetPassword = async (email) => {
+  console.log("===============sendEmailForResetPassword=====================");
+  console.log(email);
   try {
     const response = await authInstance.post("/api/users/sendEmailForResetPassword",email);
 
