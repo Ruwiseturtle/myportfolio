@@ -21,6 +21,7 @@ const AuthorizationPage = lazy(() => import("./pages/AuthorizationPage/Authoriza
 const VerifyEmailPage = lazy(() => import("./pages/VerifyEmailPage/VerifyEmailPage.jsx"));
 const UserPage = lazy(() => import("./pages/UserPage/UserPage.jsx"));
 const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage/ForgotPasswordPage.jsx"));
+const EnterNewPasswordPage = lazy(() => import("./pages/EnterNewPasswordPage/EnterNewPasswordPage.jsx"));
 
 function App() {
   const isAuthenticated = useSelector(selectIsAuthenticated);
@@ -70,6 +71,7 @@ function App() {
         /> */}
 
         <Route path="ForgotPassword" element={<ForgotPasswordPage />} />
+        <Route path="reset-password" element={<EnterNewPasswordPage />} />
         <Route path="AuthorizationPage/*" element={<AuthorizationPage />}>
           {/* <Route path="userInfo" element={<UserInfo />} /> */}
           <Route path="SignIn" element={<AuthorizationPage />} />

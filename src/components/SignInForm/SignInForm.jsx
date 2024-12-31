@@ -95,9 +95,8 @@ const SignInForm = () => {
         </button>
       </div>
       <div className={styles.hrefToForgotPassword}>
-        <Link to="/ForgotPassword" >
-          Forgot your password?
-        </Link>
+        {/* <Link to="/ForgotPassword" > */}
+        <Link to="/reset-password">Forgot your password?</Link>
       </div>
     </form>
   );
