@@ -79,7 +79,11 @@ export const sendEmailForResetPassword = async (email) => {
 export const resetPassword = async (verificationToken, password) => {
    console.log("шаг4");
   try {
-    const response = await authInstance.post("/api/users/resetPassword", { verificationToken, password });
+    console.log("шаг0");
+    const response = await authInstance.post("/api/users/resetPassword", {
+      verificationToken: verificationToken,
+      password:password,
+    });
      console.log("шаг5");
     const { status, data } = response;
 
