@@ -39,13 +39,16 @@ const EnterNewPasswordPage = () => {
     console.log("======password====verificationToken============");
     console.log(verificationToken);
     console.log(password);
-
+ console.log("шаг3");
     try {
+      console.log("шаг1");
+      
       const result = await resetPassword(verificationToken, password);
 
       result.success ? Notify.success(result.message) : Notify.failure(result.message);
       
     } catch (error) {
+       console.log("шаг2");
       console.error("Error in sendNewPassword:", error);
       Notify.failure("Failed to reset password.");
     }
