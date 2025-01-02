@@ -27,20 +27,14 @@ const ForgotPasswordPage = () => {
       },
   });
   
-  async function sendNewUserToDatabase(email) {
-    console.log("==============email======================");
-    console.log(email);
-    
+  async function sendNewUserToDatabase(email) {       
     try {
       const msg = await sendEmailForResetPassword(email);
-      console.log("ForgotPasswordPage sendNewUserToDatabase");
-      console.log(msg);
       Notify.success(msg);
     } catch (error) {
-      console.error("Error in sendNewUserToDatabase:", error.message);
+      // console.error("Error in sendNewUserToDatabase:", error.message);
       Notify.failure(error.message);
-    }
-    
+    }    
   }
 
     

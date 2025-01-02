@@ -78,8 +78,7 @@ export const sendEmailForResetPassword = async (email) => {
 
 export const resetPassword = async (verificationToken, password) => {
    
-  try {
-   
+  try {   
     const response = await authInstance.post("/api/users/resetPassword", {
       verificationToken: verificationToken,
       password:password,
@@ -87,15 +86,12 @@ export const resetPassword = async (verificationToken, password) => {
     
     const { status, data } = response;
 
-     if (status === 200) {
-       console.log(
-         "Password reset successfully. You can log in with your new password."
-       );
+    if (status === 200) {
+      // console.log("Password reset successfully.");
        return { success: true, message: data.message };
      }
   } catch (error) {
-     console.log("шаг6");
-console.error("Error resetting password:", error.response?.data || error.message);
+// console.error("Error resetting password:", error.response?.data || error.message);
 return {
   success: false,
   message: error.response?.data?.message || "Something went wrong",
