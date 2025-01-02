@@ -10,6 +10,7 @@ const DownLoadResume = () => {
         download="My_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
+        className="downloadButton"
       >
         <MdDownloading />
       </a>
