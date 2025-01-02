@@ -6,7 +6,7 @@ const DownLoadResume = () => {
   return (
     <div className="boxDownloadResume">
       <a
-        href="/tree/main/src/assets/Resume_Ruslana.pdf"
+        href="/myportfolio/Resume_Ruslana.pdf"
         download="My_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
