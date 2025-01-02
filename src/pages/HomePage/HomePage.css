@@ -261,7 +261,8 @@
   background-color: #00A8cd;
   color: white;
   cursor: pointer;
-   font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 360px){
@@ -271,7 +272,8 @@
 }
 
 .button-contactMe:hover{
-  background-color: #87E9FE;
+  transform: scale(1.05);
+  background-color: #0086A5;
 }
 
 .box-networks{

@@ -5,6 +5,11 @@
   width: 70px;
   height: 70px;  
   z-index: 200px;
+  transition: all 0.3s ease;
+}
+
+.containerBurger:hover{
+  transform: scale(1.05);
 }
 
 @media (max-width: 960px) {

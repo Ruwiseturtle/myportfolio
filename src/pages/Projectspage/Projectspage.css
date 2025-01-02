@@ -139,10 +139,12 @@ color: #00A8CD;
   letter-spacing: 0;
   color: white;
   cursor: pointer;
+  transition: all 0.3s ease;
  
 }
 
 .button-ShowAll:hover{
-  background-color: #87E9FE;
+  background-color: #0086A5;
+  transform: scale(1.05);
 }
 

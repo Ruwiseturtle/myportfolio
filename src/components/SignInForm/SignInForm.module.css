@@ -71,10 +71,12 @@ input:placeholder-shown + label {
     color: white;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
 }
 
 .buttonSignIn:hover {
-    background-color: #87E9FE;
+    background-color: #0086A5;
+    transform: scale(1.05);
 }
 
 .errorMessage {

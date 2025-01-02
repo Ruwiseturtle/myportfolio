@@ -41,9 +41,9 @@ const AuthorizationPage = () => {
     <>
       <div className="authorizationContainerMain">
         <div>
-          <div className="info">
+          {/* <div className="info">
             Authorization in the development process!!!
-          </div>
+          </div> */}
 
           <div className="authorizationContainer">
             <div className="tabs">
