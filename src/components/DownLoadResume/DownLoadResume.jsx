@@ -4,9 +4,14 @@ import "./DownLoadResume.css";
 
 const DownLoadResume = () => {
   return (
-    <div className='boxDownloadResume'>
-      <a href="/Resume_Ruslana.pdf" download="My_Resume.pdf">
-        <MdDownloading/>
+    <div className="boxDownloadResume">
+      <a
+        href="/Resume_Ruslana.pdf"
+        download="My_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <MdDownloading />
       </a>
     </div>
   );
