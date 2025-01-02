@@ -6,7 +6,7 @@ const DownLoadResume = () => {
   return (
     <div className='boxDownloadResume'>
       <a href="/Resume_Ruslana.pdf" download="My_Resume.pdf">
-        <MdDownloading size={ 40} />
+        <MdDownloading/>
       </a>
     </div>
   );
