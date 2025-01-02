@@ -1,0 +1,34 @@
+.boxDownloadResume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxDownloadResume a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 26px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.boxDownloadResume a:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.boxDownloadResume a:active {
+  transform: scale(1);
+}
+
+.boxDownloadResume a svg {
+  margin: 0;
+}

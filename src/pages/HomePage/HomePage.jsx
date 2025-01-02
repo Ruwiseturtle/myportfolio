@@ -11,6 +11,7 @@ import imageHtml from "../../assets/skills/html.png";
 import imageJavaScript from "../../assets/skills/javaScript.png";
 import imageReact from "../../assets/skills/react.png";
 import imageRedux from "../../assets/skills/redux.png";
+import DownLoadResume from "../../components/DownLoadResume/DownLoadResume";
 
 // Використання Measurement ID для Google Analytics 4
 const trackingId = "G-9DBE2L5FWW";
@@ -52,6 +53,9 @@ const HomePage = () => {
           </p>
 
           <div className="box-contacts">
+
+            <DownLoadResume />
+            
             <div className="box-btnContactMe">
               <button
                 className="button-contactMe"

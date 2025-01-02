@@ -288,10 +288,20 @@
   height: 25px;
   margin-right: 20px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.box-Imagecontact:hover{
+transform: scale(1.25);
+}
+
+.box-Imagecontact:active{
+ transform: scale(1);
 }
 
 .box-contacts{
   display: flex;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
