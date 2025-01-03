@@ -26,7 +26,19 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
           </NavLink>
         </li>
 
-        <li className={styles.menuItem}>....</li>
+        <li className={styles.menuItem}>
+          <NavLink
+            to="/MenuPage/Multilingual"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.nameHref} ${styles.activeMenu}`
+                : styles.nameHref
+            }
+            onClick={handleClick}
+          >
+            Multilingual
+          </NavLink>
+        </li>
         <li className={styles.menuItem}>....</li>
         <li className={styles.menuItem}>....</li>
       </ul>

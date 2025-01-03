@@ -60,7 +60,7 @@ list-style-type: none;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  color: #00A8cd;
+  color: #fafdfd; 
   letter-spacing: 0.05em;
 
   word-wrap: break-word; /* Дозволяє переносити слова, які не влазять */
@@ -68,5 +68,6 @@ list-style-type: none;
 }
 
 .nameHref.activeMenu {
-  color: #fafdfd; /* Колір для активного посилання */
+   color: #00A8cd; /* Колір для активного посилання */
+ 
 }
