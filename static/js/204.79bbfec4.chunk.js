@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmyportfolio=self.webpackChunkmyportfolio||[]).push([[204],{823:(l,e,i)=>{i.r(e),i.d(e,{default:()=>s});i(5043);var o=i(579);const s=()=>(0,o.jsx)("div",{children:"Multilingual"})}}]);
+//# sourceMappingURL=204.79bbfec4.chunk.js.map
