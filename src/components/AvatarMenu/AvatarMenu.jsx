@@ -10,8 +10,8 @@ import { selectIsAuthenticated } from "../../redux/auth/authSelectors";
 const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const isAuthenticated = useSelector(selectIsAuthenticated);  
-  
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+
   useEffect(() => {}, [isAuthenticated, dispatch]);
 
   const deleteTokenFromStorage = () => {
@@ -31,7 +31,6 @@ const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
               setisMenuOpen(false);
               dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
             }}
-           
           >
             Sign In
           </NavLink>
@@ -48,18 +47,32 @@ const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
           </NavLink>
         </div>
       ) : (
-        <NavLink
-          className={({ isActive }) => (isActive ? "text active" : "text")}
-          to="/"
-          onClick={() => {
-            setIsAvatarMenuOpen(false);
-            setisMenuOpen(false);
-            deleteTokenFromStorage();
-            dispatch(logOut());
-          }}
-        >
-          Log Out
-        </NavLink>
+        <div className="avatar-menu-list">
+          <NavLink
+            className={({ isActive }) => (isActive ? "text active" : "text")}
+            to="/UserPage"
+            onClick={() => {
+              setIsAvatarMenuOpen(false);
+              setisMenuOpen(false);
+              setIsAvatarMenuOpen(false);
+            }}
+          >
+            Your page
+          </NavLink>
+
+            <NavLink className={({ isActive }) => isActive && window.location.pathname !== "/"
+              ? "text active" : "text"}
+            to="/"
+            onClick={() => {
+              setIsAvatarMenuOpen(false);
+              setisMenuOpen(false);
+              deleteTokenFromStorage();
+              dispatch(logOut());
+            }}
+          >
+            Log Out
+          </NavLink>
+        </div>
       )}
     </div>
   );

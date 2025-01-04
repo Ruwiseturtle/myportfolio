@@ -38,11 +38,11 @@ const HomePage = () => {
         <li className="item item-left">
           <div>
             <h1 className="text text-name">Hi! I&apos;m Ruslana Matviienko</h1>
-            <p className="text text-profession">Frontend Developer</p>
+            <p className="text text-profession">Full Stack Developer</p>
           </div>
           <p className="text text-aboutMe">
-            I&apos;m a frontend developer with skills in HTML, CSS, JavaScript,
-            (Hooks + Redux), REST API, React, React native, GitHub and have some
+            I&apos;m a full stack developer with skills in HTML, CSS, JavaScript,
+            (Hooks + Redux), Node, REST API, React, React native, GitHub and have some
             team experience with these tools that I&apos;ve worked really hard
             to learn. Perseverance is my main character trait. After all, for
             this reason, I professionally possess the skills needed in the field

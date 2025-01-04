@@ -3,6 +3,7 @@ import  {useDispatch } from "react-redux";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import logoImage from "../../assets/images/logo-code1.png";
+import { ReactComponent as LanguageIcon } from "../../assets/images/globe-solid.svg";
 // import avatar from "../../assets/images/avatar.png";
 import avatarWhite from "../../assets/images/avatarSVGwhite.svg";
 import avatarBlue from "../../assets/images/avatarSVGblue.svg";
@@ -124,38 +125,34 @@ const avatarMenuRef = useRef(null);
           >
             Sertificates
           </NavLink>
+        </div>
 
-          <NavLink
-            className={({ isActive }) => (isActive ? "text active" : "text")}
-            to="/UserPage"
-            onClick={() => {
-              setisMenuOpen(false);
-              setIsAvatarMenuOpen(false);
-            }}
-          >
-            Your page
+        {/* іконка для мультимовності */}
+        <div>
+          <NavLink>
+            <div className="container-languageIcon">
+              <LanguageIcon className="language" />
+            </div>
           </NavLink>
         </div>
 
+        {/* іконка для аватара */}
         <NavLink
-          to="/"
           className={({ isActive }) =>
             isActive ? "box-avatar activeImage" : "box-avatar"
           }
-          onClick={() => {
+          onClick={(event) => {
+            event.preventDefault();
             setisMenuOpen(false);
             setIsAvatarMenuOpen(!isAvatarMenuOpen);
             dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
           }}
         >
-          {/* Оновлення логіки src для аватара */}
-          {({ isActive }) => (
-            <img
-              className="avatar"
-              src={isActive ? avatarBlue : avatarWhite} // Використовуємо isActive для зміни зображення
-              alt="avatar"
-            />
-          )}
+          <img
+            className="avatar"
+            src={isAvatarMenuOpen ? avatarBlue : avatarWhite} // Зміна зображення залежно від стану меню
+            alt="avatar"
+          />
         </NavLink>
         {/* випливаюче вікно для авторизації, логінізації та виходу */}
         <div ref={avatarMenuRef}>

@@ -2,8 +2,8 @@
   display: flex; /* Для центрування */
   justify-content: center;
   align-items: center;
-  width: 49px; /* Розмір кнопки */
-  height: 49px;
+  width: 40px; /* Розмір кнопки */
+  height: 40px;
   margin-right: 26px;
 }
 
@@ -13,8 +13,6 @@
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #FFA726;
-  border-radius: 50%;
   box-sizing: border-box;
   color: white;
   text-decoration: none;
@@ -24,7 +22,6 @@
 }
 
 .boxDownloadResume a:hover {
-  background-color: #FB8C00;
   transform: scale(1.05);
 }
 
@@ -32,16 +29,18 @@
   transform: scale(1);
 }
 
-
-
 .boxDownloadResume a svg {
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
-  
-  width: 43px;
-  height: 43px;
+  fill: green;
+  width: auto;
+  height: 40px;
+}
+
+.boxDownloadResume a svg:hover{
+fill: #006400;
 }
 
 .downloadButton::after {

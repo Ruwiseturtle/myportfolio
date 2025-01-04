@@ -1,5 +1,7 @@
 import React from 'react';
-import { MdDownloading } from "react-icons/md";
+// import { MdDownloading } from "react-icons/md";
+import { FaDownload } from "react-icons/fa";
+
 import "./DownLoadResume.css";
 
 const DownLoadResume = () => {
@@ -12,7 +14,7 @@ const DownLoadResume = () => {
         rel="noopener noreferrer"
         className="downloadButton"
       >
-        <MdDownloading />
+        <FaDownload />
       </a>
     </div>
   );
