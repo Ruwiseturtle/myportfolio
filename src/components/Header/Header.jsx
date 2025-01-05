@@ -128,14 +128,11 @@ const avatarMenuRef = useRef(null);
         </div>
 
         {/* іконка для мультимовності */}
-        <div>
+        <div className="container-languageIcon">
           <NavLink>
-            <div className="container-languageIcon">
-              <LanguageIcon className="language" />
-            </div>
+            <LanguageIcon className="language" />
           </NavLink>
         </div>
-
         {/* іконка для аватара */}
         <NavLink
           className={({ isActive }) =>

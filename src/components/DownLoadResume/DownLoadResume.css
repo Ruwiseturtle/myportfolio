@@ -5,6 +5,13 @@
   width: 40px; /* Розмір кнопки */
   height: 40px;
   margin-right: 26px;
+  
+}
+
+@media (max-width: 360px){
+  .boxDownloadResume{
+    margin-bottom: 14px;
+  }
 }
 
 .boxDownloadResume a{
