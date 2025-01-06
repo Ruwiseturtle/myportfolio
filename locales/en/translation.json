@@ -12,6 +12,12 @@
          "Full Stack Developer": "Full Stack Developer",
          "Description about me": "I'm a full stack developer with skills in HTML, CSS, JavaScript, (Hooks + Redux), Node, REST API, React, React native, GitHub and have some team experience with these tools that I&apos;ve worked really hard to learn. Perseverance is my main character trait. After all, for this reason, I professionally possess the skills needed in the field of website development. In the field that gives me pleasure, because for me it is a very interesting profession, where I can use my creativity and skills both independently and in a team of other smart developers.",
          "contact me": "contact me"
+        },
+    "AboutMe":{
+        "About": "About",
+         "Me": "Me",
+         "Description about me": "No rain - no flowers. I had a heavy 'rain' and now I can offer such 'flowers' that are in my skills - HTML, CSS, JavaScript, React, React-nativ, Redux, Node. You can also read about me in the first reviews about me from my colleagues.",
+         "Reviews": "Reviews"
         }
    
    
