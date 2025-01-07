@@ -18,6 +18,12 @@
          "Me": "Me",
          "Description about me": "No rain - no flowers. I had a heavy 'rain' and now I can offer such 'flowers' that are in my skills - HTML, CSS, JavaScript, React, React-nativ, Redux, Node. You can also read about me in the first reviews about me from my colleagues.",
          "Reviews": "Reviews"
+        },
+    "Projects":{
+        "My": "My",
+        "Projects": "Projects",
+        "Description projects": "List of my projects created with tools like HTML, CSS, React, Redux. There are individual projects, such as this portfolio site, and team projects with very charming project colleagues, reviews of which are also available on this site.",
+        "Show All": "Show All"
         }
    
    
