@@ -28,7 +28,8 @@
 
 @media (max-width: 960px) {
  .box-sertificates{
-    flex-direction: column;       
+    width: 100%;
+    /* flex-direction: column;        */
   }
 }
 
@@ -130,9 +131,9 @@ display: grid;
 
 @media (max-width: 960px) {
  .sertificat-item3{
-    width: 100%;
-    max-width: 550px;
-    height: auto;       
+    width:100%;
+    max-width: 350px;
+    height: auto;      
   }
 }
 
