@@ -14,6 +14,7 @@
 
 .box-sertificates{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content:center;
     align-items: center;
@@ -108,5 +109,41 @@
 }
 
 .sertificat-item2:hover img{
+  scale: 102%;
+}
+
+.sertificat-item3{
+display: grid; 
+  padding: 20px;
+  place-items: center;
+  width: 350px;
+  height: 520px;
+  /* padding: 10px; */
+  background: linear-gradient(
+    to bottom, /* Напрямок градієнту: з верхньої частини до нижньої */
+    rgba(217, 217, 217, 0.13), /* Початковий колір градієнту */
+    rgba(217, 217, 217, 0) /* Кінцевий колір градієнту */
+  );
+  /* background-color: yellow; */
+  overflow: hidden;
+}
+
+@media (max-width: 960px) {
+ .sertificat-item3{
+    width: 100%;
+    max-width: 550px;
+    height: auto;       
+  }
+}
+
+.sertificat-item3 img{
+  width: 100%;
+  height: 100%;
+    /* width: 380px;
+    height: 500px; */
+    transition: scale 400ms;
+}
+
+.sertificat-item3:hover img{
   scale: 102%;
 }
