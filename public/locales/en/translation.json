@@ -34,7 +34,9 @@
         "Contact": "Contact",
         "Me": "Me",
         "Description contact": "You can message me here. When you click on the button, WhatsApp will open, where the message type window will contain the text you have already typed and you will only need to click 'send' in the WhatsApp application."
-        }
-   
+        },
+    "Sertificates":{
+        "Sertificates": "Sertificates"
+        }   
    
 }
