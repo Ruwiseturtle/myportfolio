@@ -140,6 +140,7 @@
 
 .container-languageIcon{
   display: flex;
+  position: relative;
   margin-right: 1px;
   margin-left: 10px;
  width: 40px;
@@ -147,9 +148,9 @@
  transition: all 0.3s ease;
 }
 
-.container-languageIcon:hover{
+/* .container-languageIcon:hover{
   transform: scale(1.05);
-}
+} */
 
 .language{
   width: 30px;

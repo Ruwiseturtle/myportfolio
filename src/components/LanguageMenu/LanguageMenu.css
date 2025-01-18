@@ -1,0 +1,53 @@
+.lang-menu-list p{
+     margin-bottom: 10px;
+  word-wrap: break-word; /* Дозволяє переносити слова, що не поміщаються */
+  overflow-wrap: break-word; /* Додатково для кращої підтримки браузерів */
+  text-decoration: none;
+}
+
+.lang-menu{
+  position: absolute;
+  padding: 20px;
+  top: 50px;
+  right: 20px;
+  display: block;
+  width: 200px;
+  height: auto;
+  
+  background-color: rgb(37, 36, 36); 
+
+  border-radius: 5px;
+
+  opacity: 0; /* Початково приховане */
+  visibility: hidden; /* Щоб елемент не займав місце */
+  transform: translateY(-10);  /* Трохи вище за місце, де з'явиться */
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+  z-index: 999; /* Щоб меню було над іншими елементами */
+}
+
+@media (max-width: 960px){
+  .lang-menu{
+    position: fixed;
+    left:0;
+    width: 100%;
+    height: 100vh;
+     background-color: black;
+  }
+  .lang-menu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+}
+
+.lang-menu.openLangMenu{
+  opacity: 1; /* Робимо видимим */
+  visibility: visible; /* Робимо видимим */
+  transform: translateY(0); /* Повертаємо в початкове положення */
+}
+
+p{
+ margin: 0;
+}

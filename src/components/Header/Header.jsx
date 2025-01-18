@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import  {useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import logoImage from "../../assets/images/logo-code1.png";
@@ -10,24 +10,33 @@ import avatarBlue from "../../assets/images/avatarSVGblue.svg";
 import AvatarMenu from "../AvatarMenu/AvatarMenu";
 import { setAuthSwitchToShow } from "../../redux/auth/authReducer";
 import AuthStatus from "../../constants/userRolesEnum";
+import LanguageMenu from "../LanguageMenu/LanguageMenu";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const dispatch = useDispatch();
   const [isMenuOpen, setisMenuOpen] = useState(false);
   const [isAvatarMenuOpen, setIsAvatarMenuOpen] = useState(false);
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const {t, i18n } = useTranslation();
   // const navigate = useNavigate();
 
-const avatarMenuRef = useRef(null);
-
- // Закриття AvatarMenu при кліку поза ним
+  const avatarMenuRef = useRef(null);
+  const langMenuRef = useRef(null);
+  
+  // Закриття AvatarMenu при кліку поза ним
   useEffect(() => {
+        
     const handleClickOutside = (event) => {
       if (
         avatarMenuRef.current &&
         !avatarMenuRef.current.contains(event.target)
       ) {
-        setIsAvatarMenuOpen(false);
+        setIsAvatarMenuOpen(false);        
       }
+       if (langMenuRef.current && !langMenuRef.current.contains(event.target)) {
+         setIsLangMenuOpen(false);
+       }
     };
     // Додаємо слухач подій
     document.addEventListener("mousedown", handleClickOutside);
@@ -35,10 +44,15 @@ const avatarMenuRef = useRef(null);
     return () => {
       // Видаляємо слухач подій при розмонтуванні
       document.removeEventListener("mousedown", handleClickOutside);
-    };
+    };    
+    
   }, []);
 
 
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang); // Змінює мову    
+  };
+  
   return (
     <>
       <header className="container-header">
@@ -66,7 +80,7 @@ const avatarMenuRef = useRef(null);
               setIsAvatarMenuOpen(false);
             }}
           >
-            <p className="truncate-to-first-letter">Ruslana</p>
+            <p className="truncate-to-first-letter">{t("header.Ruslana")}</p>
           </NavLink>
         </div>
 
@@ -79,7 +93,7 @@ const avatarMenuRef = useRef(null);
               setIsAvatarMenuOpen(false);
             }}
           >
-            About me
+            {t("header.About me")}
           </NavLink>
 
           <NavLink
@@ -90,7 +104,7 @@ const avatarMenuRef = useRef(null);
               setIsAvatarMenuOpen(false);
             }}
           >
-            Projects
+            {t("header.Projects")}
           </NavLink>
 
           <NavLink
@@ -101,7 +115,7 @@ const avatarMenuRef = useRef(null);
               setIsAvatarMenuOpen(false);
             }}
           >
-            My skills
+            {t("header.My skills")}
           </NavLink>
 
           <NavLink
@@ -112,7 +126,7 @@ const avatarMenuRef = useRef(null);
               setIsAvatarMenuOpen(false);
             }}
           >
-            Contact
+            {t("header.Contact")}
           </NavLink>
 
           <NavLink
@@ -123,17 +137,32 @@ const avatarMenuRef = useRef(null);
               setIsAvatarMenuOpen(false);
             }}
           >
-            Sertificates
+            {t("header.Sertificates")}
           </NavLink>
         </div>
 
-        {/* іконка для мультимовності */}
-        <div className="container-languageIcon">
-          <NavLink>
-            <LanguageIcon className="language" />
-          </NavLink>
+        {/*********************** іконка для мультимовності ***********************/}
+        <div
+          className="container-languageIcon"
+          onClick={(event) => {
+            event.preventDefault();
+            setisMenuOpen(false);
+            setIsAvatarMenuOpen(false);
+            setIsLangMenuOpen(!isLangMenuOpen);
+          }}
+        >
+          <LanguageIcon className="language" />
+          {/* випливаюче вікно для мультимовності */}
+          <div ref={langMenuRef}>
+            <LanguageMenu
+              isLangMenuOpen={isLangMenuOpen}
+              setIsLangMenuOpen={setIsLangMenuOpen}
+              changeLanguage={changeLanguage}
+            />
+          </div>
         </div>
-        {/* іконка для аватара */}
+
+        {/*****************  іконка для аватара ***************/}
         <NavLink
           className={({ isActive }) =>
             isActive ? "box-avatar activeImage" : "box-avatar"
@@ -142,6 +171,7 @@ const avatarMenuRef = useRef(null);
             event.preventDefault();
             setisMenuOpen(false);
             setIsAvatarMenuOpen(!isAvatarMenuOpen);
+            setIsLangMenuOpen(false);
             dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
           }}
         >
@@ -160,7 +190,7 @@ const avatarMenuRef = useRef(null);
           />
         </div>
 
-        {/* бергер-меню */}
+        {/*************** бургер-меню ***************/}
         <div
           className={`burger ${isMenuOpen ? "open" : "close"}`}
           onClick={() => {

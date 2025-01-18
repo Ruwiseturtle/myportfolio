@@ -1,11 +1,12 @@
 {
+    "test": "test",
     "header":{
-         "About me": "Про мене",
-         "Projects": "Проекти",
-         "My skills": "Мої навички",
-         "Contact": "Контакти",
-         "Sertificates": "Сертифікати",
-         "Ruslana": "Руслана"
+         "About me": "About me",
+         "Projects": "Projects",
+         "My skills": "My skills",
+         "Contact": "Contact",
+         "Sertificates": "Sertificates",
+         "Ruslana": "Ruslana"
     },
     "Ruslana":{
         "Hi! I'm Ruslana Matviienko": "Hi! I'm Ruslana Matviienko",

@@ -13,12 +13,7 @@
   width: 200px;
   height: auto;
   
-  background-color: grey;
-  background: linear-gradient(
-    to bottom, /* Напрямок градієнту: з верхньої частини до нижньої */
-    rgba(217, 217, 217, 0.13), /* Початковий колір градієнту */
-    rgba(217, 217, 217, 0) /* Кінцевий колір градієнту */
-  );
+  background-color: rgb(37, 36, 36);
 
   opacity: 0; /* Початково приховане */
   visibility: hidden; /* Щоб елемент не займав місце */

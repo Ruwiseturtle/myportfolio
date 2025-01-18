@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
-import './AvatarMenu.css';
+import "./AvatarMenu.css";
 import AuthStatus from "../../constants/userRolesEnum";
 import { setAuthSwitchToShow } from "../../redux/auth/authReducer";
 import { logOut } from "../../redux/auth/authReducer";
@@ -60,8 +60,12 @@ const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
             Your page
           </NavLink>
 
-            <NavLink className={({ isActive }) => isActive && window.location.pathname !== "/"
-              ? "text active" : "text"}
+          <NavLink
+            className={({ isActive }) =>
+              isActive && window.location.pathname !== "/"
+                ? "text active"
+                : "text"
+            }
             to="/"
             onClick={() => {
               setIsAvatarMenuOpen(false);
@@ -78,4 +82,4 @@ const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
   );
 };
 
-export default AvatarMenu
+export default AvatarMenu;
