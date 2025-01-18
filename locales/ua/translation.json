@@ -1,4 +1,45 @@
 {
-    "About me": "Про мене",
-    "Projects": "Проекти"
+    "header":{
+         "About me": "Про мене",
+         "Projects": "Проекти",
+         "My skills": "Мої навички",
+         "Contact": "Контакти",
+         "Sertificates": "Сертифікати",
+         "Ruslana": "Руслана"
+    },
+    "Ruslana":{
+        "Hi! I'm Ruslana Matviienko": "Hi! I'm Ruslana Matviienko",
+         "Full Stack Developer": "Full Stack Developer",
+         "Description about me": "I'm a full stack developer with skills in HTML, CSS, JavaScript, (Hooks + Redux), Node, REST API, React, React native, GitHub and have some team experience with these tools that I&apos;ve worked really hard to learn. Perseverance is my main character trait. After all, for this reason, I professionally possess the skills needed in the field of website development. In the field that gives me pleasure, because for me it is a very interesting profession, where I can use my creativity and skills both independently and in a team of other smart developers.",
+         "contact me": "contact me"
+        },
+    "AboutMe":{
+        "About": "About",
+         "Me": "Me",
+         "Description about me": "No rain - no flowers. I had a heavy 'rain' and now I can offer such 'flowers' that are in my skills - HTML, CSS, JavaScript, React, React-nativ, Redux, Node. You can also read about me in the first reviews about me from my colleagues.",
+         "Reviews": "Reviews"
+        },
+    "Projects":{
+        "My": "My",
+        "Projects": "Projects",
+        "Description projects": "List of my projects created with tools like HTML, CSS, React, Redux. There are individual projects, such as this portfolio site, and team projects with very charming project colleagues, reviews of which are also available on this site.",
+        "Show All": "Show All"
+        },
+    "MySkills":{
+        "My": "My",
+        "Skills": "Skills",
+        "Description skills": "List of my skills. It will increase over time. If you need a developer who has these skills, feel free to contact me. I will always be happy for you!"
+        },
+    "Contact":{
+        "Contact": "Contact",
+        "Me": "Me",
+        "Description contact": "You can message me here. When you click on the button, WhatsApp will open, where the message type window will contain the text you have already typed and you will only need to click 'send' in the WhatsApp application."
+        },
+    "Sertificates":{
+        "Sertificates": "Sertificates"
+        },
+    "Description":{
+        "Description": "Description"
+        }   
+   
 }
