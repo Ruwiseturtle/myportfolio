@@ -9,10 +9,10 @@
          "Ruslana": "Руслана"
     },
     "Ruslana":{
-        "Hi! I'm Ruslana Matviienko": "Hi! I'm Ruslana Matviienko",
+        "Hi! I'm Ruslana Matviienko": "Привіт! Я Руслана Матвієнко",
          "Full Stack Developer": "Full Stack Developer",
-         "Description about me": "I'm a full stack developer with skills in HTML, CSS, JavaScript, (Hooks + Redux), Node, REST API, React, React native, GitHub and have some team experience with these tools that I&apos;ve worked really hard to learn. Perseverance is my main character trait. After all, for this reason, I professionally possess the skills needed in the field of website development. In the field that gives me pleasure, because for me it is a very interesting profession, where I can use my creativity and skills both independently and in a team of other smart developers.",
-         "contact me": "contact me"
+         "Description about me": "Я – Full Stack Developer з навичками в HTML, CSS, JavaScript (Hooks + Redux), Node, REST API, React, React Native, GitHub та маю деякий досвід роботи в команді з використанням цих інструментів, які я наполегливо вивчала. Наполегливість – моя головна риса характеру. Саме завдяки цьому я професійно володію необхідними навичками в галузі розробки вебсайтів. Це сфера, яка приносить мені задоволення, тому що для мене це дуже цікава професія, де я можу використовувати свою креативність і навички як самостійно, так і в команді з іншими розумними розробниками.",
+         "contact me": "Написати мені"
         },
     "AboutMe":{
         "About": "About",

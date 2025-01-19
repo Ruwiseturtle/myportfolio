@@ -12,12 +12,15 @@ import imageJavaScript from "../../assets/skills/javaScript.png";
 import imageReact from "../../assets/skills/react.png";
 import imageRedux from "../../assets/skills/redux.png";
 import DownLoadResume from "../../components/DownLoadResume/DownLoadResume";
+import { useTranslation } from "react-i18next";
 
 // Використання Measurement ID для Google Analytics 4
 const trackingId = "G-9DBE2L5FWW";
 ReactGA.initialize(trackingId);
 
 const HomePage = () => {
+  const { t } = useTranslation();
+  
   // Відстеження перегляду сторінки з використанням react-ga4
   useEffect(() => {
     ReactGA.send({
@@ -32,36 +35,34 @@ const HomePage = () => {
     navigate("/Contact"); // Перенаправляє користувача на сторінку "Contacts"
   };
 
+  
+  
   return (
     <div className="container-homePage">
       <ul className="list-homepage">
         <li className="item item-left">
           <div>
-            <h1 className="text text-name">Hi! I&apos;m Ruslana Matviienko</h1>
+            <h1 className="text text-name">
+              {/* текст привітання */}
+              {t("Ruslana.Hi! I'm Ruslana Matviienko")}
+            </h1>
             <p className="text text-profession">Full Stack Developer</p>
           </div>
           <p className="text text-aboutMe">
-            I&apos;m a full stack developer with skills in HTML, CSS, JavaScript,
-            (Hooks + Redux), Node, REST API, React, React native, GitHub and have some
-            team experience with these tools that I&apos;ve worked really hard
-            to learn. Perseverance is my main character trait. After all, for
-            this reason, I professionally possess the skills needed in the field
-            of website development. In the field that gives me pleasure, because
-            for me it is a very interesting profession, where I can use my
-            creativity and skills both independently and in a team of other
-            smart developers.
+            {/* текст опис про мене */}
+            {t("Ruslana.Description about me")}
           </p>
 
           <div className="box-contacts">
-
             <DownLoadResume />
-            
+
             <div className="box-btnContactMe">
               <button
                 className="button-contactMe"
                 onClick={handleContactMeClick}
               >
-                Contact Me
+                {/* текст на кнопкі */}
+                {t("Ruslana.contact me")}
               </button>
             </div>
 

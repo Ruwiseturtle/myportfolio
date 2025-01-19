@@ -151,6 +151,7 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
   margin-top: 0;
+  margin-bottom: 14px !important;
 }
 
 @media (max-width: 960px){

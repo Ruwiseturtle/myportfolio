@@ -6,6 +6,7 @@ import AuthStatus from "../../constants/userRolesEnum";
 import { setAuthSwitchToShow } from "../../redux/auth/authReducer";
 import { logOut } from "../../redux/auth/authReducer";
 import { selectIsAuthenticated } from "../../redux/auth/authSelectors";
+import { ReactComponent as Door } from "../../assets/images/door.svg";
 
 const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
   const dispatch = useDispatch();
@@ -23,31 +24,49 @@ const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
     <div className={`avatar-menu ${isAvatarMenuOpen ? "openAvatarMenu" : ""}`}>
       {!isAuthenticated ? (
         <div className="avatar-menu-list">
-          <NavLink
-            className={({ isActive }) => (isActive ? "text active" : "text")}
-            to="/AuthorizationPage/SignIn"
-            onClick={() => {
-              setIsAvatarMenuOpen(false);
-              setisMenuOpen(false);
-              dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
-            }}
-          >
-            Sign In
-          </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? "text active" : "text")}
-            to="/AuthorizationPage/SignUp"
-            onClick={() => {
-              setIsAvatarMenuOpen(false);
-              setisMenuOpen(false);
-              dispatch(setAuthSwitchToShow(AuthStatus.LogUp));
-            }}
-          >
-            Sign Up
-          </NavLink>
+          <div>
+            <NavLink
+              className={({ isActive }) => (isActive ? "text active" : "text")}
+              to="/AuthorizationPage/SignIn"
+              onClick={() => {
+                setIsAvatarMenuOpen(false);
+                setisMenuOpen(false);
+                dispatch(setAuthSwitchToShow(AuthStatus.LogIn));
+              }}
+            >
+              <div className="box-for-avatar-menu-list">
+                {/* іконка */}
+                <div className="iconDoor">
+                  <Door className="iconDoorEnter" />
+                </div>
+                {/* текст */}
+                <div>Sign In</div>
+              </div>
+            </NavLink>
+
+            <NavLink
+              className={({ isActive }) => (isActive ? "text active" : "text")}
+              to="/AuthorizationPage/SignUp"
+              onClick={() => {
+                setIsAvatarMenuOpen(false);
+                setisMenuOpen(false);
+                dispatch(setAuthSwitchToShow(AuthStatus.LogUp));
+              }}
+            >
+              <div className="box-for-avatar-menu-list">
+                {/* іконка */}
+                <div className="iconDoor">
+                  <Door className="iconDoorExit" />
+                </div>
+                {/* текст */}
+                <div>Sign Up</div>
+              </div>
+            </NavLink>
+          </div>
         </div>
       ) : (
-        <div className="avatar-menu-list">
+          <div className="avatar-menu-list">
+            
           <NavLink
             className={({ isActive }) => (isActive ? "text active" : "text")}
             to="/UserPage"
@@ -57,7 +76,10 @@ const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
               setIsAvatarMenuOpen(false);
             }}
           >
-            Your page
+            <div className="box-for-avatar-menu-list">
+              {/* текст */}
+              <div>Your page</div>
+            </div>
           </NavLink>
 
           <NavLink
@@ -74,7 +96,10 @@ const AvatarMenu = ({isAvatarMenuOpen,setIsAvatarMenuOpen,setisMenuOpen}) => {
               dispatch(logOut());
             }}
           >
-            Log Out
+            <div className="box-for-avatar-menu-list">
+              {/* текст */}
+              <div>Log Out</div>
+            </div>
           </NavLink>
         </div>
       )}
