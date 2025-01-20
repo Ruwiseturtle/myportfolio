@@ -2,9 +2,11 @@ import React from "react";
 import "./Aboutme.css";
 import imageMyphoto2 from "../../assets/images/myphoto2.jpg";
 import ReviewsList from "../../components/ReviewsList/ReviewsList";
+import { useTranslation } from "react-i18next";
 
 const Aboutme = () => {
-  
+  const { t } = useTranslation();
+
   return (
     <div className="container-aboutMe">
       <div className="list-aboutme">
@@ -26,17 +28,18 @@ const Aboutme = () => {
           <div className="box-aboutme">
             <h1 className="box-aboutme-text">
               <div className="text-title">
-                <p className="text-white">About</p>
-                <p className="text-blue">Me</p>
+                {/* текст "про" */}
+                <p className="text-white">{t("AboutMe.About")}</p>
+                {/* текст "мене" */}
+                <p className="text-blue">{t("AboutMe.Me")}</p>
               </div>
               <p className="aboutme-text">
-                No rain - no flowers. I had a heavy "rain" and now I can offer
-                such "flowers" that are in my skills - HTML, CSS, JavaScript,
-                React, React-nativ, Redux, Node. You can also read about me in
-                the first reviews about me from my colleagues.
+                {/* текст опис про мене */}
+                {t("AboutMe.Description about me")}
               </p>
               <div className="box-reviews">
-                <p className="title-reviews">Reviews</p>
+                {/* текст "відгуки" */}
+                <p className="title-reviews">{t("AboutMe.Reviews")}</p>
                 <ReviewsList />
               </div>
             </h1>

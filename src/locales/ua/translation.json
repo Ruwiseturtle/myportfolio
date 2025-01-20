@@ -15,10 +15,10 @@
          "contact me": "Написати мені"
         },
     "AboutMe":{
-        "About": "About",
-         "Me": "Me",
-         "Description about me": "No rain - no flowers. I had a heavy 'rain' and now I can offer such 'flowers' that are in my skills - HTML, CSS, JavaScript, React, React-nativ, Redux, Node. You can also read about me in the first reviews about me from my colleagues.",
-         "Reviews": "Reviews"
+        "About": "Про",
+         "Me": "Мене",
+         "Description about me": "Немає дощу — немає квітів. У мене був немаленький 'дощ', і тепер я можу запропонувати такі 'квіти' у вигляді навичок, як — HTML, CSS, JavaScript, React, React Native, Redux, Node. Ви також можете прочитати про мене у перших відгуках від моїх колег.",
+         "Reviews": "Відгуки"
         },
     "Projects":{
         "My": "My",
