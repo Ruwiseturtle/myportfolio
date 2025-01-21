@@ -21,10 +21,11 @@
          "Reviews": "Відгуки"
         },
     "Projects":{
-        "My": "My",
-        "Projects": "Projects",
-        "Description projects": "List of my projects created with tools like HTML, CSS, React, Redux. There are individual projects, such as this portfolio site, and team projects with very charming project colleagues, reviews of which are also available on this site.",
-        "Show All": "Show All"
+        "My": "Мої",
+        "Projects": "Проекти",
+        "Description projects": "Список моїх проєктів, створених за допомогою інструментів, таких як HTML, CSS, React, Redux. Тут представлені як індивідуальні проєкти, зокрема цей сайт-портфоліо, так і командні проєкти з чудовими колегами, відгуки про співпрацю з якими також доступні на цьому сайті.",
+        "Hide": "Сховати",
+        "Show All": "Показати все"
         },
     "MySkills":{
         "My": "My",
