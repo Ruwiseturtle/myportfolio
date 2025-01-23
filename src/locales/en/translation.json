@@ -32,6 +32,7 @@
         "Description skills": "List of my skills. It will increase over time. If you need a developer who has these skills, feel free to contact me. I will always be happy for you!"
         },
     "Contact":{
+        "Contacts": "Contacts",
         "Contact": "Contact",
         "Me": "Me",
         "Description contact": "You can message me here. When you click on the button, WhatsApp will open, where the message type window will contain the text you have already typed and you will only need to click 'send' in the WhatsApp application."

@@ -33,9 +33,10 @@
         "Description skills": "Список моїх навичок. З часом він буде зростати. Якщо вам потрібен розробник із цими навичками, не соромтеся звертатися до мене. Я завжди буду рада допомогти вам!"
         },
     "Contact":{
-        "Contact": "Contact",
-        "Me": "Me",
-        "Description contact": "You can message me here. When you click on the button, WhatsApp will open, where the message type window will contain the text you have already typed and you will only need to click 'send' in the WhatsApp application."
+        "Contacts": "Контакти",
+        "Contact": "Написати",
+        "Me": "Мені",
+        "Description contact": "Ви можете написати мені тут. Коли ви натиснете кнопку, відкриється WhatsApp, де у вікні введення повідомлення вже буде текст, який ви ввели, і вам залишиться лише натиснути 'надіслати' у додатку WhatsApp."
         },
     "Sertificates":{
         "Sertificates": "Sertificates"

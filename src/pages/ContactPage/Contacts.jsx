@@ -1,19 +1,22 @@
 import React from 'react'
 import './Contacts.css';
 import ContactForm from '../../components/ContactForm/ContactForm';
+import { useTranslation } from "react-i18next";
 
 const ContactPage = () => {
+const { t } = useTranslation();
+
   return (
     <div className="container-contact">
       <div className="text-contactMe">
-        <p className="contact-text-white">Contact</p>
-        <p className="contact-text-blue">Me</p>
+        {/* текст "Написати" */}
+        <p className="contact-text-white">{t("Contact.Contact")}</p>
+        {/* текст "Мені" */}
+        <p className="contact-text-blue">{t("Contact.Me")}</p>
       </div>
       <p className="contact-text-contactMe">
-        You can message me here. When you click on the button, WhatsApp will
-        open, where the message type window will contain the text you have
-        already typed and you will only need to click "send" in the WhatsApp
-        application.
+        {/* текст "про сторінку Контакти" */}
+        {t("Contact.Description contact")}
       </p>
       <div className="box-contact">
         <ContactForm />
