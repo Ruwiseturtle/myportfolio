@@ -1,0 +1,47 @@
+{
+    "test": "test",
+    "header":{
+         "About me": "About me",
+         "Projects": "Projects",
+         "My skills": "My skills",
+         "Contact": "Contact",
+         "Sertificates": "Sertificates",
+         "Ruslana": "Ruslana"
+    },
+    "Ruslana":{
+        "Hi! I'm Ruslana Matviienko": "Cześć! Jestem Ruslana Matviienko",
+         "Full Stack Developer": "Full Stack Developer",
+         "Description about me": "Jestem full stack developerem z umiejętnościami w HTML, CSS, JavaScript (Hooks + Redux), Node, REST API, React, React Native, GitHub i posiadam pewne doświadczenie pracy zespołowej z tymi narzędziami, które ciężko wypracowałam. Wytrwałość to moja główna cecha charakteru. W końcu to właśnie dzięki niej profesjonalnie posiadam umiejętności potrzebne w dziedzinie tworzenia stron internetowych. W dziedzinie, która sprawia mi przyjemność, ponieważ dla mnie jest to bardzo interesujący zawód, w którym mogę wykorzystać swoją kreatywność i umiejętności zarówno samodzielnie, jak i w zespole innych inteligentnych programistów.",
+         "contact me": "Skontaktuj się ze mną"
+        },
+    "AboutMe":{
+        "About": "About",
+         "Me": "Me",
+         "Description about me": "No rain - no flowers. I had a heavy 'rain' and now I can offer such 'flowers' that are in my skills - HTML, CSS, JavaScript, React, React-nativ, Redux, Node. You can also read about me in the first reviews about me from my colleagues.",
+         "Reviews": "Reviews"
+        },
+    "Projects":{
+        "My": "My",
+        "Projects": "Projects",
+        "Description projects": "List of my projects created with tools like HTML, CSS, React, Redux. There are individual projects, such as this portfolio site, and team projects with very charming project colleagues, reviews of which are also available on this site.",
+        "Show All": "Show All"
+        },
+    "MySkills":{
+        "My": "My",
+        "Skills": "Skills",
+        "Description skills": "List of my skills. It will increase over time. If you need a developer who has these skills, feel free to contact me. I will always be happy for you!"
+        },
+    "Contact":{
+        "Contacts": "Contacts",
+        "Contact": "Contact",
+        "Me": "Me",
+        "Description contact": "You can message me here. When you click on the button, WhatsApp will open, where the message type window will contain the text you have already typed and you will only need to click 'send' in the WhatsApp application."
+        },
+    "Sertificates":{
+        "Sertificates": "Sertificates"
+        },
+    "Description":{
+        "Description": "Description"
+        }   
+   
+}
