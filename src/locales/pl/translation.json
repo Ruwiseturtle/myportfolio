@@ -1,11 +1,11 @@
 {
     "test": "test",
     "header":{
-         "About me": "About me",
-         "Projects": "Projects",
-         "My skills": "My skills",
-         "Contact": "Contact",
-         "Sertificates": "Sertificates",
+         "About me": "О mnie",
+         "Projects": "Projekty",
+         "My skills": "Moje umiejętności",
+         "Contact": "Kontakt",
+         "Sertificates": "Certyfikaty",
          "Ruslana": "Ruslana"
     },
     "Ruslana":{
@@ -15,10 +15,10 @@
          "contact me": "Skontaktuj się ze mną"
         },
     "AboutMe":{
-        "About": "About",
-         "Me": "Me",
-         "Description about me": "No rain - no flowers. I had a heavy 'rain' and now I can offer such 'flowers' that are in my skills - HTML, CSS, JavaScript, React, React-nativ, Redux, Node. You can also read about me in the first reviews about me from my colleagues.",
-         "Reviews": "Reviews"
+        "About": "О",
+         "Me": "Mnie",
+         "Description about me": "Bez deszczu nie ma kwiatów. Miałam ciężki „deszcz”, ale teraz mogę zaoferować takie „kwiaty”, jakie są w moich umiejętnościach – HTML, CSS, JavaScript, React, React Native, Redux, Node. Możesz również przeczytać o mnie w pierwszych opiniach moich współpracowników.",
+         "Reviews": "Opinie"
         },
     "Projects":{
         "My": "My",
