@@ -33,16 +33,16 @@
         "Description skills": "Lista moich umiejętności. Będzie się powiększać z czasem. Jeśli potrzebujesz developera z tymi umiejętnościami, skontaktuj się ze mną. Zawsze chętnie Ci pomogę!"
         },
     "Contact":{
-        "Contacts": "Contacts",
-        "Contact": "Contact",
-        "Me": "Me",
-        "Description contact": "You can message me here. When you click on the button, WhatsApp will open, where the message type window will contain the text you have already typed and you will only need to click 'send' in the WhatsApp application."
+        "Contacts": "Kontakty",
+        "Contact": "Kontakt",
+        "Me": "Mnie",
+        "Description contact": "Możesz napisać do mnie tutaj. Po kliknięciu przycisku otworzy się WhatsApp, w którym okno wpisywania wiadomości będzie zawierało już wpisany tekst, a Ty będziesz musiał jedynie kliknąć „wyślij” w aplikacji WhatsApp."
         },
     "Sertificates":{
-        "Sertificates": "Sertificates"
+        "Sertificates": "Certyfikaty"
         },
     "Description":{
-        "Description": "Description"
+        "Description": "Opis"
         }   
    
 }
