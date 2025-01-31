@@ -44,10 +44,12 @@
   fill: #d452bb;
   width: auto;
   height: 40px;
+  animation: pulse 6s ease-in-out infinite;
 }
 
 .boxDownloadResume a svg:hover{
 fill: #a52f8c;
+
 }
 
 .downloadButton::after {
@@ -71,4 +73,19 @@ fill: #a52f8c;
   content: "download resume"; /* Текст, який відображається при ховері */
   opacity: 1;
   visibility: visible;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
