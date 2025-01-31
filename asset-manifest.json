@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/myportfolio/static/css/main.1503326b.css",
-    "main.js": "/myportfolio/static/js/main.95150948.js",
-    "static/css/890.b5b868f2.chunk.css": "/myportfolio/static/css/890.b5b868f2.chunk.css",
+    "main.js": "/myportfolio/static/js/main.b3850673.js",
+    "static/css/890.3ba8110d.chunk.css": "/myportfolio/static/css/890.3ba8110d.chunk.css",
     "static/js/890.1216cd2a.chunk.js": "/myportfolio/static/js/890.1216cd2a.chunk.js",
     "static/css/563.cfd9638c.chunk.css": "/myportfolio/static/css/563.cfd9638c.chunk.css",
     "static/js/563.c9df8c60.chunk.js": "/myportfolio/static/js/563.c9df8c60.chunk.js",
@@ -79,8 +79,8 @@
     "static/media/CircleFlagsUa.svg": "/myportfolio/static/media/CircleFlagsUa.73257fa220b7fbf80eb2f0881e9fc023.svg",
     "static/media/CircleFlagsPl.svg": "/myportfolio/static/media/CircleFlagsPl.0d5360bdd32ac326e59186d483113609.svg",
     "main.1503326b.css.map": "/myportfolio/static/css/main.1503326b.css.map",
-    "main.95150948.js.map": "/myportfolio/static/js/main.95150948.js.map",
-    "890.b5b868f2.chunk.css.map": "/myportfolio/static/css/890.b5b868f2.chunk.css.map",
+    "main.b3850673.js.map": "/myportfolio/static/js/main.b3850673.js.map",
+    "890.3ba8110d.chunk.css.map": "/myportfolio/static/css/890.3ba8110d.chunk.css.map",
     "890.1216cd2a.chunk.js.map": "/myportfolio/static/js/890.1216cd2a.chunk.js.map",
     "563.cfd9638c.chunk.css.map": "/myportfolio/static/css/563.cfd9638c.chunk.css.map",
     "563.c9df8c60.chunk.js.map": "/myportfolio/static/js/563.c9df8c60.chunk.js.map",
@@ -113,6 +113,6 @@
   },
   "entrypoints": [
     "static/css/main.1503326b.css",
-    "static/js/main.95150948.js"
+    "static/js/main.b3850673.js"
   ]
 }
