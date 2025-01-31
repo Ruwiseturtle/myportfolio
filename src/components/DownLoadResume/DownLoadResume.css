@@ -44,7 +44,7 @@
   fill: #d452bb;
   width: auto;
   height: 40px;
-  animation: pulse 6s ease-in-out infinite;
+  animation: pulse 3s ease-in-out infinite;
 }
 
 .boxDownloadResume a svg:hover{
