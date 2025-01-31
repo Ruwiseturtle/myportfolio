@@ -1,6 +1,7 @@
 import React from 'react'
 import './Contacts.css';
 import ContactForm from '../../components/ContactForm/ContactForm';
+// import CallMe from '../../components/CallMe/CallMe';
 import { useTranslation } from "react-i18next";
 
 const ContactPage = () => {
@@ -20,6 +21,7 @@ const { t } = useTranslation();
       </p>
       <div className="box-contact">
         <ContactForm />
+        
       </div>
     </div>
   );

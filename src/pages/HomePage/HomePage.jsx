@@ -46,7 +46,7 @@ const HomePage = () => {
               {/* текст привітання */}
               {t("Ruslana.Hi! I'm Ruslana Matviienko")}
             </h1>
-            <p className="text text-profession">Full Stack Developer</p>
+            <h2 className="text text-profession">Full Stack Developer</h2>
           </div>
           <p className="text text-aboutMe">
             {/* текст опис про мене */}

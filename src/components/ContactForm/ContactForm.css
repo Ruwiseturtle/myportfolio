@@ -1,5 +1,6 @@
 .form-container{
     width: 100%;
+    margin-bottom: 26px;
 }
 
 .form-row {
@@ -78,11 +79,23 @@ textarea:placeholder-shown + label {
     margin-bottom: 20px;
 }
 
+.box-form-contacts{
+    display: flex;
+    /* background-color: yellow; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .box-btnContact {
-   display: flex;
+
+   display:inline-flex;
+   /* width: 300px; */
    justify-content: center; 
    align-items: center;
    height: 100%;
+   /* background-color: red; */
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .button-contact {
@@ -94,6 +107,8 @@ textarea:placeholder-shown + label {
     cursor: pointer;
     font-family: "Poppins", sans-serif;
     transition: all 0.3s ease;
+    margin-right: 20px;
+
 }
 
 .button-contact:hover {
