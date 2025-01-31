@@ -41,13 +41,13 @@
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
-  fill: green;
+  fill: #d452bb;
   width: auto;
   height: 40px;
 }
 
 .boxDownloadResume a svg:hover{
-fill: #006400;
+fill: #a52f8c;
 }
 
 .downloadButton::after {

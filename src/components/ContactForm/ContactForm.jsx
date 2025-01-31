@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ContactForm.css";
-// import CallMe from "../CallMe/CallMe";
+import CallMe from "../CallMe/CallMe";
 
 // const MY_NUMBER_PHONE = "380665166837";
 const MY_NUMBER_PHONE = "380665166837";
@@ -109,7 +109,7 @@ const ContactForm = () => {
         />
         <label htmlFor="message">Message</label>
       </div>
-      <div className="box-form-contacts">
+      
         <div className="box-btnContact">
           <button
             className="button-contact"
@@ -118,9 +118,9 @@ const ContactForm = () => {
           >
             Contact Me
           </button>
-          {/* <CallMe /> */}
+          <CallMe />
         </div>
-      </div>
+     
     </form>
   );
 };

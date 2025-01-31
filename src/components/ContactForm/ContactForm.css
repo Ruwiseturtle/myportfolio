@@ -1,4 +1,5 @@
 .form-container{
+    position: relative;
     width: 100%;
     margin-bottom: 26px;
 }
@@ -79,16 +80,11 @@ textarea:placeholder-shown + label {
     margin-bottom: 20px;
 }
 
-.box-form-contacts{
-    display: flex;
-    /* background-color: yellow; */
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .box-btnContact {
 
-   display:inline-flex;
+   display:flex;
    /* width: 300px; */
    justify-content: center; 
    align-items: center;
@@ -96,6 +92,12 @@ textarea:placeholder-shown + label {
    /* background-color: red; */
    margin-left: auto;
    margin-right: auto;
+}
+
+@media (max-width: 360px){
+  .box-btnContact{
+    flex-direction: column;
+  }
 }
 
 .button-contact {
@@ -110,6 +112,8 @@ textarea:placeholder-shown + label {
     margin-right: 20px;
 
 }
+
+
 
 .button-contact:hover {
     background-color: #0086A5;

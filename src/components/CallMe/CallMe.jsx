@@ -6,7 +6,7 @@ import { ReactComponent as PhoneIcon } from "../../assets/images/phone2.svg";
 const CallMe = () => {
   return (
     <div className="boxCallme">
-      <div className="text-callMe">+38066XXXXXX7</div>
+      <div className="text-callMe"></div>
       <div class="call-button">
         <a href="tel:+380665166837">
           <PhoneIcon className="callmeIcon" />
