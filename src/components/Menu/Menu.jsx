@@ -36,7 +36,7 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
             }
             onClick={handleClick}
           >
-            Multilingual
+            RollingGallery
           </NavLink>
         </li>
         <li className={styles.menuItem}>....</li>

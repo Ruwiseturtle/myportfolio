@@ -22,7 +22,7 @@ const VerifyEmailPage = lazy(() => import("./pages/VerifyEmailPage/VerifyEmailPa
 const UserPage = lazy(() => import("./pages/UserPage/UserPage.jsx"));
 const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage/ForgotPasswordPage.jsx"));
 const EnterNewPasswordPage = lazy(() => import("./pages/EnterNewPasswordPage/EnterNewPasswordPage.jsx"));
-const Multilingual = lazy(() => import("./pages/Multilingual/Multilingual.jsx"));
+const RollingGallery = lazy(() => import("./pages/RollingGallery/RollingGallery.jsx"));
 
 function App() {
   const isAuthenticated = useSelector(selectIsAuthenticated);
@@ -81,7 +81,7 @@ function App() {
         </Route>
         <Route path="MenuPage/*" element={<MenuPage />}>
           <Route path="DescriptionMenu" element={<DescriptionMenu />} />
-          <Route path="Multilingual" element={<Multilingual />} />
+          <Route path="Multilingual" element={<RollingGallery />} />
         </Route>
       </Route>
     </Routes>
